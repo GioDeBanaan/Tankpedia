@@ -1,0 +1,1817 @@
+﻿{
+    "pages": [
+        {
+            "title": "10TP",
+            "page_key": "10TP",
+            "description": "1930s Polish cruiser tank prototype",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/c\/cc\/10TP.jpg\/330px-10TP.jpg",
+            "country": "Polish"
+        },
+        {
+            "title": "1942 medium tank (Romania)",
+            "page_key": "1942_medium_tank_(Romania)",
+            "description": "Romanian medium tank project",
+            "thumbnail_url": null,
+            "country": "Romanian"
+        },
+        {
+            "title": "A22 tank",
+            "page_key": "A22_tank",
+            "description": "British heavy infantry tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/4\/42\/Tanks_and_Afvs_of_the_British_Army_1939-45_KID1265.jpg\/330px-Tanks_and_Afvs_of_the_British_Army_1939-45_KID1265.jpg",
+            "country": "British"
+        },
+        {
+            "title": "Altay (tank)",
+            "page_key": "Altay_(tank)",
+            "description": "Main battle tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/e\/eb\/Altay_Tank.jpg\/330px-Altay_Tank.jpg",
+            "country": "Turkish"
+        },
+        {
+            "title": "AMC 35",
+            "page_key": "AMC_35",
+            "description": "French medium cavalry tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/5\/56\/AMC-35-Saumur.00044pa3.jpg\/330px-AMC-35-Saumur.00044pa3.jpg",
+            "country": "French"
+        },
+        {
+            "title": "AMR 33",
+            "page_key": "AMR_33",
+            "description": "French light cavalry tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/9\/93\/AMR_33_Saumur_01.jpeg\/330px-AMR_33_Saumur_01.jpeg",
+            "country": "French"
+        },
+        {
+            "title": "AMR 35",
+            "page_key": "AMR_35",
+            "description": "French light cavalry tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/0\/03\/AMR35_parade.jpg\/330px-AMR35_parade.jpg",
+            "country": "French"
+        },
+        {
+            "title": "AMX-13",
+            "page_key": "AMX-13",
+            "description": "French light tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/2\/2c\/Amx-13_tankfest_2023.JPG\/330px-Amx-13_tankfest_2023.JPG",
+            "country": "French"
+        },
+        {
+            "title": "AMX-30",
+            "page_key": "AMX-30",
+            "description": "1966 French main battle tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/d\/d6\/AMX-30B_U.S._Army_Armor_%26_Cavalry_Collection.jpg\/330px-AMX-30B_U.S._Army_Armor_%26_Cavalry_Collection.jpg",
+            "country": "French"
+        },
+        {
+            "title": "AMX-40",
+            "page_key": "AMX-40",
+            "description": "Main battle tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/0\/0b\/AMX-40%2C_Tanks_in_the_Mus%C3%A9e_des_Blind%C3%A9s%2C_France%2C_pic-2.JPG\/330px-AMX-40%2C_Tanks_in_the_Mus%C3%A9e_des_Blind%C3%A9s%2C_France%2C_pic-2.JPG",
+            "country": "French"
+        },
+        {
+            "title": "AMX-50",
+            "page_key": "AMX-50",
+            "description": "Medium Tank\/heavy tank (lowered variant)",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/a\/a6\/AMX-50.jpg\/330px-AMX-50.jpg",
+            "country": "French"
+        },
+        {
+            "title": "Archer (tank destroyer)",
+            "page_key": "Archer_(tank_destroyer)",
+            "description": "British self-propelled anti-tank gun",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/4\/4a\/Archer_SP_17_pdr_Tank_Destroyer.jpg\/330px-Archer_SP_17_pdr_Tank_Destroyer.jpg",
+            "country": "British"
+        },
+        {
+            "title": "Ariete",
+            "page_key": "Ariete",
+            "description": "Main battle tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/5\/52\/Italian_Army_-_4th_Tank_Regiment_-_Ariete_tanks_during_an_exercise_at_Capo_Teulada_October_2022.jpg\/330px-Italian_Army_-_4th_Tank_Regiment_-_Ariete_tanks_during_an_exercise_at_Capo_Teulada_October_2022.jpg",
+            "country": "Italian"
+        },
+        {
+            "title": "Arjun (tank)",
+            "page_key": "Arjun_(tank)",
+            "description": "Indian main battle tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/b\/b7\/Arjun_MK1A_field_trials.jpg\/330px-Arjun_MK1A_field_trials.jpg",
+            "country": "Indian"
+        },
+        {
+            "title": "ARL 44",
+            "page_key": "ARL_44",
+            "description": "French heavy tank and tank destroyer",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/4\/40\/ARL-44_at_Mourmelon_le_Grand.JPG\/330px-ARL-44_at_Mourmelon_le_Grand.JPG",
+            "country": "French"
+        },
+        {
+            "title": "Black Prince (tank)",
+            "page_key": "Black_Prince_(tank)",
+            "description": "British infantry tank prototype",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/3\/3e\/Black_Prince_tank_side_view.jpg\/330px-Black_Prince_tank_side_view.jpg",
+            "country": "British"
+        },
+        {
+            "title": "BMD-1",
+            "page_key": "BMD-1",
+            "description": "Soviet airborne infantry fighting vehicle",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/b\/b8\/Vdvcompetition11.jpg\/330px-Vdvcompetition11.jpg",
+            "country": "Soviet"
+        },
+        {
+            "title": "British heavy tanks of the First World War",
+            "page_key": "British_heavy_tanks_of_the_First_World_War",
+            "description": "Type of combat tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/f\/f6\/British_Mark_I_male_tank_Somme_25_September_1916.jpg\/330px-British_Mark_I_male_tank_Somme_25_September_1916.jpg",
+            "country": "British"
+        },
+        {
+            "title": "BT tank",
+            "page_key": "BT_tank",
+            "description": "Light cavalry tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/5\/57\/BT_-_5.jpg\/330px-BT_-_5.jpg",
+            "country": "Soviet"
+        },
+        {
+            "title": "BT-2",
+            "page_key": "BT-2",
+            "description": "Light cavalry tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/5\/57\/BT_-_5.jpg\/330px-BT_-_5.jpg",
+            "country": "Soviet"
+        },
+        {
+            "title": "BT-5",
+            "page_key": "BT-5",
+            "description": "Soviet light tank used in the 1930s and WWII",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/a\/a2\/BT_tank_in_the_Breakthrough_of_the_Siege_of_Leningrad_Museum_2.jpg\/330px-BT_tank_in_the_Breakthrough_of_the_Siege_of_Leningrad_Museum_2.jpg",
+            "country": "Soviet"
+        },
+        {
+            "title": "BT-7",
+            "page_key": "BT-7",
+            "description": "Light cavalry tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/en\/thumb\/4\/4e\/Soviet_cavalry_tank_BT-7m.jpg\/330px-Soviet_cavalry_tank_BT-7m.jpg",
+            "country": "Soviet"
+        },
+        {
+            "title": "Cavalier tank",
+            "page_key": "Cavalier_tank",
+            "description": "British WWII cruiser tank",
+            "thumbnail_url": null,
+            "country": "British"
+        },
+        {
+            "title": "Centurion (tank)",
+            "page_key": "Centurion_(tank)",
+            "description": "British main battle tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/a\/a1\/Centurion_cfb_borden_1.JPG\/330px-Centurion_cfb_borden_1.JPG",
+            "country": "British"
+        },
+        {
+            "title": "Ch'┼Ånma-ho",
+            "page_key": "Ch'┼Ånma-ho",
+            "description": "Main battle tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/en\/thumb\/1\/1e\/North_Korean_Chonma-ho_main_battle_tank.jpg\/330px-North_Korean_Chonma-ho_main_battle_tank.jpg",
+            "country": "North Korean"
+        },
+        {
+            "title": "Challenger 1",
+            "page_key": "Challenger_1",
+            "description": "UK main battle tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/8\/8d\/Challenger_1MBT_Mk_3_%287527916878%29.jpg\/330px-Challenger_1MBT_Mk_3_%287527916878%29.jpg",
+            "country": "British"
+        },
+        {
+            "title": "Challenger 2",
+            "page_key": "Challenger_2",
+            "description": "British main battle tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/3\/30\/Challenger_2_Main_Battle_Tank_patrolling_outside_Basra%2C_Iraq_MOD_45148325.jpg\/330px-Challenger_2_Main_Battle_Tank_patrolling_outside_Basra%2C_Iraq_MOD_45148325.jpg",
+            "country": "British"
+        },
+        {
+            "title": "Char 2C",
+            "page_key": "Char_2C",
+            "description": "French super-heavy tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/a\/ad\/Berry_in_1928_%28moar_contrast_%2B_cropped%29.jpg\/330px-Berry_in_1928_%28moar_contrast_%2B_cropped%29.jpg",
+            "country": "French"
+        },
+        {
+            "title": "Char B1",
+            "page_key": "Char_B1",
+            "description": "WW2 French heavy tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/9\/93\/Renault_B1_bis%2CTanks_in_the_Mus%C3%A9e_des_Blind%C3%A9s%2C_France%2C_pic-9.jpg\/330px-Renault_B1_bis%2CTanks_in_the_Mus%C3%A9e_des_Blind%C3%A9s%2C_France%2C_pic-9.jpg",
+            "country": "French"
+        },
+        {
+            "title": "Char D1",
+            "page_key": "Char_D1",
+            "description": "Light tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/7\/79\/Char_D11936.jpg\/330px-Char_D11936.jpg",
+            "country": "French"
+        },
+        {
+            "title": "Char D2",
+            "page_key": "Char_D2",
+            "description": "Interwar French medium tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/7\/71\/Char_D2.jpg\/330px-Char_D2.jpg",
+            "country": "French"
+        },
+        {
+            "title": "Chieftain (tank)",
+            "page_key": "Chieftain_(tank)",
+            "description": "British main battle tank of the 1960s-90s",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/a\/ad\/Chieftain_Tank_%289628802829%29.jpg\/330px-Chieftain_Tank_%289628802829%29.jpg",
+            "country": "British"
+        },
+        {
+            "title": "Churchill tank",
+            "page_key": "Churchill_tank",
+            "description": "British heavy infantry tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/4\/42\/Tanks_and_Afvs_of_the_British_Army_1939-45_KID1265.jpg\/330px-Tanks_and_Afvs_of_the_British_Army_1939-45_KID1265.jpg",
+            "country": "British"
+        },
+        {
+            "title": "Comet (tank)",
+            "page_key": "Comet_(tank)",
+            "description": "British cruiser tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/b\/b8\/Comet_tank_tankfest_2023.JPG\/330px-Comet_tank_tankfest_2023.JPG",
+            "country": "British"
+        },
+        {
+            "title": "Conqueror (tank)",
+            "page_key": "Conqueror_(tank)",
+            "description": "British heavy tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/3\/38\/Conqueror_front-left_2017_Bovington.jpg\/330px-Conqueror_front-left_2017_Bovington.jpg",
+            "country": "British"
+        },
+        {
+            "title": "Covenanter tank",
+            "page_key": "Covenanter_tank",
+            "description": "British WWII cruiser tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/d\/d8\/IWM-KID-778-Covenanter.jpg\/330px-IWM-KID-778-Covenanter.jpg",
+            "country": "British"
+        },
+        {
+            "title": "Cromwell tank",
+            "page_key": "Cromwell_tank",
+            "description": "British WWII cruiser tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/a\/a6\/Cromwell_%28A27M%29_front-right_2017_Bovington.jpg\/330px-Cromwell_%28A27M%29_front-right_2017_Bovington.jpg",
+            "country": "British"
+        },
+        {
+            "title": "Cruiser Mk I",
+            "page_key": "Cruiser_Mk_I",
+            "description": "British cruiser tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/0\/0d\/Mk1CruiserTank.jpg\/330px-Mk1CruiserTank.jpg",
+            "country": "British"
+        },
+        {
+            "title": "Cruiser Mk II",
+            "page_key": "Cruiser_Mk_II",
+            "description": "British cruiser tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/6\/68\/CruiserMk2.jpg\/330px-CruiserMk2.jpg",
+            "country": "British"
+        },
+        {
+            "title": "Cruiser Mk III",
+            "page_key": "Cruiser_Mk_III",
+            "description": "British WWII cruiser tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/a\/ad\/Bundesarchiv_Bild_146-2005-0066%2C_Calais%2C_zerst%C3%B6rter_englischer_Panzer.jpg\/330px-Bundesarchiv_Bild_146-2005-0066%2C_Calais%2C_zerst%C3%B6rter_englischer_Panzer.jpg",
+            "country": "British"
+        },
+        {
+            "title": "Cruiser Mk IV",
+            "page_key": "Cruiser_Mk_IV",
+            "description": "British WWII cruiser tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/d\/d4\/British_Tanks_and_Armoured_Fighting_Vehicles_1939-45_KID716.jpg\/330px-British_Tanks_and_Armoured_Fighting_Vehicles_1939-45_KID716.jpg",
+            "country": "British"
+        },
+        {
+            "title": "Cruiser Mk V",
+            "page_key": "Cruiser_Mk_V",
+            "description": "British WWII cruiser tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/d\/d8\/IWM-KID-778-Covenanter.jpg\/330px-IWM-KID-778-Covenanter.jpg",
+            "country": "British"
+        },
+        {
+            "title": "Crusader tank",
+            "page_key": "Crusader_tank",
+            "description": "British WWII cruiser tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/8\/81\/Crusader_MkIII_%E2%80%98T126272%E2%80%99_%2836590905746%29.jpg\/330px-Crusader_MkIII_%E2%80%98T126272%E2%80%99_%2836590905746%29.jpg",
+            "country": "British"
+        },
+        {
+            "title": "Excelsior tank",
+            "page_key": "Excelsior_tank",
+            "description": "British experimental infantry tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/4\/4b\/A33_Excelsior.jpg\/330px-A33_Excelsior.jpg",
+            "country": "British"
+        },
+        {
+            "title": "FCM 36",
+            "page_key": "FCM_36",
+            "description": "French light infantry tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/d\/dd\/FCM-36-Saumur.00045hyp.jpg\/330px-FCM-36-Saumur.00045hyp.jpg",
+            "country": "French"
+        },
+        {
+            "title": "Fiat 2000",
+            "page_key": "Fiat_2000",
+            "description": "Italian World War I heavy tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/4\/4e\/Tank_Fiat_2000.jpg\/330px-Tank_Fiat_2000.jpg",
+            "country": "Italian"
+        },
+        {
+            "title": "Fiat 3000",
+            "page_key": "Fiat_3000",
+            "description": "Light tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/2\/26\/Fiat3000.jpg\/330px-Fiat3000.jpg",
+            "country": "Italian"
+        },
+        {
+            "title": "Grosstraktor",
+            "page_key": "Grosstraktor",
+            "description": "Prototype medium tank of the Weimar Republic",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/2\/21\/Bundesarchiv_Bild_146-1979-107-13%2C_Volkssturm%2C_%C3%9Cbung_mit_Panzerschreck.jpg\/330px-Bundesarchiv_Bild_146-1979-107-13%2C_Volkssturm%2C_%C3%9Cbung_mit_Panzerschreck.jpg",
+            "country": "German"
+        },
+        {
+            "title": "Harry Hopkins (tank)",
+            "page_key": "Harry_Hopkins_(tank)",
+            "description": "Light tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/d\/d1\/IWM-MH-9324-Harry-Hopkins.jpg\/330px-IWM-MH-9324-Harry-Hopkins.jpg",
+            "country": "British"
+        },
+        {
+            "title": "Hotchkiss H35",
+            "page_key": "Hotchkiss_H35",
+            "description": "French cavalry tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/6\/60\/Hotchkiss-H-39-latrun-2.jpg\/330px-Hotchkiss-H-39-latrun-2.jpg",
+            "country": "French"
+        },
+        {
+            "title": "Hotchkiss H39",
+            "page_key": "Hotchkiss_H39",
+            "description": "French cavalry tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/6\/60\/Hotchkiss-H-39-latrun-2.jpg\/330px-Hotchkiss-H-39-latrun-2.jpg",
+            "country": "French"
+        },
+        {
+            "title": "IS-2",
+            "page_key": "IS-2",
+            "description": "Soviet heavy tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/f\/f7\/%D0%9C%D0%B5%D0%BC%D0%BE%D1%80%D1%96%D0%B0%D0%BB%D1%8C%D0%BD%D0%B8%D0%B9_%D0%BA%D0%BE%D0%BC%D0%BF%D0%BB%D0%B5%D0%BA%D1%81_%C2%AB%D0%A1%D0%B0%D0%BF%D1%83%D0%BD-%D0%B3%D0%BE%D1%80%D0%B0%C2%BB2.JPG\/330px-%D0%9C%D0%B5%D0%BC%D0%BE%D1%80%D1%96%D0%B0%D0%BB%D1%8C%D0%BD%D0%B8%D0%B9_%D0%BA%D0%BE%D0%BC%D0%BF%D0%BB%D0%B5%D0%BA%D1%81_%C2%AB%D0%A1%D0%B0%D0%BF%D1%83%D0%BD-%D0%B3%D0%BE%D1%80%D0%B0%C2%BB2.JPG",
+            "country": "Soviet"
+        },
+        {
+            "title": "IS-3",
+            "page_key": "IS-3",
+            "description": "1940s Soviet heavy tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/1\/1e\/IS3.jpg\/330px-IS3.jpg",
+            "country": "Soviet"
+        },
+        {
+            "title": "IS-4",
+            "page_key": "IS-4",
+            "description": "1940s Soviet heavy tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/7\/7f\/IS-4_Tank.jpg\/330px-IS-4_Tank.jpg",
+            "country": "Soviet"
+        },
+        {
+            "title": "IS-7",
+            "page_key": "IS-7",
+            "description": "Soviet heavy tank prototype",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/7\/7c\/IS-7_in_the_Kubinka_Museum.jpg\/330px-IS-7_in_the_Kubinka_Museum.jpg",
+            "country": "Soviet"
+        },
+        {
+            "title": "ISU-122",
+            "page_key": "ISU-122",
+            "description": "Soviet self-propelled gun",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/4\/4d\/ISU-122_skos_RB.jpg\/330px-ISU-122_skos_RB.jpg",
+            "country": "Soviet"
+        },
+        {
+            "title": "ISU-152",
+            "page_key": "ISU-152",
+            "description": "Soviet heavy assault gun",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/5\/51\/ISU-152%40Kubinka.jpg\/330px-ISU-152%40Kubinka.jpg",
+            "country": "Soviet"
+        },
+        {
+            "title": "Jagdpanther",
+            "page_key": "Jagdpanther",
+            "description": "Self-propelled anti-tank gun",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/4\/41\/Jagdpanzer_V_Jagdpanther_1.jpg\/330px-Jagdpanzer_V_Jagdpanther_1.jpg",
+            "country": "German"
+        },
+        {
+            "title": "Jagdpanzer IV",
+            "page_key": "Jagdpanzer_IV",
+            "description": "Self-propelled anti-tank gun",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/6\/6a\/Panzermuseum_Munster_2010_0449.JPG\/330px-Panzermuseum_Munster_2010_0449.JPG",
+            "country": "German"
+        },
+        {
+            "title": "Jagdtiger",
+            "page_key": "Jagdtiger",
+            "description": "Heavy tank destroyer",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/2\/2a\/Jagdtiger_at_Aberdeen_proving_grounds_2008.jpg\/330px-Jagdtiger_at_Aberdeen_proving_grounds_2008.jpg",
+            "country": "German"
+        },
+        {
+            "title": "K1 tank",
+            "page_key": "K1_tank",
+            "description": "South Korean main battle tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/a\/a8\/2013.4.1_%EC%9C%A1%EA%B5%B011%EC%82%AC%EB%8B%A8_%EC%95%BC%EC%99%B8%EA%B8%B0%EB%8F%99%EC%A0%84%EC%88%A0%ED%9B%88%EB%A0%A8_Field_Training_Exercise%2C_Republic_of_Korea_Army_11th_Division_%288617306085%29.jpg\/330px-2013.4.1_%EC%9C%A1%EA%B5%B011%EC%82%AC%EB%8B%A8_%EC%95%BC%EC%99%B8%EA%B8%B0%EB%8F%99%EC%A0%84%EC%88%A0%ED%9B%88%EB%A0%A8_Field_Training_Exercise%2C_Republic_of_Korea_Army_11th_Division_%288617306085%29.jpg",
+            "country": "South Korean"
+        },
+        {
+            "title": "K2 Black Panther",
+            "page_key": "K2_Black_Panther",
+            "description": "South Korean main battle tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/4\/41\/U.S.%2C_ROK_forces_forge_interoperability_with_combined_arms_exercise_-_8_of_8.jpg\/330px-U.S.%2C_ROK_forces_forge_interoperability_with_combined_arms_exercise_-_8_of_8.jpg",
+            "country": "South Korean"
+        },
+        {
+            "title": "Kaplan MT \/ Harimau",
+            "page_key": "Kaplan_MT_\/_Harimau",
+            "description": "Turkish-Indonesian medium tank \/ light tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/d\/db\/Harimau_Medium_Tank%2C_13th_Cavalry_Battalion%2C_Indonesian_Army._4.jpg\/330px-Harimau_Medium_Tank%2C_13th_Cavalry_Battalion%2C_Indonesian_Army._4.jpg",
+            "country": "Turkish"
+        },
+        {
+            "title": "Kolohousenka",
+            "page_key": "Kolohousenka",
+            "description": "Wheeled\/tracked light tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/0\/04\/KH50.jpg\/330px-KH50.jpg",
+            "country": "Czech"
+        },
+        {
+            "title": "KV-1",
+            "page_key": "KV-1",
+            "description": "WWII Soviet heavy tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/8\/8c\/%D0%9A%D0%92-1_%D1%83_%D0%B4%D0%B8%D0%BE%D1%80%D0%B0%D0%BC%D1%8B_%C2%AB%D0%9F%D1%80%D0%BE%D1%80%D1%8B%D0%B2_%D0%B1%D0%BB%D0%BE%D0%BA%D0%B0%D0%B4%D1%8B_%D0%9B%D0%B5%D0%BD%D0%B8%D0%BD%D0%B3%D1%80%D0%B0%D0%B4%D0%B0%C2%BB._%D0%92%D0%B8%D0%B4_%D1%81%D0%BF%D0%B5%D1%80%D0%B5%D0%B4%D0%B8-%D1%81%D0%BF%D1%80%D0%B0%D0%B2%D0%B0.JPG\/330px-%D0%9A%D0%92-1_%D1%83_%D0%B4%D0%B8%D0%BE%D1%80%D0%B0%D0%BC%D1%8B_%C2%AB%D0%9F%D1%80%D0%BE%D1%80%D1%8B%D0%B2_%D0%B1%D0%BB%D0%BE%D0%BA%D0%B0%D0%B4%D1%8B_%D0%9B%D0%B5%D0%BD%D0%B8%D0%BD%D0%B3%D1%80%D0%B0%D0%B4%D0%B0%C2%BB._%D0%92%D0%B8%D0%B4_%D1%81%D0%BF%D0%B5%D1%80%D0%B5%D0%B4%D0%B8-%D1%81%D0%BF%D1%80%D0%B0%D0%B2%D0%B0.JPG",
+            "country": "Soviet"
+        },
+        {
+            "title": "KV-13",
+            "page_key": "KV-13",
+            "description": "Soviet experimental medium tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/f\/f3\/KV-13_1.jpg",
+            "country": "Soviet"
+        },
+        {
+            "title": "KV-2",
+            "page_key": "KV-2",
+            "description": "WWII Soviet heavy tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/8\/8c\/%D0%9A%D0%92-1_%D1%83_%D0%B4%D0%B8%D0%BE%D1%80%D0%B0%D0%BC%D1%8B_%C2%AB%D0%9F%D1%80%D0%BE%D1%80%D1%8B%D0%B2_%D0%B1%D0%BB%D0%BE%D0%BA%D0%B0%D0%B4%D1%8B_%D0%9B%D0%B5%D0%BD%D0%B8%D0%BD%D0%B3%D1%80%D0%B0%D0%B4%D0%B0%C2%BB._%D0%92%D0%B8%D0%B4_%D1%81%D0%BF%D0%B5%D1%80%D0%B5%D0%B4%D0%B8-%D1%81%D0%BF%D1%80%D0%B0%D0%B2%D0%B0.JPG\/330px-%D0%9A%D0%92-1_%D1%83_%D0%B4%D0%B8%D0%BE%D1%80%D0%B0%D0%BC%D1%8B_%C2%AB%D0%9F%D1%80%D0%BE%D1%80%D1%8B%D0%B2_%D0%B1%D0%BB%D0%BE%D0%BA%D0%B0%D0%B4%D1%8B_%D0%9B%D0%B5%D0%BD%D0%B8%D0%BD%D0%B3%D1%80%D0%B0%D0%B4%D0%B0%C2%BB._%D0%92%D0%B8%D0%B4_%D1%81%D0%BF%D0%B5%D1%80%D0%B5%D0%B4%D0%B8-%D1%81%D0%BF%D1%80%D0%B0%D0%B2%D0%B0.JPG",
+            "country": "Soviet"
+        },
+        {
+            "title": "KV-220",
+            "page_key": "KV-220",
+            "description": "WWII Soviet heavy tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/8\/8c\/%D0%9A%D0%92-1_%D1%83_%D0%B4%D0%B8%D0%BE%D1%80%D0%B0%D0%BC%D1%8B_%C2%AB%D0%9F%D1%80%D0%BE%D1%80%D1%8B%D0%B2_%D0%B1%D0%BB%D0%BE%D0%BA%D0%B0%D0%B4%D1%8B_%D0%9B%D0%B5%D0%BD%D0%B8%D0%BD%D0%B3%D1%80%D0%B0%D0%B4%D0%B0%C2%BB._%D0%92%D0%B8%D0%B4_%D1%81%D0%BF%D0%B5%D1%80%D0%B5%D0%B4%D0%B8-%D1%81%D0%BF%D1%80%D0%B0%D0%B2%D0%B0.JPG\/330px-%D0%9A%D0%92-1_%D1%83_%D0%B4%D0%B8%D0%BE%D1%80%D0%B0%D0%BC%D1%8B_%C2%AB%D0%9F%D1%80%D0%BE%D1%80%D1%8B%D0%B2_%D0%B1%D0%BB%D0%BE%D0%BA%D0%B0%D0%B4%D1%8B_%D0%9B%D0%B5%D0%BD%D0%B8%D0%BD%D0%B3%D1%80%D0%B0%D0%B4%D0%B0%C2%BB._%D0%92%D0%B8%D0%B4_%D1%81%D0%BF%D0%B5%D1%80%D0%B5%D0%B4%D0%B8-%D1%81%D0%BF%D1%80%D0%B0%D0%B2%D0%B0.JPG",
+            "country": "Soviet"
+        },
+        {
+            "title": "KV-85",
+            "page_key": "KV-85",
+            "description": "WWII Soviet heavy tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/8\/8c\/%D0%9A%D0%92-1_%D1%83_%D0%B4%D0%B8%D0%BE%D1%80%D0%B0%D0%BC%D1%8B_%C2%AB%D0%9F%D1%80%D0%BE%D1%80%D1%8B%D0%B2_%D0%B1%D0%BB%D0%BE%D0%BA%D0%B0%D0%B4%D1%8B_%D0%9B%D0%B5%D0%BD%D0%B8%D0%BD%D0%B3%D1%80%D0%B0%D0%B4%D0%B0%C2%BB._%D0%92%D0%B8%D0%B4_%D1%81%D0%BF%D0%B5%D1%80%D0%B5%D0%B4%D0%B8-%D1%81%D0%BF%D1%80%D0%B0%D0%B2%D0%B0.JPG\/330px-%D0%9A%D0%92-1_%D1%83_%D0%B4%D0%B8%D0%BE%D1%80%D0%B0%D0%BC%D1%8B_%C2%AB%D0%9F%D1%80%D0%BE%D1%80%D1%8B%D0%B2_%D0%B1%D0%BB%D0%BE%D0%BA%D0%B0%D0%B4%D1%8B_%D0%9B%D0%B5%D0%BD%D0%B8%D0%BD%D0%B3%D1%80%D0%B0%D0%B4%D0%B0%C2%BB._%D0%92%D0%B8%D0%B4_%D1%81%D0%BF%D0%B5%D1%80%D0%B5%D0%B4%D0%B8-%D1%81%D0%BF%D1%80%D0%B0%D0%B2%D0%B0.JPG",
+            "country": "Soviet"
+        },
+        {
+            "title": "L3\/33",
+            "page_key": "L3\/33",
+            "description": "Tankette used by the Italian Army before and during World War II",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/d\/da\/Carro_Veloce_CV33_front-left_2017_Bovington.jpg\/330px-Carro_Veloce_CV33_front-left_2017_Bovington.jpg",
+            "country": "Italian"
+        },
+        {
+            "title": "L3\/35",
+            "page_key": "L3\/35",
+            "description": "Italian tankette that saw combat before and during World War II",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/f\/f1\/Carro_Leggero_3_35-001.jpg\/330px-Carro_Leggero_3_35-001.jpg",
+            "country": "Italian"
+        },
+        {
+            "title": "L6\/40",
+            "page_key": "L6\/40",
+            "description": "Light tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/e\/e8\/Fiat_L6_40_05.jpg\/330px-Fiat_L6_40_05.jpg",
+            "country": "Italian"
+        },
+        {
+            "title": "Landsverk L-10",
+            "page_key": "Landsverk_L-10",
+            "description": "Swedish interwar medium tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/1\/1f\/Stridsvagn_m31_%28Landsverk_L-10%29%2C_P4_Skaraborg_%28cropped%29.jpg\/330px-Stridsvagn_m31_%28Landsverk_L-10%29%2C_P4_Skaraborg_%28cropped%29.jpg",
+            "country": "Swedish"
+        },
+        {
+            "title": "Landsverk L-5",
+            "page_key": "Landsverk_L-5",
+            "description": "Swedish experimental light tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/5\/51\/Stridsvagn_L-5.jpg\/330px-Stridsvagn_L-5.jpg",
+            "country": "Swedish"
+        },
+        {
+            "title": "Leclerc (tank)",
+            "page_key": "Leclerc_(tank)",
+            "description": "Main battle tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/f\/fc\/Leclerc-openphotonet_PICT6015.JPG\/330px-Leclerc-openphotonet_PICT6015.JPG",
+            "country": "French"
+        },
+        {
+            "title": "Leichttraktor",
+            "page_key": "Leichttraktor",
+            "description": "German experimental tank designed during the Interwar Period",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/5\/5b\/LeichttraktorProfile.jpg\/330px-LeichttraktorProfile.jpg",
+            "country": "German"
+        },
+        {
+            "title": "Leopard 1",
+            "page_key": "Leopard_1",
+            "description": "Main battle tank family of German origin",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/f\/f9\/Leopard_1A5.jpg\/330px-Leopard_1A5.jpg",
+            "country": "German"
+        },
+        {
+            "title": "Leopard 2",
+            "page_key": "Leopard_2",
+            "description": "German main battle tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/a\/a7\/Leopard_2_A7V_313_Bad_Frankenhausen_2024.JPG\/330px-Leopard_2_A7V_313_Bad_Frankenhausen_2024.JPG",
+            "country": "German"
+        },
+        {
+            "title": "Leopard 2E",
+            "page_key": "Leopard_2E",
+            "description": "Spanish main battle tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/8\/87\/Leopardo_2E._zaragoza_1.jpg\/330px-Leopardo_2E._zaragoza_1.jpg",
+            "country": "Spanish"
+        },
+        {
+            "title": "Little Willie",
+            "page_key": "Little_Willie",
+            "description": "British prototype armoured tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/4\/4a\/Little_Willie.jpg\/330px-Little_Willie.jpg",
+            "country": "British"
+        },
+        {
+            "title": "LK II",
+            "page_key": "LK_II",
+            "description": "German light tank prototype",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/0\/0b\/German_LKII_light_tank%2C_at_the_Deutsches_Panzermuseum.jpg\/330px-German_LKII_light_tank%2C_at_the_Deutsches_Panzermuseum.jpg",
+            "country": "Swedish"
+        },
+        {
+            "title": "LT vz. 34",
+            "page_key": "LT_vz._34",
+            "description": "Light tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/2\/28\/Tank_LT-34.gif\/330px-Tank_LT-34.gif",
+            "country": "Czech"
+        },
+        {
+            "title": "M1 Abrams",
+            "page_key": "M1_Abrams",
+            "description": "American third-generation main battle tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/0\/0b\/M1A2_SEP_v3.jpg\/330px-M1A2_SEP_v3.jpg",
+            "country": "American"
+        },
+        {
+            "title": "M10 tank destroyer",
+            "page_key": "M10_tank_destroyer",
+            "description": "WW2 American tank destroyer",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/5\/53\/Aberdean_proving_grounds_036.JPG\/330px-Aberdean_proving_grounds_036.JPG",
+            "country": "American"
+        },
+        {
+            "title": "M103 heavy tank",
+            "page_key": "M103_heavy_tank",
+            "description": "American heavy tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/3\/34\/M103_tankfest_2024.JPG\/330px-M103_tankfest_2024.JPG",
+            "country": "American"
+        },
+        {
+            "title": "M13\/40",
+            "page_key": "M13\/40",
+            "description": "Italian World War II medium tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/2\/2e\/Museum_at_El_Alamein_-_Flickr_-_heatheronhertravels_%289%29_%28cropped%29.jpg\/330px-Museum_at_El_Alamein_-_Flickr_-_heatheronhertravels_%289%29_%28cropped%29.jpg",
+            "country": "Italian"
+        },
+        {
+            "title": "M14\/41",
+            "page_key": "M14\/41",
+            "description": "Medium tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/9\/94\/M14_slash_41_Bovington_museum.jpg\/330px-M14_slash_41_Bovington_museum.jpg",
+            "country": "Italian"
+        },
+        {
+            "title": "M15\/42",
+            "page_key": "M15\/42",
+            "description": "Italian medium tank of World War II",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/e\/ed\/M15-42-Saumur.0004yfcp.jpg\/330px-M15-42-Saumur.0004yfcp.jpg",
+            "country": "Italian"
+        },
+        {
+            "title": "M18 Hellcat",
+            "page_key": "M18_Hellcat",
+            "description": "American tank destroyer",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/4\/43\/M18_hellcat_side.jpg\/330px-M18_hellcat_side.jpg",
+            "country": "American"
+        },
+        {
+            "title": "M2 light tank",
+            "page_key": "M2_light_tank",
+            "description": "1930s United States light tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/3\/32\/The_British_Army_in_the_United_Kingdom_1939-45_H17816.jpg\/330px-The_British_Army_in_the_United_Kingdom_1939-45_H17816.jpg",
+            "country": "American"
+        },
+        {
+            "title": "M2 medium tank",
+            "page_key": "M2_medium_tank",
+            "description": "American medium battle tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/b\/b5\/Aberdean_proving_grounds_014.JPG\/330px-Aberdean_proving_grounds_014.JPG",
+            "country": "American"
+        },
+        {
+            "title": "M22 Locust",
+            "page_key": "M22_Locust",
+            "description": "Airborne light tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/e\/e0\/M22_Locust_light_tank_at_Bovington.jpg\/330px-M22_Locust_light_tank_at_Bovington.jpg",
+            "country": "American"
+        },
+        {
+            "title": "M24 Chaffee",
+            "page_key": "M24_Chaffee",
+            "description": "American light tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/7\/7f\/M24_Chaffee_tankfest_2023.JPG\/330px-M24_Chaffee_tankfest_2023.JPG",
+            "country": "American"
+        },
+        {
+            "title": "M26 Pershing",
+            "page_key": "M26_Pershing",
+            "description": "American medium\/heavy battle tank (1944ÔÇô1951)",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/4\/4d\/Flickr_-_davehighbury_-_Bovington_Tank_Museum_246_M26.jpg\/330px-Flickr_-_davehighbury_-_Bovington_Tank_Museum_246_M26.jpg",
+            "country": "American"
+        },
+        {
+            "title": "M3 Lee",
+            "page_key": "M3_Lee",
+            "description": "American medium tank of World War II",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/a\/aa\/AlfredPalmerM3tank1942b_crop2.jpg\/330px-AlfredPalmerM3tank1942b_crop2.jpg",
+            "country": "American"
+        },
+        {
+            "title": "M3 Stuart",
+            "page_key": "M3_Stuart",
+            "description": "WW2 American light tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/5\/53\/Stuart_tankfest_2023.JPG\/330px-Stuart_tankfest_2023.JPG",
+            "country": "American"
+        },
+        {
+            "title": "M36 tank destroyer",
+            "page_key": "M36_tank_destroyer",
+            "description": "Self-propelled anti-tank gun",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/2\/26\/American_tank_destroyers.jpg\/330px-American_tank_destroyers.jpg",
+            "country": "American"
+        },
+        {
+            "title": "M4 Sherman",
+            "page_key": "M4_Sherman",
+            "description": "World War II era medium tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/5\/53\/M4_Sherman_tank_-_Flickr_-_Joost_J._Bakker_IJmuiden.jpg\/330px-M4_Sherman_tank_-_Flickr_-_Joost_J._Bakker_IJmuiden.jpg",
+            "country": "American"
+        },
+        {
+            "title": "M4 Sherman variants",
+            "page_key": "M4_Sherman_variants",
+            "description": "Tank variants of World War II",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/4\/41\/Kangaroo_e010786216-v8.jpg\/330px-Kangaroo_e010786216-v8.jpg",
+            "country": "American"
+        },
+        {
+            "title": "M41 Walker Bulldog",
+            "page_key": "M41_Walker_Bulldog",
+            "description": "Cold War-era American light tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/8\/8e\/M41_Bulldog_Fort_Meade.jpg\/330px-M41_Bulldog_Fort_Meade.jpg",
+            "country": "American"
+        },
+        {
+            "title": "M46 Patton",
+            "page_key": "M46_Patton",
+            "description": "US Cold War medium tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/4\/4b\/Marines-tank-Korea-19530705.JPEG\/330px-Marines-tank-Korea-19530705.JPEG",
+            "country": "American"
+        },
+        {
+            "title": "M47 Patton",
+            "page_key": "M47_Patton",
+            "description": "American main battle tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/1\/1e\/M47.jpg\/330px-M47.jpg",
+            "country": "American"
+        },
+        {
+            "title": "M48 Patton",
+            "page_key": "M48_Patton",
+            "description": "Cold War-era American medium tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/2\/2a\/Kampfpanzer_M_48_A2_C.JPG\/330px-Kampfpanzer_M_48_A2_C.JPG",
+            "country": "American"
+        },
+        {
+            "title": "M50 Ontos",
+            "page_key": "M50_Ontos",
+            "description": "American tank destroyer\/self propelled gun(s)",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/3\/34\/Ontos.jpg\/330px-Ontos.jpg",
+            "country": "American"
+        },
+        {
+            "title": "M551 Sheridan",
+            "page_key": "M551_Sheridan",
+            "description": "American light tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/0\/0a\/Yuma_Proving_Ground%2C_Arizona_%2842188342504%29.jpg\/330px-Yuma_Proving_Ground%2C_Arizona_%2842188342504%29.jpg",
+            "country": "American"
+        },
+        {
+            "title": "M56 Scorpion",
+            "page_key": "M56_Scorpion",
+            "description": "Self-propelled gun",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/3\/37\/M56_at_AAF_Tank_Museum.JPG\/330px-M56_at_AAF_Tank_Museum.JPG",
+            "country": "American"
+        },
+        {
+            "title": "M6 heavy tank",
+            "page_key": "M6_heavy_tank",
+            "description": "American prototype heavy tank of World War II",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/9\/96\/M6_heavy_tank_TM9-2800_p120.jpg\/330px-M6_heavy_tank_TM9-2800_p120.jpg",
+            "country": "American"
+        },
+        {
+            "title": "M60 tank",
+            "page_key": "M60_tank",
+            "description": "American second generation main battle tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/a\/a7\/M60_Patton_Tank_Fort_Lewis_Military_Museum.jpg\/330px-M60_Patton_Tank_Fort_Lewis_Military_Museum.jpg",
+            "country": "American"
+        },
+        {
+            "title": "M60T tank",
+            "page_key": "M60T_tank",
+            "description": "Main battle tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/c\/c1\/TankM60TM.jpg\/330px-TankM60TM.jpg",
+            "country": "Turkish"
+        },
+        {
+            "title": "M7 medium tank",
+            "page_key": "M7_medium_tank",
+            "description": "American prototype tank of World War Two",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/0\/05\/M7_Aberdeen.JPG\/330px-M7_Aberdeen.JPG",
+            "country": "American"
+        },
+        {
+            "title": "Magach",
+            "page_key": "Magach",
+            "description": "Series of Israeli Tanks",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/8\/8f\/M60A1-Patton-Blazer-latrun-2.jpg\/330px-M60A1-Patton-Blazer-latrun-2.jpg",
+            "country": "Israeli"
+        },
+        {
+            "title": "Mark I tank",
+            "page_key": "Mark_I_tank",
+            "description": "Type of combat tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/f\/f6\/British_Mark_I_male_tank_Somme_25_September_1916.jpg\/330px-British_Mark_I_male_tank_Somme_25_September_1916.jpg",
+            "country": "British"
+        },
+        {
+            "title": "Mark IV tank",
+            "page_key": "Mark_IV_tank",
+            "description": "British WWI Tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/a\/ab\/MarkIVTankWithUnditchingBeam1917.jpg\/330px-MarkIVTankWithUnditchingBeam1917.jpg",
+            "country": "British"
+        },
+        {
+            "title": "Mark V tank",
+            "page_key": "Mark_V_tank",
+            "description": "British WWI tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/0\/02\/British_Mark_V_%28male%29_tank.jpg\/330px-British_Mark_V_%28male%29_tank.jpg",
+            "country": "British"
+        },
+        {
+            "title": "Mark VIII tank",
+            "page_key": "Mark_VIII_tank",
+            "description": "British\/American WWI tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/c\/cd\/Mark_VIII_tank%2C_Q_71031.jpg\/330px-Mark_VIII_tank%2C_Q_71031.jpg",
+            "country": "British"
+        },
+        {
+            "title": "Matilda I (tank)",
+            "page_key": "Matilda_I_(tank)",
+            "description": "Infantry tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/c\/c9\/IWM-KID-68-Matilda.jpg\/330px-IWM-KID-68-Matilda.jpg",
+            "country": "British"
+        },
+        {
+            "title": "Matilda II",
+            "page_key": "Matilda_II",
+            "description": "British Army tank of World War II",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/f\/f9\/A12_Matilda_II_%E2%80%98T10459%E2%80%99_%E2%80%9CTHE_PRINCESS_ROYAL%E2%80%9D_%2849909226038%29.jpg\/330px-A12_Matilda_II_%E2%80%98T10459%E2%80%99_%E2%80%9CTHE_PRINCESS_ROYAL%E2%80%9D_%2849909226038%29.jpg",
+            "country": "British"
+        },
+        {
+            "title": "MBT-70",
+            "page_key": "MBT-70",
+            "description": "American-West German main battle tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/d\/d8\/Kampfpanzer_70_%28DPM%29.jpg\/330px-Kampfpanzer_70_%28DPM%29.jpg",
+            "country": "German"
+        },
+        {
+            "title": "Medium Mark A Whippet",
+            "page_key": "Medium_Mark_A_Whippet",
+            "description": "Medium tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/b\/bf\/Whippet.jpg\/330px-Whippet.jpg",
+            "country": "British"
+        },
+        {
+            "title": "Medium Mark C",
+            "page_key": "Medium_Mark_C",
+            "description": "Late WWI\/early interwar British medium tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/b\/b8\/Medium_Mark_C_Hornet_tank%2C_Q_70983.jpg\/330px-Medium_Mark_C_Hornet_tank%2C_Q_70983.jpg",
+            "country": "British"
+        },
+        {
+            "title": "Merkava",
+            "page_key": "Merkava",
+            "description": "Series of Israeli main battle tanks",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/4\/43\/Merkava-Mk4m-whiteback01.jpg\/330px-Merkava-Mk4m-whiteback01.jpg",
+            "country": "Israeli"
+        },
+        {
+            "title": "Merkava II",
+            "page_key": "Merkava_II",
+            "description": "Series of Israeli main battle tanks",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/4\/43\/Merkava-Mk4m-whiteback01.jpg\/330px-Merkava-Mk4m-whiteback01.jpg",
+            "country": "Israeli"
+        },
+        {
+            "title": "Merkava III",
+            "page_key": "Merkava_III",
+            "description": "Series of Israeli main battle tanks",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/4\/43\/Merkava-Mk4m-whiteback01.jpg\/330px-Merkava-Mk4m-whiteback01.jpg",
+            "country": "Israeli"
+        },
+        {
+            "title": "Merkava IV",
+            "page_key": "Merkava_IV",
+            "description": "Series of Israeli main battle tanks",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/4\/43\/Merkava-Mk4m-whiteback01.jpg\/330px-Merkava-Mk4m-whiteback01.jpg",
+            "country": "Israeli"
+        },
+        {
+            "title": "Neubaufahrzeug",
+            "page_key": "Neubaufahrzeug",
+            "description": "1934 German medium tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/3\/37\/Bundesarchiv_Bild_101I-761-221N-06%2C_Norwegen%2C_Panzer_%22Neubaufahrzeug%22.jpg\/330px-Bundesarchiv_Bild_101I-761-221N-06%2C_Norwegen%2C_Panzer_%22Neubaufahrzeug%22.jpg",
+            "country": "German"
+        },
+        {
+            "title": "Object 279",
+            "page_key": "Object_279",
+            "description": "Heavy tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/0\/0f\/Obj279.jpg\/330px-Obj279.jpg",
+            "country": "Soviet"
+        },
+        {
+            "title": "Object 292",
+            "page_key": "Object_292",
+            "description": "Main battle tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/5\/52\/%D0%9E%D0%B1%D1%8A%D0%B5%D0%BA%D1%82_292_%E2%80%93_Kubinka_Tank_Museum_%2837944777522%29.jpg\/330px-%D0%9E%D0%B1%D1%8A%D0%B5%D0%BA%D1%82_292_%E2%80%93_Kubinka_Tank_Museum_%2837944777522%29.jpg",
+            "country": "Soviet"
+        },
+        {
+            "title": "Object 416",
+            "page_key": "Object_416",
+            "description": "Self-propelled gun",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/a\/ad\/SU-100M_in_Kubinka.jpg\/330px-SU-100M_in_Kubinka.jpg",
+            "country": "Soviet"
+        },
+        {
+            "title": "Object 430",
+            "page_key": "Object_430",
+            "description": "Soviet main battle tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/5\/56\/T-64BV_mod_2017%2C_Kyiv_2021%2C_16.jpg\/330px-T-64BV_mod_2017%2C_Kyiv_2021%2C_16.jpg",
+            "country": "Soviet"
+        },
+        {
+            "title": "Object 775",
+            "page_key": "Object_775",
+            "description": "Soviet-made missile carrier",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/8\/86\/Object_775_%28on_the_basis_of_T-64%29.jpg\/330px-Object_775_%28on_the_basis_of_T-64%29.jpg",
+            "country": "Soviet"
+        },
+        {
+            "title": "OF-40",
+            "page_key": "OF-40",
+            "description": "Italian main battle tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/7\/77\/76-mm_Super_Rapid_Gun_System_on_OF-40_tank_chassis_%28moderately_clouded_sky_background%29.png\/330px-76-mm_Super_Rapid_Gun_System_on_OF-40_tank_chassis_%28moderately_clouded_sky_background%29.png",
+            "country": "Italian"
+        },
+        {
+            "title": "Panther II tank",
+            "page_key": "Panther_II_tank",
+            "description": "German tank design proposal",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/0\/0b\/Panther_II_US_Army_Armor_%26_Cavalry_Collection.jpg\/330px-Panther_II_US_Army_Armor_%26_Cavalry_Collection.jpg",
+            "country": "German"
+        },
+        {
+            "title": "Panther tank",
+            "page_key": "Panther_tank",
+            "description": "German medium tank of WWII",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/6\/61\/Bundesarchiv_Bild_183-H26258%2C_Panzer_V_%22Panther%22.jpg\/330px-Bundesarchiv_Bild_183-H26258%2C_Panzer_V_%22Panther%22.jpg",
+            "country": "German"
+        },
+        {
+            "title": "Panzer 35(t)",
+            "page_key": "Panzer_35(t)",
+            "description": "Czechoslovak light tank used by Nazi Germany",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/f\/f9\/Panzer-35.jpg\/330px-Panzer-35.jpg",
+            "country": "Czech"
+        },
+        {
+            "title": "Panzer 38(t)",
+            "page_key": "Panzer_38(t)",
+            "description": "Czechoslovak light tank used by Germany during WW2",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/e\/ec\/Panzer_38%28t%29_Ausf._S.jpg\/330px-Panzer_38%28t%29_Ausf._S.jpg",
+            "country": "Czech"
+        },
+        {
+            "title": "Panzer I",
+            "page_key": "Panzer_I",
+            "description": "German light tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/7\/7b\/SdKfz101.jpg\/330px-SdKfz101.jpg",
+            "country": "German"
+        },
+        {
+            "title": "Panzer II",
+            "page_key": "Panzer_II",
+            "description": "German light tank of the 1930s and World War II",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/3\/3d\/Panzer_II_Saumur.JPG\/330px-Panzer_II_Saumur.JPG",
+            "country": "German"
+        },
+        {
+            "title": "Panzer III",
+            "page_key": "Panzer_III",
+            "description": "German medium tank of the 1930s and World War II",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/c\/ce\/PzKpfwIIIF.Saumur.000a1y8q.jpg\/330px-PzKpfwIIIF.Saumur.000a1y8q.jpg",
+            "country": "German"
+        },
+        {
+            "title": "Panzer IV",
+            "page_key": "Panzer_IV",
+            "description": "German WWII medium tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/e\/e1\/Panzermuseum_Munster_2010_0128_b.jpg\/330px-Panzermuseum_Munster_2010_0128_b.jpg",
+            "country": "German"
+        },
+        {
+            "title": "Panzer VIII Maus",
+            "page_key": "Panzer_VIII_Maus",
+            "description": "WWII German super-heavy tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/c\/c2\/Maus_2025_b.jpg\/330px-Maus_2025_b.jpg",
+            "country": "German"
+        },
+        {
+            "title": "Pokpung-ho",
+            "page_key": "Pokpung-ho",
+            "description": "Main battle tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/c\/c9\/North_Korea_Victory_Day_122_%289465927866%29_%28cropped%29.jpg\/330px-North_Korea_Victory_Day_122_%289465927866%29_%28cropped%29.jpg",
+            "country": "North Korean"
+        },
+        {
+            "title": "PT-76",
+            "page_key": "PT-76",
+            "description": "Amphibious light tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/2\/28\/Verkhnyaya_Pyshma_Tank_Museum_2012_0181.jpg\/330px-Verkhnyaya_Pyshma_Tank_Museum_2012_0181.jpg",
+            "country": "Soviet"
+        },
+        {
+            "title": "PT-91 Twardy",
+            "page_key": "PT-91_Twardy",
+            "description": "Polish main battle tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/5\/51\/PT91_MSPO15_DSC02773.JPG\/330px-PT91_MSPO15_DSC02773.JPG",
+            "country": "Polish"
+        },
+        {
+            "title": "R-1 tank",
+            "page_key": "R-1_tank",
+            "description": "Romanian World War II light tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/5\/5a\/R-1_Romanian_tank_4.jpg\/330px-R-1_Romanian_tank_4.jpg",
+            "country": "Romanian"
+        },
+        {
+            "title": "Ram tank",
+            "page_key": "Ram_tank",
+            "description": "Canadian medium tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/0\/0b\/Ram_cfb_borden_2.JPG\/330px-Ram_cfb_borden_2.JPG",
+            "country": "Canadian"
+        },
+        {
+            "title": "Renault FT",
+            "page_key": "Renault_FT",
+            "description": "French light tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/5\/53\/FT_17.jpg\/330px-FT_17.jpg",
+            "country": "French"
+        },
+        {
+            "title": "Renault R35",
+            "page_key": "Renault_R35",
+            "description": "French light infantry tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/b\/bb\/Renault-R-35-latrun-2.jpg\/330px-Renault-R-35-latrun-2.jpg",
+            "country": "French"
+        },
+        {
+            "title": "Renault R40",
+            "page_key": "Renault_R40",
+            "description": "French light infantry tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/c\/c1\/D50-12_Nr_736_%28f%29_%281941-01-02%29_Panzerkampfwagen_ZM_736_%28f%29_-_Char_ZM_%28Bild%29.png\/330px-D50-12_Nr_736_%28f%29_%281941-01-02%29_Panzerkampfwagen_ZM_736_%28f%29_-_Char_ZM_%28Bild%29.png",
+            "country": "French"
+        },
+        {
+            "title": "Sabra (tank)",
+            "page_key": "Sabra_(tank)",
+            "description": "Main battle tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/1\/11\/Sabra_tank.jpg\/330px-Sabra_tank.jpg",
+            "country": "Israeli"
+        },
+        {
+            "title": "Saint-Chamond (tank)",
+            "page_key": "Saint-Chamond_(tank)",
+            "description": "Heavy French tank of World War 1",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/c\/cd\/St._Chamond.jpg\/330px-St._Chamond.jpg",
+            "country": "French"
+        },
+        {
+            "title": "Schneider CA1",
+            "page_key": "Schneider_CA1",
+            "description": "French tank developed during WWI",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/5\/55\/Schneider_CA1_%28M16%29_tank.jpg\/330px-Schneider_CA1_%28M16%29_tank.jpg",
+            "country": "French"
+        },
+        {
+            "title": "Semovente 105\/25",
+            "page_key": "Semovente_105\/25",
+            "description": "Self-propelled gun",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/3\/32\/Semovente_105_25.jpg\/330px-Semovente_105_25.jpg",
+            "country": "Italian"
+        },
+        {
+            "title": "Semovente 75\/18",
+            "page_key": "Semovente_75\/18",
+            "description": "Italian self-propelled gun of World War Two",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/0\/05\/Semovente_M42.Saumur.0008fefh.jpg\/330px-Semovente_M42.Saumur.0008fefh.jpg",
+            "country": "Italian"
+        },
+        {
+            "title": "Semovente 75\/34",
+            "page_key": "Semovente_75\/34",
+            "description": "Italian self-propelled gun",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/2\/2d\/Semovente_75_34.jpg\/330px-Semovente_75_34.jpg",
+            "country": "Italian"
+        },
+        {
+            "title": "Sentinel tank",
+            "page_key": "Sentinel_tank",
+            "description": "Australian cruiser tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/1\/1f\/Sentinel_%28AWM_101156%29.jpg\/330px-Sentinel_%28AWM_101156%29.jpg",
+            "country": "Australian"
+        },
+        {
+            "title": "Skink anti-aircraft tank",
+            "page_key": "Skink_anti-aircraft_tank",
+            "description": "Canadian self-propelled anti-aircraft gun",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/7\/76\/Skink_SPAAG.png\/330px-Skink_SPAAG.png",
+            "country": "Canadian"
+        },
+        {
+            "title": "┼ákoda MU-4",
+            "page_key": "┼ákoda_MU-4",
+            "description": "Tankette",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/b\/b3\/MU-4_Tank.jpg\/330px-MU-4_Tank.jpg",
+            "country": "Czech"
+        },
+        {
+            "title": "┼ákoda ┼á-I-j",
+            "page_key": "┼ákoda_┼á-I-j",
+            "description": "Tankette",
+            "thumbnail_url": null,
+            "country": "Czech"
+        },
+        {
+            "title": "SMK tank",
+            "page_key": "SMK_tank",
+            "description": "Soviet heavy tank prototype of the 1930s",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/6\/6e\/SMK%2C_August_1939.jpg\/330px-SMK%2C_August_1939.jpg",
+            "country": "Soviet"
+        },
+        {
+            "title": "SOMUA S35",
+            "page_key": "SOMUA_S35",
+            "description": "French cavalry tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/0\/01\/Char_1935_S_Somua_1.jpg\/330px-Char_1935_S_Somua_1.jpg",
+            "country": "French"
+        },
+        {
+            "title": "Stridsvagn 101",
+            "page_key": "Stridsvagn_101",
+            "description": "British main battle tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/a\/a1\/Centurion_cfb_borden_1.JPG\/330px-Centurion_cfb_borden_1.JPG",
+            "country": "Swedish"
+        },
+        {
+            "title": "Stridsvagn 102",
+            "page_key": "Stridsvagn_102",
+            "description": "British main battle tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/a\/a1\/Centurion_cfb_borden_1.JPG\/330px-Centurion_cfb_borden_1.JPG",
+            "country": "Swedish"
+        },
+        {
+            "title": "Stridsvagn 103",
+            "page_key": "Stridsvagn_103",
+            "description": "Turretless main battle tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/9\/91\/STRV-103_demonstrating_at_P7_Revingehed%2C_24th_April_2022.jpg\/330px-STRV-103_demonstrating_at_P7_Revingehed%2C_24th_April_2022.jpg",
+            "country": "Swedish"
+        },
+        {
+            "title": "Stridsvagn 104",
+            "page_key": "Stridsvagn_104",
+            "description": "British main battle tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/a\/a1\/Centurion_cfb_borden_1.JPG\/330px-Centurion_cfb_borden_1.JPG",
+            "country": "Swedish"
+        },
+        {
+            "title": "Stridsvagn 121",
+            "page_key": "Stridsvagn_121",
+            "description": "German main battle tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/a\/a7\/Leopard_2_A7V_313_Bad_Frankenhausen_2024.JPG\/330px-Leopard_2_A7V_313_Bad_Frankenhausen_2024.JPG",
+            "country": "Swedish"
+        },
+        {
+            "title": "Stridsvagn 122",
+            "page_key": "Stridsvagn_122",
+            "description": "Swedish main battle tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/f\/f8\/Strv122_3_cropped.jpg\/330px-Strv122_3_cropped.jpg",
+            "country": "Swedish"
+        },
+        {
+            "title": "Stridsvagn 74",
+            "page_key": "Stridsvagn_74",
+            "description": "Swedish light tank used from 1958 to 1984",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/b\/b8\/Stridsvagn_74.jpg\/330px-Stridsvagn_74.jpg",
+            "country": "Swedish"
+        },
+        {
+            "title": "Stridsvagn 81",
+            "page_key": "Stridsvagn_81",
+            "description": "British main battle tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/a\/a1\/Centurion_cfb_borden_1.JPG\/330px-Centurion_cfb_borden_1.JPG",
+            "country": "Swedish"
+        },
+        {
+            "title": "Stridsvagn L-60",
+            "page_key": "Stridsvagn_L-60",
+            "description": "Light tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/2\/2b\/Stridsvagn_m40K_H%C3%A4ssleholm_31.07.09.JPG\/330px-Stridsvagn_m40K_H%C3%A4ssleholm_31.07.09.JPG",
+            "country": "Swedish"
+        },
+        {
+            "title": "Stridsvagn m\/37",
+            "page_key": "Stridsvagn_m\/37",
+            "description": "Swedish tankette",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/c\/c7\/Le%C5%A1any_-_vojensk%C3%A9_muzeum%2C_Tankov%C3%BD_den_2024%2C_uk%C3%A1zky%2C_Strv_m37%2C_obr01_%28cropped%29.jpg\/330px-Le%C5%A1any_-_vojensk%C3%A9_muzeum%2C_Tankov%C3%BD_den_2024%2C_uk%C3%A1zky%2C_Strv_m37%2C_obr01_%28cropped%29.jpg",
+            "country": "Swedish"
+        },
+        {
+            "title": "Stridsvagn m\/42",
+            "page_key": "Stridsvagn_m\/42",
+            "description": "Swedish medium tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/4\/48\/Stridsvagn_m42_Revinge_2012-2.jpg\/330px-Stridsvagn_m42_Revinge_2012-2.jpg",
+            "country": "Swedish"
+        },
+        {
+            "title": "Strv fm\/28",
+            "page_key": "Strv_fm\/28",
+            "description": "Light tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/0\/0f\/Stridsvagn_fm28_-_Renault_NC_27_Str%C3%A4ngn%C3%A4s_12.08.11_%286%29.JPG\/330px-Stridsvagn_fm28_-_Renault_NC_27_Str%C3%A4ngn%C3%A4s_12.08.11_%286%29.JPG",
+            "country": "Swedish"
+        },
+        {
+            "title": "Sturmgesch├╝tz III",
+            "page_key": "Sturmgesch├╝tz_III",
+            "description": "WW2 German assault gun",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/1\/18\/SNC15697_%285853637442%29_b.jpg\/330px-SNC15697_%285853637442%29_b.jpg",
+            "country": "German"
+        },
+        {
+            "title": "Sturmgesch├╝tz IV",
+            "page_key": "Sturmgesch├╝tz_IV",
+            "description": "German WW2 assault gun",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/2\/23\/Sturmgeschutz_iv_Muzeum_Broni_Pancernej_CSWL_2.JPG\/330px-Sturmgeschutz_iv_Muzeum_Broni_Pancernej_CSWL_2.JPG",
+            "country": "German"
+        },
+        {
+            "title": "Sturmpanzer IV",
+            "page_key": "Sturmpanzer_IV",
+            "description": "German heavy assault gun",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/0\/07\/Sturmpanzer.Saumur.0008gkp7.jpg\/330px-Sturmpanzer.Saumur.0008gkp7.jpg",
+            "country": "German"
+        },
+        {
+            "title": "Sturmtiger",
+            "page_key": "Sturmtiger",
+            "description": "Heavy assault gun",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/a\/a2\/Sturmtiger_%E2%80%9919_red%E2%80%99_%28s-n_205543%29_%E2%80%93_Patriot_Museum%2C_Kubinka_%2838240137396%29.jpg\/330px-Sturmtiger_%E2%80%9919_red%E2%80%99_%28s-n_205543%29_%E2%80%93_Patriot_Museum%2C_Kubinka_%2838240137396%29.jpg",
+            "country": "German"
+        },
+        {
+            "title": "SU-100",
+            "page_key": "SU-100",
+            "description": "Self-propelled anti-tank gun",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/5\/5a\/Su-100_-_TankBiathlon2013-07.jpg\/330px-Su-100_-_TankBiathlon2013-07.jpg",
+            "country": "Soviet"
+        },
+        {
+            "title": "SU-122",
+            "page_key": "SU-122",
+            "description": "Self-propelled howitzer",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/c\/c0\/SU-122_TBiU_8.jpg\/330px-SU-122_TBiU_8.jpg",
+            "country": "Soviet"
+        },
+        {
+            "title": "SU-152",
+            "page_key": "SU-152",
+            "description": "Assault gun",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/f\/fb\/11-Heavy_self_propelled_gun_su_152-LMW.jpg\/330px-11-Heavy_self_propelled_gun_su_152-LMW.jpg",
+            "country": "Soviet"
+        },
+        {
+            "title": "SU-76",
+            "page_key": "SU-76",
+            "description": "Light self-propelled gun",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/3\/3e\/Su76_nn.jpg\/330px-Su76_nn.jpg",
+            "country": "Soviet"
+        },
+        {
+            "title": "SU-85",
+            "page_key": "SU-85",
+            "description": "Self-propelled anti-tank gun",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/5\/5d\/SU-85_tank_destroyer_at_the_Muzeum_Polskiej_Techniki_Wojskowej_in_Warsaw.jpg\/330px-SU-85_tank_destroyer_at_the_Muzeum_Polskiej_Techniki_Wojskowej_in_Warsaw.jpg",
+            "country": "Soviet"
+        },
+        {
+            "title": "T-10 tank",
+            "page_key": "T-10_tank",
+            "description": "Soviet heavy tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/c\/c4\/T-10_tank.jpg\/330px-T-10_tank.jpg",
+            "country": "Soviet"
+        },
+        {
+            "title": "T-100 tank",
+            "page_key": "T-100_tank",
+            "description": "1930s Soviet heavy tank prototype",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/3\/38\/T-100.jpg\/330px-T-100.jpg",
+            "country": "Soviet"
+        },
+        {
+            "title": "T-14 Armata",
+            "page_key": "T-14_Armata",
+            "description": "Russian main battle tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/9\/9e\/VDayRehearsal05052016-28.jpg\/330px-VDayRehearsal05052016-28.jpg",
+            "country": "Soviet"
+        },
+        {
+            "title": "T-17 tank",
+            "page_key": "T-17_tank",
+            "description": "Soviet tankette",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/3\/38\/%D0%A2%D0%B0%D0%BD%D0%BA%D0%B5%D1%82%D0%BA%D0%B0_%D0%A2-17.JPG\/330px-%D0%A2%D0%B0%D0%BD%D0%BA%D0%B5%D1%82%D0%BA%D0%B0_%D0%A2-17.JPG",
+            "country": "Soviet"
+        },
+        {
+            "title": "T-18 tank",
+            "page_key": "T-18_tank",
+            "description": "Soviet light tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/f\/fb\/MS-1.jpg\/330px-MS-1.jpg",
+            "country": "Soviet"
+        },
+        {
+            "title": "T-24 tank",
+            "page_key": "T-24_tank",
+            "description": "Soviet medium tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/3\/32\/T-24_tank.jpg\/330px-T-24_tank.jpg",
+            "country": "Soviet"
+        },
+        {
+            "title": "T-26",
+            "page_key": "T-26",
+            "description": "Soviet light infantry tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/6\/66\/T-26_in_Kirovsk.JPG\/330px-T-26_in_Kirovsk.JPG",
+            "country": "Soviet"
+        },
+        {
+            "title": "T-27",
+            "page_key": "T-27",
+            "description": "Tankette",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/9\/99\/T-27_tank.jpg\/330px-T-27_tank.jpg",
+            "country": "Soviet"
+        },
+        {
+            "title": "T-34",
+            "page_key": "T-34",
+            "description": "Soviet medium tank, Second World War",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/d\/dd\/Tank_T-34.JPG\/330px-Tank_T-34.JPG",
+            "country": "Soviet"
+        },
+        {
+            "title": "T-34 variants",
+            "page_key": "T-34_variants",
+            "description": "Variants of Soviet medium tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/7\/7d\/T-34_prototypes.jpg\/330px-T-34_prototypes.jpg",
+            "country": "Soviet"
+        },
+        {
+            "title": "T-35",
+            "page_key": "T-35",
+            "description": "Soviet heavy tank of the 1930s",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/7\/7e\/P68l.jpg\/330px-P68l.jpg",
+            "country": "Soviet"
+        },
+        {
+            "title": "T-37A tank",
+            "page_key": "T-37A_tank",
+            "description": "Soviet amphibious light tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/6\/61\/T-37A_%E2%80%982%E2%80%99_-_Patriot_Museum%2C_Kubinka_%2826645904419%29.jpg\/330px-T-37A_%E2%80%982%E2%80%99_-_Patriot_Museum%2C_Kubinka_%2826645904419%29.jpg",
+            "country": "Soviet"
+        },
+        {
+            "title": "T-38 tank",
+            "page_key": "T-38_tank",
+            "description": "Soviet amphibious light tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/8\/8d\/T-38_tank.JPG\/330px-T-38_tank.JPG",
+            "country": "Soviet"
+        },
+        {
+            "title": "T-40 tank",
+            "page_key": "T-40_tank",
+            "description": "Soviet amphibious light tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/c\/cd\/T40kub1.jpg\/330px-T40kub1.jpg",
+            "country": "Soviet"
+        },
+        {
+            "title": "T-44",
+            "page_key": "T-44",
+            "description": "Soviet medium tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/c\/c8\/T_44_in_Linija_Stalina_%28Belarus%29.jpg\/330px-T_44_in_Linija_Stalina_%28Belarus%29.jpg",
+            "country": "Soviet"
+        },
+        {
+            "title": "T-50 tank",
+            "page_key": "T-50_tank",
+            "description": "Soviet light tank of World War II",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/6\/6c\/T-50_in_the_Kubinka_Museum.jpg\/330px-T-50_in_the_Kubinka_Museum.jpg",
+            "country": "Soviet"
+        },
+        {
+            "title": "T-54\/T-55",
+            "page_key": "T-54\/T-55",
+            "description": "Main battle tank\/medium tank family of Soviet origin, 1946",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/6\/60\/T-55_4.jpg\/330px-T-55_4.jpg",
+            "country": "Soviet"
+        },
+        {
+            "title": "T-60 tank",
+            "page_key": "T-60_tank",
+            "description": "Soviet light tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/8\/82\/T-60_%E2%80%98A_-_2317%E2%80%99_-_Patriot_Museum%2C_Kubinka_%2824524755458%29.jpg\/330px-T-60_%E2%80%98A_-_2317%E2%80%99_-_Patriot_Museum%2C_Kubinka_%2824524755458%29.jpg",
+            "country": "Soviet"
+        },
+        {
+            "title": "T-62",
+            "page_key": "T-62",
+            "description": "1961 Soviet medium tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/d\/db\/ParkPatriot2015part10-12.jpg\/330px-ParkPatriot2015part10-12.jpg",
+            "country": "Soviet"
+        },
+        {
+            "title": "T-64",
+            "page_key": "T-64",
+            "description": "Soviet main battle tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/5\/56\/T-64BV_mod_2017%2C_Kyiv_2021%2C_16.jpg\/330px-T-64BV_mod_2017%2C_Kyiv_2021%2C_16.jpg",
+            "country": "Soviet"
+        },
+        {
+            "title": "T-70 tank",
+            "page_key": "T-70_tank",
+            "description": "1942 Soviet light tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/3\/32\/T-70%2C_technical_museum%2C_Togliatti-1.jpg\/330px-T-70%2C_technical_museum%2C_Togliatti-1.jpg",
+            "country": "Soviet"
+        },
+        {
+            "title": "T-72",
+            "page_key": "T-72",
+            "description": "Soviet\/Russian main battle tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/5\/56\/Alabino05042017-40.jpg\/330px-Alabino05042017-40.jpg",
+            "country": "Soviet"
+        },
+        {
+            "title": "T-80",
+            "page_key": "T-80",
+            "description": "Main battle tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/f\/ff\/T-80BVM.jpg\/330px-T-80BVM.jpg",
+            "country": "Soviet"
+        },
+        {
+            "title": "T-90",
+            "page_key": "T-90",
+            "description": "Russian third-generation main battle tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/d\/d9\/T-90M.jpg\/330px-T-90M.jpg",
+            "country": "Soviet"
+        },
+        {
+            "title": "T14 heavy tank",
+            "page_key": "T14_heavy_tank",
+            "description": "American prototype heavy tank of World War II",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/2\/2e\/Assault-tank-T-14.jpg\/330px-Assault-tank-T-14.jpg",
+            "country": "American"
+        },
+        {
+            "title": "T20 medium tank",
+            "page_key": "T20_medium_tank",
+            "description": "Series of armored fighting vehicles designed by the United States",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/b\/b8\/T20_tank_pilot_at_Fisher_plant.png\/330px-T20_tank_pilot_at_Fisher_plant.png",
+            "country": "American"
+        },
+        {
+            "title": "T28 super-heavy tank",
+            "page_key": "T28_super-heavy_tank",
+            "description": "Super-heavy tank, assault gun",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/a\/af\/T28_Super_Heavy_Tank.jpg\/330px-T28_Super_Heavy_Tank.jpg",
+            "country": "American"
+        },
+        {
+            "title": "T29 heavy tank",
+            "page_key": "T29_heavy_tank",
+            "description": "American heavy tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/8\/88\/T29E1_in_U.S._Army_Armor_%26_Cavalry_Collection.jpg\/330px-T29E1_in_U.S._Army_Armor_%26_Cavalry_Collection.jpg",
+            "country": "American"
+        },
+        {
+            "title": "T30 heavy tank",
+            "page_key": "T30_heavy_tank",
+            "description": "American heavy tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/d\/df\/Heavy_tank_T30_in_U.S._Army_Armor_%26_Cavalry_Collection_2022.jpg\/330px-Heavy_tank_T30_in_U.S._Army_Armor_%26_Cavalry_Collection_2022.jpg",
+            "country": "American"
+        },
+        {
+            "title": "T34 heavy tank",
+            "page_key": "T34_heavy_tank",
+            "description": "Heavy tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/e\/e1\/T34_heavy_Tank_in_U.S._Army_Armor_%26_Cavalry_Collection_2021.jpg\/330px-T34_heavy_Tank_in_U.S._Army_Armor_%26_Cavalry_Collection_2021.jpg",
+            "country": "American"
+        },
+        {
+            "title": "T92 light tank",
+            "page_key": "T92_light_tank",
+            "description": "US light tank prototype of the 1950s",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/5\/5f\/T92.jpg\/330px-T92.jpg",
+            "country": "American"
+        },
+        {
+            "title": "T95 medium tank",
+            "page_key": "T95_medium_tank",
+            "description": "American prototype medium tank developed from 1955 to 1959",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/4\/48\/T-95_tank.jpg\/330px-T-95_tank.jpg",
+            "country": "American"
+        },
+        {
+            "title": "Tan─ì├¡k vz. 33",
+            "page_key": "Tan─ì├¡k_vz._33",
+            "description": "Tankette",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/5\/57\/Tan%C4%8D%C3%ADk_T%C4%8D_vz._33_v_Milovic%C3%ADch.jpg\/330px-Tan%C4%8D%C3%ADk_T%C4%8D_vz._33_v_Milovic%C3%ADch.jpg",
+            "country": "Czech"
+        },
+        {
+            "title": "Tank Mark VIII",
+            "page_key": "Tank_Mark_VIII",
+            "description": "British\/American WWI tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/c\/cd\/Mark_VIII_tank%2C_Q_71031.jpg\/330px-Mark_VIII_tank%2C_Q_71031.jpg",
+            "country": "British"
+        },
+        {
+            "title": "Tetrarch (tank)",
+            "page_key": "Tetrarch_(tank)",
+            "description": "British light tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/e\/ed\/Tetrarch_-_Light_Tank_Mark_VII.jpg\/330px-Tetrarch_-_Light_Tank_Mark_VII.jpg",
+            "country": "British"
+        },
+        {
+            "title": "Tiger I",
+            "page_key": "Tiger_I",
+            "description": "German WWII heavy tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/b\/ba\/Bundesarchiv_Bild_101I-299-1805-16%2C_Nordfrankreich%2C_Panzer_VI_%28Tiger_I%29.2.jpg\/330px-Bundesarchiv_Bild_101I-299-1805-16%2C_Nordfrankreich%2C_Panzer_VI_%28Tiger_I%29.2.jpg",
+            "country": "German"
+        },
+        {
+            "title": "Tiger II",
+            "page_key": "Tiger_II",
+            "description": "German WWII heavy tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/e\/ef\/Bundesarchiv_Bild_101I-721-0398-21A%2C_Frankreich%2C_Panzer_VI_%28Tiger_II%2C_K%C3%B6nigstiger%29.jpg\/330px-Bundesarchiv_Bild_101I-721-0398-21A%2C_Frankreich%2C_Panzer_VI_%28Tiger_II%2C_K%C3%B6nigstiger%29.jpg",
+            "country": "German"
+        },
+        {
+            "title": "TKS",
+            "page_key": "TKS",
+            "description": "Polish tankette",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/3\/38\/TKS_P1010141_2.jpg\/330px-TKS_P1010141_2.jpg",
+            "country": "Polish"
+        },
+        {
+            "title": "TOG 2",
+            "page_key": "TOG_2",
+            "description": "British WWII super-heavy tank prototype",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/5\/56\/TOG_2_front-left_2017_Bovington.jpg\/330px-TOG_2_front-left_2017_Bovington.jpg",
+            "country": "British"
+        },
+        {
+            "title": "Tortoise heavy assault tank",
+            "page_key": "Tortoise_heavy_assault_tank",
+            "description": "British assault gun design\/prototype",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/b\/b4\/IWM-MH-9865-Tortoise.jpg\/330px-IWM-MH-9865-Tortoise.jpg",
+            "country": "British"
+        },
+        {
+            "title": "TR-125",
+            "page_key": "TR-125",
+            "description": "Main battle tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/en\/d\/d8\/TR-125_tank_during_a_military_parade.jpg",
+            "country": "Romanian"
+        },
+        {
+            "title": "TR-77",
+            "page_key": "TR-77",
+            "description": "Main battle tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/8\/85\/Romanian_tanks_attack_during_Combined_Resolve_II_%2814095508658%29.jpg\/330px-Romanian_tanks_attack_during_Combined_Resolve_II_%2814095508658%29.jpg",
+            "country": "Romanian"
+        },
+        {
+            "title": "TR-85",
+            "page_key": "TR-85",
+            "description": "Main battle tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/8\/85\/Romanian_tanks_attack_during_Combined_Resolve_II_%2814095508658%29.jpg\/330px-Romanian_tanks_attack_during_Combined_Resolve_II_%2814095508658%29.jpg",
+            "country": "Romanian"
+        },
+        {
+            "title": "Type 1 Chi-He",
+            "page_key": "Type_1_Chi-He",
+            "description": "Medium tank of the Imperial Japanese Army in World War II",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/b\/bd\/Isshikityusensya.jpg\/330px-Isshikityusensya.jpg",
+            "country": "Japanese"
+        },
+        {
+            "title": "Type 10",
+            "page_key": "Type_10",
+            "description": "Japanese main battle tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/7\/76\/Type10MBT.jpg\/330px-Type10MBT.jpg",
+            "country": "Japanese"
+        },
+        {
+            "title": "Type 15 tank",
+            "page_key": "Type_15_tank",
+            "description": "Chinese light tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/7\/75\/Type_15_tank_20221020.jpg\/330px-Type_15_tank_20221020.jpg",
+            "country": "Chinese"
+        },
+        {
+            "title": "Type 16 maneuver combat vehicle",
+            "page_key": "Type_16_maneuver_combat_vehicle",
+            "description": "Japanese wheeled armoured fighting vehicle",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/3\/31\/JGSDF_Type_16_Maneuver_Combat_Vehicle_%2826-7978%29_left_front_view_at_JASDF_Hamamatsu_Air_Base_October_23%2C_2022_01.jpg\/330px-JGSDF_Type_16_Maneuver_Combat_Vehicle_%2826-7978%29_left_front_view_at_JASDF_Hamamatsu_Air_Base_October_23%2C_2022_01.jpg",
+            "country": "Japanese"
+        },
+        {
+            "title": "Type 2 Ka-Mi",
+            "page_key": "Type_2_Ka-Mi",
+            "description": "Amphibious light tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/a\/a0\/Type_2_Ka-Mi_amphibious_tank.jpg\/330px-Type_2_Ka-Mi_amphibious_tank.jpg",
+            "country": "Japanese"
+        },
+        {
+            "title": "Type 2 Ke-To",
+            "page_key": "Type_2_Ke-To",
+            "description": "Light tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/9\/93\/%E4%BA%8C%E5%BC%8F%E8%BB%BD%E6%88%A6%E8%BB%8A.jpg\/330px-%E4%BA%8C%E5%BC%8F%E8%BB%BD%E6%88%A6%E8%BB%8A.jpg",
+            "country": "Japanese"
+        },
+        {
+            "title": "Type 3 Chi-Nu",
+            "page_key": "Type_3_Chi-Nu",
+            "description": "Medium tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/b\/b9\/Japanese_Type_3_Chi-Nu_tank_1.jpg\/330px-Japanese_Type_3_Chi-Nu_tank_1.jpg",
+            "country": "Japanese"
+        },
+        {
+            "title": "Type 4 Chi-To",
+            "page_key": "Type_4_Chi-To",
+            "description": "Japanese medium tank prototype",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/7\/7d\/Chi-To.JPG\/330px-Chi-To.JPG",
+            "country": "Japanese"
+        },
+        {
+            "title": "Type 59 tank",
+            "page_key": "Type_59_tank",
+            "description": "Chinese main battle tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/6\/6f\/Type_59_tank_in_Military_Museum_of_the_Chinese_People%27s_Revolution_20180219.jpg\/330px-Type_59_tank_in_Military_Museum_of_the_Chinese_People%27s_Revolution_20180219.jpg",
+            "country": "Chinese"
+        },
+        {
+            "title": "Type 63 (tank)",
+            "page_key": "Type_63_(tank)",
+            "description": "Chinese amphibious light tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/d\/db\/Type_63_tank_-_above.jpg\/330px-Type_63_tank_-_above.jpg",
+            "country": "Chinese"
+        },
+        {
+            "title": "Type 69 tank",
+            "page_key": "Type_69_tank",
+            "description": "Main battle tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/9\/92\/Type_69-II_Iraq.jpg\/330px-Type_69-II_Iraq.jpg",
+            "country": "Chinese"
+        },
+        {
+            "title": "Type 72Z",
+            "page_key": "Type_72Z",
+            "description": "Main battle tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/0\/0b\/SafirTank.jpg\/330px-SafirTank.jpg",
+            "country": "Iranian"
+        },
+        {
+            "title": "Type 80\/88 main battle tank",
+            "page_key": "Type_80\/88_main_battle_tank",
+            "description": "Main battle tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/d\/dd\/Chinese_Type_80-%D0%86%D0%86_Tank.jpg\/330px-Chinese_Type_80-%D0%86%D0%86_Tank.jpg",
+            "country": "Chinese"
+        },
+        {
+            "title": "Type 89 I-Go",
+            "page_key": "Type_89_I-Go",
+            "description": "Medium tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/1\/1a\/Type_89_Yi-Go_at_Tsuchira.jpg\/330px-Type_89_Yi-Go_at_Tsuchira.jpg",
+            "country": "Japanese"
+        },
+        {
+            "title": "Type 90 tank",
+            "page_key": "Type_90_tank",
+            "description": "Japanese main battle tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/f\/f1\/Firing_Type_90_tank.jpg\/330px-Firing_Type_90_tank.jpg",
+            "country": "Japanese"
+        },
+        {
+            "title": "Type 94 tankette",
+            "page_key": "Type_94_tankette",
+            "description": "Japanese tankette",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/6\/66\/IJA_TK_Tankette_Display_at_Armor_School_History_Museum_20130302b.JPG\/330px-IJA_TK_Tankette_Display_at_Armor_School_History_Museum_20130302b.JPG",
+            "country": "Japanese"
+        },
+        {
+            "title": "Type 95 Ha-Go",
+            "page_key": "Type_95_Ha-Go",
+            "description": "Light tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/8\/83\/Ha-Go_Moscow_%28cropped%29.jpg\/330px-Ha-Go_Moscow_%28cropped%29.jpg",
+            "country": "Japanese"
+        },
+        {
+            "title": "Type 96 tank",
+            "page_key": "Type_96_tank",
+            "description": "Chinese main battle tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/b\/b7\/TankBiathlon2017Individual-02.jpg\/330px-TankBiathlon2017Individual-02.jpg",
+            "country": "Chinese"
+        },
+        {
+            "title": "Type 97 Chi-Ha",
+            "page_key": "Type_97_Chi-Ha",
+            "description": "Medium tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/e\/e8\/Type_97_Chi-Ha_in_the_Great_Patriotic_War_Museum_5-jun-2014.jpg\/330px-Type_97_Chi-Ha_in_the_Great_Patriotic_War_Museum_5-jun-2014.jpg",
+            "country": "Japanese"
+        },
+        {
+            "title": "Type 97 Chi-Ni",
+            "page_key": "Type_97_Chi-Ni",
+            "description": "Weapon",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/d\/dd\/Type_97_Chi-Ni.jpg\/330px-Type_97_Chi-Ni.jpg",
+            "country": "Japanese"
+        },
+        {
+            "title": "Type 97 Te-Ke tankette",
+            "page_key": "Type_97_Te-Ke_tankette",
+            "description": "Japanese tankette",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/a\/ab\/Type_97_%28AWM_P00001-361%29.jpg\/330px-Type_97_%28AWM_P00001-361%29.jpg",
+            "country": "Japanese"
+        },
+        {
+            "title": "Type 98 Ke-Ni",
+            "page_key": "Type_98_Ke-Ni",
+            "description": "Weapon",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/0\/02\/Type_98A_Ke-Ni.jpg\/330px-Type_98A_Ke-Ni.jpg",
+            "country": "Japanese"
+        },
+        {
+            "title": "Type 99 tank",
+            "page_key": "Type_99_tank",
+            "description": "2001 Chinese main battle tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/7\/77\/ZTZ-99A_tank_front_20170902.jpg\/330px-ZTZ-99A_tank_front_20170902.jpg",
+            "country": "Chinese"
+        },
+        {
+            "title": "Valentine tank",
+            "page_key": "Valentine_tank",
+            "description": "British infantry tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/a\/ac\/Valentine_II_%E2%80%985-40%E2%80%99_-_Patriot_Museum%2C_Kubinka_%2838390149682%29.jpg\/330px-Valentine_II_%E2%80%985-40%E2%80%99_-_Patriot_Museum%2C_Kubinka_%2838390149682%29.jpg",
+            "country": "British"
+        },
+        {
+            "title": "Valiant tank",
+            "page_key": "Valiant_tank",
+            "description": "British assault tank prototype",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/8\/8a\/A38_Valiant_front-left_2017_Bovington.jpg\/330px-A38_Valiant_front-left_2017_Bovington.jpg",
+            "country": "British"
+        },
+        {
+            "title": "Vickers MBT",
+            "page_key": "Vickers_MBT",
+            "description": "Main battle tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/e\/e5\/AB133_-_Vijayanta_MBT.JPG\/330px-AB133_-_Vijayanta_MBT.JPG",
+            "country": "British"
+        },
+        {
+            "title": "Vickers Medium Mark I",
+            "page_key": "Vickers_Medium_Mark_I",
+            "description": "British medium tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/4\/42\/Baby_tank.JPG\/330px-Baby_tank.JPG",
+            "country": "British"
+        },
+        {
+            "title": "Vickers Medium Mark II",
+            "page_key": "Vickers_Medium_Mark_II",
+            "description": "British medium tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/0\/06\/Vickers_Medium_Mk_IIA_1.jpg\/330px-Vickers_Medium_Mk_IIA_1.jpg",
+            "country": "British"
+        },
+        {
+            "title": "VK 16.02 Leopard",
+            "page_key": "VK_16.02_Leopard",
+            "description": "Cancelled German light tank project of WW2",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/f\/f4\/VK_1602_Leopard_new02.svg\/330px-VK_1602_Leopard_new02.svg.png",
+            "country": "German"
+        },
+        {
+            "title": "VK 30.01 (H)",
+            "page_key": "VK_30.01_(H)",
+            "description": "German heavy tank prototype",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/4\/41\/German_turret_at_Omaha_Beach.jpg\/330px-German_turret_at_Omaha_Beach.jpg",
+            "country": "German"
+        },
+        {
+            "title": "VK 45.01 (P)",
+            "page_key": "VK_45.01_(P)",
+            "description": "German heavy tank prototype",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/c\/c8\/Tiger_%28P%29.svg\/330px-Tiger_%28P%29.svg.png",
+            "country": "German"
+        },
+        {
+            "title": "VK 45.02 (P)",
+            "page_key": "VK_45.02_(P)",
+            "description": "German heavy tank project of WW2.",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/en\/thumb\/6\/69\/VK4502_Typ_180B.jpg\/330px-VK4502_Typ_180B.jpg",
+            "country": "German"
+        },
+        {
+            "title": "VT-4",
+            "page_key": "VT-4",
+            "description": "Chinese Main battle tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/0\/0a\/NORINCO_VT-4_at_IDEX_2017.jpg\/330px-NORINCO_VT-4_at_IDEX_2017.jpg",
+            "country": "Chinese"
+        },
+        {
+            "title": "WZ-111 heavy tank",
+            "page_key": "WZ-111_heavy_tank",
+            "description": "Chinese heavy tank prototype",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/7\/75\/111_Heavy-tank_Test_car_20131004.JPG\/330px-111_Heavy-tank_Test_car_20131004.JPG",
+            "country": "Chinese"
+        },
+        {
+            "title": "Zulfiqar (tank)",
+            "page_key": "Zulfiqar_(tank)",
+            "description": "Iranian battle tank",
+            "thumbnail_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/7\/70\/Sacred_Defence_Week_parade%2C_2012%2C_in_Tehran_%28107%29.jpg\/330px-Sacred_Defence_Week_parade%2C_2012%2C_in_Tehran_%28107%29.jpg",
+            "country": "Iranian"
+        }
+    ]
+}
