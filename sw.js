@@ -3,6 +3,7 @@
 const CACHE = "tankpedia-v4";
 const FILES = [
   ".",
+  "home.html",
   "index.html",
   "script.js",
   "manifest.json",
