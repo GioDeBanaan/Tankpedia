@@ -7,7 +7,7 @@ const FILES = [
   "script.js",
   "manifest.json",
   "tanks.json",
-  "IMG/Tank Logo.png"
+  "IMG/Tank%20Logo.png"
 ];
 
 self.addEventListener("install", e => {

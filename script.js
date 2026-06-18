@@ -504,10 +504,10 @@ async function loadTanks(q = "") {
     pages.forEach(page => {
       const card = document.createElement("div");
       card.className = "search-card";
-      const title = page.title || page.key;
+      const title = page.title || page.page_key || page.key;
       const description = page.description || "";
-      const thumbnail = page.thumbnail_url || null;
-      const pageKey = page.key;
+      const thumbnail = page.thumbnail_url || (page.thumbnail && page.thumbnail.url) || null;
+      const pageKey = page.page_key || page.key;
       const cName = page.country || "";
       const countryHtml = flagHtml(cName) || (cName ? `<span class="country-badge">${cName}</span>` : "");
 
