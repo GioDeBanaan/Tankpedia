@@ -27,8 +27,10 @@ self.addEventListener("activate", e => {
   self.clients.claim();
 });
 
-// Fetch-event: netwerk eerst, bij navigatie-fout index.html uit cache (SPA fallback)
+// Fetch-event: alleen eigen domein onderscheppen; cross-origin (bv. Wikimedia) gaan direct naar netwerk
 self.addEventListener("fetch", e => {
+  const url = new URL(e.request.url);
+  if (url.origin !== self.location.origin) return;
   e.respondWith(
     fetch(e.request).catch(() => {
       if (e.request.mode === "navigate") {

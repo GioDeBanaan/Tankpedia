@@ -598,7 +598,7 @@ async function openTankDetails(title, country) {
 
     const bibiHtml = (country && country.toLowerCase().trim() === "israeli")
       ? `<div class="bibi-section">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Benjamin_Netanyahu_2018.jpg/240px-Benjamin_Netanyahu_2018.jpg"
+          <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Benjamin_Netanyahu_2018.jpg"
                alt="Benjamin Netanyahu" class="bibi-photo" loading="lazy" />
           <p class="bibi-caption">🇮🇱 Prime Minister Benjamin Netanyahu approves this tank</p>
         </div>`
@@ -606,7 +606,7 @@ async function openTankDetails(title, country) {
 
     const stalinHtml = (country && country.toLowerCase().trim() === "soviet")
       ? `<div class="bibi-section">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Joseph_Stalin_official_portrait.jpg/240px-Joseph_Stalin_official_portrait.jpg"
+          <img src="https://upload.wikimedia.org/wikipedia/commons/f/f7/Joseph_Stalin_official_portrait.jpg"
                alt="Joseph Stalin" class="bibi-photo" loading="lazy" />
           <p class="bibi-caption">🇷🇺 Joseph Stalin approves this tank</p>
         </div>`
