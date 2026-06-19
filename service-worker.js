@@ -6,7 +6,7 @@ const FILES = [
   ".",
   "index.html",
   "SCRIPTS/app.js",
-  "SCRIPTS/manifest.json",
+  "manifest.json",
   "SCRIPTS/tank-database.json",
   "IMG/Tank%20Logo.png",
   "IMG/bunker_green-camo.jpg"
