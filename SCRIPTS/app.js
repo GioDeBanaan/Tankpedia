@@ -143,7 +143,7 @@ function toggleLang() {
 }
 
 // ======================== VLAGGEN ============================================
-// Land → ISO-code mapping voor vlaggen via flagcdn.com
+// Land → ISO-code mapping + vlag-URL (Wikimedia thumbnails voor historische landen)
 function getFlagUrl(country) {
   const map = {
     American: "us", Soviet: "su", German: "de", British: "gb",
@@ -156,6 +156,9 @@ function getFlagUrl(country) {
   };
   const code = map[country];
   if (!code) return null;
+  // Historische landen die niet op flagcdn.com staan → Wikimedia thumbnails met vaste grootte
+  if (code === "su") return "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Flag_of_the_Soviet_Union.svg/28px-Flag_of_the_Soviet_Union.svg.png";
+  if (code === "yu") return "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Flag_of_Yugoslavia_%281946-1992%29.svg/28px-Flag_of_Yugoslavia_%281946-1992%29.svg.png";
   return `https://flagcdn.com/28x21/${code}.png`;
 }
 
@@ -751,7 +754,10 @@ function switchTab(tab) {
 document.getElementById("nav-search").addEventListener("click", () => switchTab("search"));
 document.getElementById("nav-fav").addEventListener("click", () => switchTab("fav"));
 document.getElementById("nav-home").addEventListener("click", () => {
-  location.hash = "app";
+  // Home = terug naar splash. Verwijder hash, roep syncView aan en scroll omhoog.
+  history.replaceState(null, "", location.pathname);
+  if (typeof syncView === "function") syncView();
+  window.scrollTo(0, 0);
 });
 
 document.getElementById("lang-btn").addEventListener("click", toggleLang);
