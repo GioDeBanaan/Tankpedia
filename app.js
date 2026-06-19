@@ -43,6 +43,13 @@ const LANG = {
     rankingHint: "De tanks hieronder zijn automatisch gerangschikt op gevechtswaarde.",
     rankingEmpty: "Voeg 2 of meer favorieten toe om een ranglijst te zien.",
     rankingLoading: "Ranglijst laden...",
+    tankType: "Type tank",
+    tankCrew: "Crew",
+    tankEngine: "Engine",
+    tankArmor: "Armour",
+    tankMass: "Gewicht",
+    tankSize: "Hoogte / Breedte",
+    tankManufacturer: "Manufacturer",
   },
   en: {
     title: "Tankpedia",
@@ -87,6 +94,13 @@ const LANG = {
     rankingHint: "The tanks below are automatically ranked by battle value.",
     rankingEmpty: "Add 2 or more favorites to see a ranking.",
     rankingLoading: "Loading ranking...",
+    tankType: "Tank type",
+    tankCrew: "Crew",
+    tankEngine: "Engine",
+    tankArmor: "Armor",
+    tankMass: "Weight",
+    tankSize: "Height / Width",
+    tankManufacturer: "Manufacturer",
   }
 };
 
@@ -149,37 +163,108 @@ function extractTankNumber(value) {
   return match ? parseFloat(match[0].replace(",", ".")) : null;
 }
 
+function cleanInfoboxText(value) {
+  if (!value) return "";
+  let text = String(value).replace(/\[\d+\]/g, "").replace(/\s+/g, " ").trim();
+  if (text.length > 180) {
+    const firstClause = text.split(/[,.;]/)[0].trim();
+    if (firstClause) text = firstClause;
+  }
+  if (text.length > 140) {
+    text = text.substring(0, 140) + "...";
+  }
+  return text;
+}
+
+function getInfoboxField(fields, names) {
+  for (const name of names) {
+    if (fields[name]) return cleanInfoboxText(fields[name]);
+  }
+  return "";
+}
+
+function getArmorText(fields) {
+  const parts = [];
+  const front = getInfoboxField(fields, ["Front armor"]);
+  const side = getInfoboxField(fields, ["Side armor"]);
+  const rear = getInfoboxField(fields, ["Rear armor"]);
+
+  if (front) parts.push(`Voor: ${front}`);
+  if (side) parts.push(`Zij: ${side}`);
+  if (rear) parts.push(`Achter: ${rear}`);
+  if (parts.length) return parts.join(" / ");
+
+  const armor = getInfoboxField(fields, ["Armor", "Hull armor", "Turret armor"]);
+  return armor;
+}
+
+function getSizeText(fields) {
+  const height = getInfoboxField(fields, ["Height"]);
+  const width = getInfoboxField(fields, ["Width"]);
+  const parts = [];
+  if (height) parts.push(`Hoogte: ${height}`);
+  if (width) parts.push(`Breedte: ${width}`);
+  return parts.join(" / ");
+}
+
+function buildTankDisplayData(fields) {
+  const type = getInfoboxField(fields, ["Type"]);
+  const crew = getInfoboxField(fields, ["Crew"]);
+  const engine = getInfoboxField(fields, ["Engine"]);
+  const armor = getArmorText(fields);
+  const mass = getInfoboxField(fields, ["Mass"]);
+  const size = getSizeText(fields);
+  const manufacturer = getInfoboxField(fields, ["Manufacturer"]);
+
+  return {
+    type,
+    crew,
+    engine,
+    armor,
+    mass,
+    size,
+    manufacturer,
+    scoreFields: {
+      crew: extractTankNumber(crew),
+      speed: extractTankNumber(getInfoboxField(fields, ["Maximum speed", "Speed"])),
+      armor: extractTankNumber(armor),
+      mass: extractTankNumber(mass),
+      length: extractTankNumber(getInfoboxField(fields, ["Length"])),
+    }
+  };
+}
+
 function scoreBattleTank(tank) {
-  const infobox = tank.infobox || {};
-  const crew = extractTankNumber(infobox["Crew"]);
-  const speed = extractTankNumber(infobox["Maximum speed"]) || extractTankNumber(infobox["Speed"]);
-  const armor = extractTankNumber(infobox["Armor"]);
-  const mass = extractTankNumber(infobox["Mass"]);
-  const length = extractTankNumber(infobox["Length"]);
+  const metrics = tank.scoreFields || {};
+  const crew = metrics.crew;
+  const speed = metrics.speed;
+  const armor = metrics.armor;
+  const mass = metrics.mass;
+  const length = metrics.length;
 
   let score = 0;
   const notes = [];
 
   if (armor !== null) {
     score += Math.min(armor, 300) * 2.8;
-    notes.push(`Armor ${armor}`);
+    notes.push(`${_t("armor")}: ${armor}`);
   }
   if (speed !== null) {
     score += Math.min(speed, 100) * 2.1;
-    notes.push(`Speed ${speed}`);
+    notes.push(`${_t("speed")}: ${speed}`);
   }
   if (crew !== null) {
     const crewBonus = crew <= 3 ? 28 : crew <= 4 ? 20 : crew <= 5 ? 12 : 6;
     score += crewBonus;
-    notes.push(`Crew ${crew}`);
+    notes.push(`${_t("crew")}: ${crew}`);
   }
   if (mass !== null) {
     score += Math.max(0, 80 - Math.min(mass, 80)) * 0.4;
-    notes.push(`Mass ${mass}`);
+    notes.push(`${_t("mass")}: ${mass}`);
   }
   if (length !== null) {
     score += Math.max(0, 12 - Math.min(length, 12)) * 2;
-    notes.push(`Length ${length}`);
+    notes.push(`${_t("length")}: ${length}`);
   }
 
   return { score: Math.round(score), notes, crew, speed, armor, mass };
@@ -408,7 +493,14 @@ async function fetchTankDetails(title) {
       if (label && value) fields[label] = value;
     }
   });
-  return { title: title.replace(/_/g, " "), infobox: fields, image };
+  const display = buildTankDisplayData(fields);
+  return {
+    title: title.replace(/_/g, " "),
+    image,
+    display,
+    scoreFields: display.scoreFields,
+    infobox: fields,
+  };
 }
 
 async function openTankDetails(title, country) {
@@ -420,34 +512,25 @@ async function openTankDetails(title, country) {
 
   try {
     const data = await fetchTankDetails(key);
-    const fields = data.infobox || {};
-    const order = [
-      "Type", "Crew", "Primary armament", "Secondary armament",
-      "Engine", "Engine power", "Power/weight", "Speed",
-      "Maximum speed", "Vehicle range", "Armor", "Mass",
-      "Length", "Width", "Height", "Manufacturer",
-      "Production", "Production date", "Unit cost",
-    ];
+    const display = data.display || {};
+    const stats = [
+      ["tankType", display.type],
+      ["tankCrew", display.crew],
+      ["tankEngine", display.engine],
+      ["tankArmor", display.armor],
+      ["tankMass", display.mass],
+      ["tankSize", display.size],
+      ["tankManufacturer", display.manufacturer],
+    ].filter(([, value]) => value);
 
-    let statsHtml = "";
-    order.forEach(key => {
-      if (fields[key]) {
-        let displayValue = fields[key];
-        if (displayValue.length > 100) {
-          displayValue = displayValue.substring(0, 100) + "...";
-        }
-        statsHtml += `
-          <div class="stat-row">
-            <span class="stat-label">${key}</span>
-            <span class="stat-value" data-label="${key}">${displayValue}</span>
-          </div>
-        `;
-      }
-    });
+    let statsHtml = stats.map(([labelKey, value]) => `
+      <div class="stat-row">
+        <span class="stat-label">${_t(labelKey)}</span>
+        <span class="stat-value">${value}</span>
+      </div>
+    `).join("");
 
-    if (!statsHtml) {
-      statsHtml = `<div class="stat-row"><span>${_t("noStats")}</span></div>`;
-    }
+    if (!statsHtml) statsHtml = `<div class="stat-row"><span>${_t("noStats")}</span></div>`;
 
     const imageHtml = data.image
       ? `<div class="stats-image"><img src="${data.image}" alt="${data.title}" /></div>`
