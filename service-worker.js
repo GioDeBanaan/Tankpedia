@@ -1,6 +1,7 @@
 const CACHE = "tankpedia-v5";
 const FILES = [
   ".",
+  "home.html",
   "index.html",
   "app.html",
   "app.js",
