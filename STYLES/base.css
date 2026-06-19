@@ -2,18 +2,20 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 [hidden] { display: none !important; }
 
-/* === BODY – Camouflage achtergrond === */
+/* === BODY – Duitse tank camouflage (WWII Dunkelgelb + Olivgrün + Rotbraun) === */
 body {
   font-family: "Segoe UI", Arial, sans-serif;
-  background-color: #2d4a2d;
-  /* Meerdere radial-gradients creëren een organisch camouflage patroon */
+  background-color: #b8943a;
+  /* Organische vlekken in Duitse tank-camouflage kleuren */
   background-image:
-    radial-gradient(ellipse 40% 30% at 15% 25%, #4a6b3a 0%, transparent 100%),
-    radial-gradient(ellipse 30% 40% at 75% 15%, #3a5a2a 0%, transparent 100%),
-    radial-gradient(ellipse 35% 35% at 50% 70%, #5a7a4a 0%, transparent 100%),
-    radial-gradient(ellipse 25% 45% at 85% 65%, #2a4a2a 0%, transparent 100%),
-    radial-gradient(ellipse 45% 25% at 10% 85%, #4a6b3a 0%, transparent 100%),
-    radial-gradient(ellipse 30% 30% at 45% 40%, #3d5a3d 0%, transparent 100%);
+    radial-gradient(ellipse 35% 25% at 12% 20%, #6b8a3a 0%, transparent 100%),
+    radial-gradient(ellipse 25% 35% at 78% 18%, #5a6b2a 0%, transparent 100%),
+    radial-gradient(ellipse 30% 30% at 55% 65%, #7a3a2a 0%, transparent 100%),
+    radial-gradient(ellipse 20% 40% at 88% 70%, #6b3a2a 0%, transparent 100%),
+    radial-gradient(ellipse 40% 20% at 30% 80%, #5a7a3a 0%, transparent 100%),
+    radial-gradient(ellipse 25% 25% at 45% 35%, #8a5a2a 0%, transparent 100%),
+    radial-gradient(ellipse 30% 20% at 70% 40%, #4a6b2a 0%, transparent 100%),
+    radial-gradient(ellipse 20% 30% at 20% 55%, #8a4a2a 0%, transparent 100%);
   color: #e8dcc8;
   min-height: 100vh;
 }
