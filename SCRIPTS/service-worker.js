@@ -8,7 +8,8 @@ const FILES = [
   "SCRIPTS/app.js",
   "SCRIPTS/manifest.json",
   "SCRIPTS/tank-database.json",
-  "IMG/Tank%20Logo.png"
+  "IMG/Tank%20Logo.png",
+  "IMG/bunker_green-camo.jpg"
 ];
 
 // Install-event: alle bestanden in de cache plaatsen
