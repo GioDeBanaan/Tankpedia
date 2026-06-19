@@ -39,6 +39,10 @@ const LANG = {
     compareSummaryOne: "{winner} staat bovenaan.",
     compareSummaryTwo: "{winner} staat bovenaan. {runnerUp} volgt op plek 2.",
     compareNoStatsRank: "Weinig stats beschikbaar om te scoren.",
+    rankingTitle: "Ranglijst",
+    rankingHint: "De tanks hieronder zijn automatisch gerangschikt op gevechtswaarde.",
+    rankingEmpty: "Voeg 2 of meer favorieten toe om een ranglijst te zien.",
+    rankingLoading: "Ranglijst laden...",
   },
   en: {
     title: "Tankpedia",
@@ -79,6 +83,10 @@ const LANG = {
     compareSummaryOne: "{winner} is on top.",
     compareSummaryTwo: "{winner} is on top. {runnerUp} is second.",
     compareNoStatsRank: "Not enough stats available to score.",
+    rankingTitle: "Ranking",
+    rankingHint: "The tanks below are automatically ranked by battle value.",
+    rankingEmpty: "Add 2 or more favorites to see a ranking.",
+    rankingLoading: "Loading ranking...",
   }
 };
 
@@ -134,6 +142,118 @@ function flagHtmlLg(country) {
   return url ? `<img class="flag-icon flag-icon-lg" src="${url}" alt="${country}" title="${country}" />` : "";
 }
 
+function extractTankNumber(value) {
+  if (!value) return null;
+  const match = String(value).match(/[\d,.]+/);
+  return match ? parseFloat(match[0].replace(",", ".")) : null;
+}
+
+function scoreBattleTank(tank) {
+  const infobox = tank.infobox || {};
+  const crew = extractTankNumber(infobox["Crew"]);
+  const speed = extractTankNumber(infobox["Maximum speed"]) || extractTankNumber(infobox["Speed"]);
+  const armor = extractTankNumber(infobox["Armor"]);
+  const mass = extractTankNumber(infobox["Mass"]);
+  const length = extractTankNumber(infobox["Length"]);
+
+  let score = 0;
+  const notes = [];
+
+  if (armor !== null) {
+    score += Math.min(armor, 300) * 2.8;
+    notes.push(`Armor ${armor}`);
+  }
+  if (speed !== null) {
+    score += Math.min(speed, 100) * 2.1;
+    notes.push(`Speed ${speed}`);
+  }
+  if (crew !== null) {
+    const crewBonus = crew <= 3 ? 28 : crew <= 4 ? 20 : crew <= 5 ? 12 : 6;
+    score += crewBonus;
+    notes.push(`Crew ${crew}`);
+  }
+  if (mass !== null) {
+    score += Math.max(0, 80 - Math.min(mass, 80)) * 0.4;
+    notes.push(`Mass ${mass}`);
+  }
+  if (length !== null) {
+    score += Math.max(0, 12 - Math.min(length, 12)) * 2;
+    notes.push(`Length ${length}`);
+  }
+
+  return { score: Math.round(score), notes, crew, speed, armor, mass };
+}
+
+function buildRankingHtml(ranked) {
+  const winner = ranked[0];
+  const runnerUp = ranked[1];
+  const summaryText = runnerUp
+    ? tFormat("compareSummaryTwo", { winner: winner.title, runnerUp: runnerUp.title })
+    : tFormat("compareSummaryOne", { winner: winner.title });
+
+  const itemsHtml = ranked.map((tank, index) => {
+    const rank = index + 1;
+    const isWinner = index === 0;
+    const stats = [];
+    if (tank.armor !== null) stats.push(`<span class="compare-pill">Armor ${tank.armor}</span>`);
+    if (tank.speed !== null) stats.push(`<span class="compare-pill">Speed ${tank.speed}</span>`);
+    if (tank.crew !== null) stats.push(`<span class="compare-pill">Crew ${tank.crew}</span>`);
+    if (tank.mass !== null) stats.push(`<span class="compare-pill">Mass ${tank.mass}</span>`);
+
+    return `
+      <div class="compare-item${isWinner ? " top-one" : ""}">
+        <div class="compare-item-header">
+          <div style="display:flex;gap:0.8rem;align-items:flex-start;">
+            <span class="compare-rank">${rank}</span>
+            <div>
+              <h3 style="margin:0;">${tank.title}</h3>
+              <p class="compare-note">${isWinner ? _t("compareWinner") : _t("compareCandidate")}</p>
+            </div>
+          </div>
+          <div class="compare-score">Score ${tank.score}</div>
+        </div>
+        <div class="compare-note">${tank.notes.length ? tank.notes.join(" · ") : _t("compareNoStatsRank")}</div>
+        <div class="compare-meta">${stats.join("")}</div>
+      </div>
+    `;
+  }).join("");
+
+  return `
+    <h3 style="margin:1rem 0 0.35rem;">${_t("rankingTitle")}</h3>
+    <p class="compare-note">${summaryText}</p>
+    <div class="compare-list">${itemsHtml}</div>
+  `;
+}
+
+async function renderFavoriteRanking(favs) {
+  const rankingContainer = document.getElementById("fav-ranking");
+  if (!rankingContainer) return;
+
+  if (favs.length < 2) {
+    rankingContainer.innerHTML = `<p class="fav-empty">${_t("rankingEmpty")}</p>`;
+    return;
+  }
+
+  rankingContainer.innerHTML = `<div class="loading-spinner">${_t("rankingLoading")}</div>`;
+
+  const results = await Promise.all(favs.map(async fav => {
+    try {
+      const data = await fetchTankDetails(fav.key);
+      return { ...data, ...scoreBattleTank(data) };
+    } catch (_) {
+      return null;
+    }
+  }));
+
+  const ranked = results.filter(Boolean).sort((a, b) => b.score - a.score);
+  if (ranked.length < 2) {
+    rankingContainer.innerHTML = `<p>${_t("statsFailed")}</p>`;
+    return;
+  }
+
+  rankingContainer.innerHTML = buildRankingHtml(ranked);
+}
+
 // Favorites
 function getFavorites() {
   return JSON.parse(localStorage.getItem("tankpedia_favs") || "[]");
@@ -165,7 +285,7 @@ function renderFavorites() {
   if (!container) return;
   const favs = getFavorites();
   if (favs.length === 0) {
-    container.innerHTML = `<p class="fav-empty">${_t("favEmpty")}</p>`;
+    container.innerHTML = `<p class="fav-empty">${_t("favEmpty")}</p><div id="fav-ranking"></div>`;
     return;
   }
   const cardsHtml = favs.map(f => {
@@ -178,7 +298,7 @@ function renderFavorites() {
       </div>
     </div>`;
   }).join("");
-  container.innerHTML = `<div id="fav-toolbar"><button id="compare-btn">${_t("compare")}</button></div>${cardsHtml}`;
+  container.innerHTML = `<div id="fav-toolbar"><button id="compare-btn">${_t("compare")}</button></div>${cardsHtml}<div id="fav-ranking"></div>`;
 
   container.querySelectorAll(".fav-card").forEach(card => {
     card.addEventListener("click", function(e) {
@@ -197,6 +317,7 @@ function renderFavorites() {
     });
   });
   document.getElementById("compare-btn").addEventListener("click", compareSelectedFavorites);
+  renderFavoriteRanking(favs);
 }
 
 async function compareSelectedFavorites() {
@@ -227,98 +348,14 @@ async function compareSelectedFavorites() {
     return;
   }
 
-  const extractNum = (s) => {
-    if (!s) return null;
-    const m = String(s).match(/[\d,.]+/);
-    return m ? parseFloat(m[0].replace(",", ".")) : null;
-  };
-
-  const getCrew = (tank) => extractNum((tank.infobox || {})["Crew"]);
-  const getSpeed = (tank) => {
-    const infobox = tank.infobox || {};
-    return extractNum(infobox["Maximum speed"]) || extractNum(infobox["Speed"]);
-  };
-  const getArmor = (tank) => extractNum((tank.infobox || {})["Armor"]);
-  const getMass = (tank) => extractNum((tank.infobox || {})["Mass"]);
-  const getLength = (tank) => extractNum((tank.infobox || {})["Length"]);
-
-  const scoreTank = (tank) => {
-    const crew = getCrew(tank);
-    const speed = getSpeed(tank);
-    const armor = getArmor(tank);
-    const mass = getMass(tank);
-    const length = getLength(tank);
-
-    let score = 0;
-    const notes = [];
-
-    if (armor !== null) {
-      score += Math.min(armor, 300) * 2.8;
-      notes.push(`Armor ${armor}`);
-    }
-    if (speed !== null) {
-      score += Math.min(speed, 100) * 2.1;
-      notes.push(`Speed ${speed}`);
-    }
-    if (crew !== null) {
-      const crewBonus = crew <= 3 ? 28 : crew <= 4 ? 20 : crew <= 5 ? 12 : 6;
-      score += crewBonus;
-      notes.push(`Crew ${crew}`);
-    }
-    if (mass !== null) {
-      score += Math.max(0, 80 - Math.min(mass, 80)) * 0.4;
-      notes.push(`Mass ${mass}`);
-    }
-    if (length !== null) {
-      score += Math.max(0, 12 - Math.min(length, 12)) * 2;
-      notes.push(`Length ${length}`);
-    }
-
-    return { score: Math.round(score), notes };
-  };
-
   const ranked = results
-    .map(tank => ({ ...tank, ...scoreTank(tank) }))
+    .map(tank => ({ ...tank, ...scoreBattleTank(tank) }))
     .sort((a, b) => b.score - a.score);
-
-  const winner = ranked[0];
-  const runnerUp = ranked[1];
-  const summaryText = runnerUp
-    ? tFormat("compareSummaryTwo", { winner: winner.title, runnerUp: runnerUp.title })
-    : tFormat("compareSummaryOne", { winner: winner.title });
-
-  const itemsHtml = ranked.map((tank, index) => {
-    const rank = index + 1;
-    const isWinner = index === 0;
-    const stats = [];
-    if (getArmor(tank) !== null) stats.push(`<span class="compare-pill">Armor ${getArmor(tank)}</span>`);
-    if (getSpeed(tank) !== null) stats.push(`<span class="compare-pill">Speed ${getSpeed(tank)}</span>`);
-    if (getCrew(tank) !== null) stats.push(`<span class="compare-pill">Crew ${getCrew(tank)}</span>`);
-    if (getMass(tank) !== null) stats.push(`<span class="compare-pill">Mass ${getMass(tank)}</span>`);
-
-    return `
-      <div class="compare-item${isWinner ? " top-one" : ""}">
-        <div class="compare-item-header">
-          <div style="display:flex;gap:0.8rem;align-items:flex-start;">
-            <span class="compare-rank">${rank}</span>
-            <div>
-              <h3 style="margin:0;">${tank.title}</h3>
-              <p class="compare-note">${isWinner ? _t("compareWinner") : _t("compareCandidate")}</p>
-            </div>
-          </div>
-          <div class="compare-score">Score ${tank.score}</div>
-        </div>
-        <div class="compare-note">${tank.notes.length ? tank.notes.join(" · ") : _t("compareNoStatsRank")}</div>
-        <div class="compare-meta">${stats.join("")}</div>
-      </div>
-    `;
-  }).join("");
 
   modalBody.innerHTML = `
     <div class="modal-top-bar"></div>
     <h2>${_t("compareTitle")}</h2>
-    <p class="compare-note">${summaryText}</p>
-    <div class="compare-list">${itemsHtml}</div>
+    ${buildRankingHtml(ranked)}
   `;
 }
 
