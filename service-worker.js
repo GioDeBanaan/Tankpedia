@@ -1,4 +1,4 @@
-const CACHE = "tankpedia-v4";
+const CACHE = "tankpedia-v5";
 const FILES = [
   ".",
   "index.html",

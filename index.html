@@ -55,6 +55,10 @@
   <img src="IMG/Tank%20Logo.png" class="logo" alt="Tankpedia" />
   <h1>Tankpedia</h1>
   <p>Een encyclopedie van militaire tanks. Zoek door 259 tanks uit 21 landen, bekijk stats van Wikipedia, sla favorieten op en vergelijk tanks met elkaar.</p>
-  <a href="./app.html?view=app" class="btn">Naar de app</a>
+  <a id="open-app" href="#" class="btn">Naar de app</a>
+  <script>
+    const openApp = document.getElementById("open-app");
+    openApp.href = new URL("app.html?view=app", location.href).href;
+  </script>
 </body>
 </html>
