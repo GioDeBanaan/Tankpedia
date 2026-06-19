@@ -1,0 +1,10 @@
+{
+  "name": "Tankpedia",
+  "short_name": "Tankpedia",
+  "description": "Military tank encyclopedia",
+  "start_url": "home.html",
+  "display": "standalone",
+  "background_color": "#f4f5f8",
+  "theme_color": "#2563eb",
+  "orientation": "portrait"
+}
