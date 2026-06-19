@@ -135,7 +135,6 @@ function toggleLang() {
   document.getElementById("search-button").textContent = _t("searchBtn");
   document.getElementById("nav-search").textContent = _t("navSearch");
   document.getElementById("nav-fav").textContent = _t("navFav");
-  document.getElementById("nav-home").textContent = _t("navHome");
   // Als er een actieve zoekopdracht is, herlaad met nieuwe taal
   const q = document.getElementById("search").value.trim();
   if (q) loadTanks(q);
@@ -157,8 +156,8 @@ function getFlagUrl(country) {
   const code = map[country];
   if (!code) return null;
   // Historische landen die niet op flagcdn.com staan → Wikimedia thumbnails met vaste grootte
-  if (code === "su") return "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Flag_of_the_Soviet_Union.svg/28px-Flag_of_the_Soviet_Union.svg.png";
-  if (code === "yu") return "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Flag_of_Yugoslavia_%281946-1992%29.svg/28px-Flag_of_Yugoslavia_%281946-1992%29.svg.png";
+  if (code === "su") return "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Flag_of_the_Soviet_Union.svg/40px-Flag_of_the_Soviet_Union.svg.png";
+  if (code === "yu") return "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Flag_of_Yugoslavia_%281946-1992%29.svg/40px-Flag_of_Yugoslavia_%281946-1992%29.svg.png";
   return `https://flagcdn.com/28x21/${code}.png`;
 }
 
@@ -753,13 +752,6 @@ function switchTab(tab) {
 
 document.getElementById("nav-search").addEventListener("click", () => switchTab("search"));
 document.getElementById("nav-fav").addEventListener("click", () => switchTab("fav"));
-document.getElementById("nav-home").addEventListener("click", () => {
-  // Home = terug naar splash. Verwijder hash, roep syncView aan en scroll omhoog.
-  history.replaceState(null, "", location.pathname);
-  if (typeof syncView === "function") syncView();
-  window.scrollTo(0, 0);
-});
-
 document.getElementById("lang-btn").addEventListener("click", toggleLang);
 
 // Start op zoek-tab, tenzij ?view=fav in URL staat
