@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tankpedia</title>
+  <meta name="theme-color" content="#2563eb">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="apple-touch-icon" href="IMG/Tank%20Logo.png">
   <script>
     if (location.protocol !== "file:") {
       const link = document.createElement("link");
@@ -174,7 +178,8 @@
     .stat-label { font-weight: 700; }
     .stats-footer { margin-top: 1rem; text-align: right; }
     .stats-footer a { color: #2563eb; text-decoration: none; font-weight: 700; }
-    .flag-icon { vertical-align: middle; }
+    .flag-icon { width: 28px; height: 21px; vertical-align: middle; }
+    .flag-icon-lg { width: 42px; height: 32px; }
     .country-badge {
       display: inline-block;
       padding: 0.15rem 0.5rem;
@@ -245,9 +250,29 @@
       font-size: 0.85rem;
     }
     @media (max-width: 720px) {
-      .topbar { flex-direction: column; align-items: flex-start; }
+      html { font-size: 15px; }
+      .topbar { flex-direction: column; align-items: stretch; gap: 0.5rem; }
+      .brand p { display: none; }
+      .toolbar { justify-content: center; }
+      .toolbar button, .nav-link, #search-button, #modal-close, .details-button, #compare-btn {
+        padding: 0.6rem 0.8rem;
+        font-size: 0.9rem;
+        min-height: 44px;
+      }
       .search-panel { grid-template-columns: 1fr; }
+      #search { font-size: 1rem; padding: 0.85rem 1rem; min-height: 48px; }
+      #search-button { min-height: 48px; }
+      .search-card, .fav-card { padding: 0.85rem; }
       .result-header, .fav-header { flex-direction: column; }
+      .result-thumb { max-width: 100%; }
+      .modal-content { padding: 0.75rem; }
+      .stat-row { flex-direction: column; gap: 0.3rem; padding: 0.65rem 0.8rem; }
+      .stats-image img { max-width: 100%; height: auto; }
+      .splash { padding: 1.5rem; }
+      .splash h1 { font-size: 1.8rem; }
+      .splash p { font-size: 1rem; }
+      .logo { width: 7rem; height: 7rem; }
+      .compare-item-header { flex-direction: column; gap: 0.5rem; }
     }
   </style>
 </head>

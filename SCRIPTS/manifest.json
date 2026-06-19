@@ -2,9 +2,17 @@
   "name": "Tankpedia",
   "short_name": "Tankpedia",
   "description": "Military tank encyclopedia",
-  "start_url": "index.html",
+  "start_url": "index.html#app",
   "display": "standalone",
   "background_color": "#f4f5f8",
   "theme_color": "#2563eb",
-  "orientation": "portrait"
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "../IMG/Tank%20Logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
 }
