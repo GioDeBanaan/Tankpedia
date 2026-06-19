@@ -177,7 +177,17 @@ function flagHtmlLg(country) {
 // Haalt een numerieke waarde uit tekst (bijv. "50 km/h" → 50)
 function extractTankNumber(value) {
   if (!value) return null;
-  const match = String(value).match(/[\d,.]+/);
+  const str = String(value);
+  // Bereik zoals "25–185 mm" → neem de hoogste waarde (185)
+  const rangeMatch = str.match(/([\d,.]+)\s*[–\-]\s*([\d,.]+)/);
+  if (rangeMatch) {
+    return Math.max(
+      parseFloat(rangeMatch[1].replace(",", ".")),
+      parseFloat(rangeMatch[2].replace(",", "."))
+    );
+  }
+  // Enkel getal: pak de eerste match
+  const match = str.match(/[\d,.]+/);
   return match ? parseFloat(match[0].replace(",", ".")) : null;
 }
 
@@ -205,17 +215,19 @@ function getInfoboxField(fields, names) {
 
 // Stelt pantsertekst samen (voor/zij/achter apart of samengevat)
 function getArmorText(fields) {
+  // Aparte voor/zij/achter velden (zowel US als Britse spelling)
   const parts = [];
-  const front = getInfoboxField(fields, ["Front armor"]);
-  const side = getInfoboxField(fields, ["Side armor"]);
-  const rear = getInfoboxField(fields, ["Rear armor"]);
+  const front = getInfoboxField(fields, ["Front armor", "Front armour"]);
+  const side = getInfoboxField(fields, ["Side armor", "Side armour"]);
+  const rear = getInfoboxField(fields, ["Rear armor", "Rear armour"]);
 
   if (front) parts.push(`Voor: ${front}`);
   if (side) parts.push(`Zij: ${side}`);
   if (rear) parts.push(`Achter: ${rear}`);
   if (parts.length) return parts.join(" / ");
 
-  const armor = getInfoboxField(fields, ["Armor", "Hull armor", "Turret armor"]);
+  // Samengevat pantserveld (bv. "Armour 25–185 mm")
+  const armor = getInfoboxField(fields, ["Armor", "Armour", "Hull armor", "Hull armour", "Turret armor", "Turret armour"]);
   return armor;
 }
 
@@ -275,31 +287,21 @@ function scoreBattleTank(tank) {
   let score = 0;
   const notes = [];
 
-  // Pantser: hoger is beter, max 300
+  // Pantser: de belangrijkste defensieve stat, cap 300 mm
   if (armor !== null) {
-    score += Math.min(armor, 300) * 2.8;
+    score += Math.min(armor, 300) * 3.0;
     notes.push(`${_t("armor")}: ${armor}`);
   }
-  // Snelheid: hoger is beter, max 100
+  // Snelheid: relevant maar minder bepalend dan pantser
   if (speed !== null) {
-    score += Math.min(speed, 100) * 2.1;
+    score += Math.min(speed, 100) * 1.5;
     notes.push(`${_t("speed")}: ${speed}`);
   }
-  // Bemanning: minder bemanning = meer geautomatiseerd = bonus
+  // Bemanning: kleinere bemanning = moderner / geautomatiseerder
   if (crew !== null) {
-    const crewBonus = crew <= 3 ? 28 : crew <= 4 ? 20 : crew <= 5 ? 12 : 6;
+    const crewBonus = crew <= 3 ? 25 : crew <= 4 ? 18 : crew <= 5 ? 10 : 4;
     score += crewBonus;
     notes.push(`${_t("crew")}: ${crew}`);
-  }
-  // Gewicht: lichter is beter (mobiliteit), max aftrek bij 80 ton
-  if (mass !== null) {
-    score += Math.max(0, 80 - Math.min(mass, 80)) * 0.4;
-    notes.push(`${_t("mass")}: ${mass}`);
-  }
-  // Lengte: korter is beter (kleiner doelwit), max bonus bij 12m
-  if (length !== null) {
-    score += Math.max(0, 12 - Math.min(length, 12)) * 2;
-    notes.push(`${_t("length")}: ${length}`);
   }
 
   return { score: Math.round(score), notes, crew, speed, armor, mass };
@@ -594,10 +596,19 @@ async function openTankDetails(title, country) {
       ? `<div class="stats-image"><img src="${data.image}" alt="${data.title}" /></div>`
       : "";
 
+    const bibiHtml = country === "Israeli"
+      ? `<div class="bibi-section">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/9/9d/Benjamin_Netanyahu_2018.jpg"
+               alt="Benjamin Netanyahu" class="bibi-photo" />
+          <p class="bibi-caption">🇮🇱 Prime Minister Benjamin Netanyahu approves this tank</p>
+        </div>`
+      : "";
+
     modalBody.innerHTML = `
       <h2>${flagH} ${data.title}</h2>
       ${imageHtml}
       <div class="stat-grid">${statsHtml}</div>
+      ${bibiHtml}
       <div class="stats-footer">
         <a href="https://en.wikipedia.org/wiki/${encodeURIComponent(title)}" target="_blank" rel="noopener">${_t("openWiki")}</a>
       </div>

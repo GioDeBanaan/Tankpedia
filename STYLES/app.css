@@ -176,6 +176,24 @@
   max-width: 100%; border-radius: 0.8rem; border: 1px solid #8a7a5a;
 }
 
+/* === BIBI EASTER EGG === */
+.bibi-section {
+  margin: 1rem 0;
+  text-align: center;
+}
+.bibi-photo {
+  max-width: 200px;
+  border-radius: 1rem;
+  border: 2px solid #6b8e23;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+.bibi-caption {
+  margin: 0.5rem 0 0;
+  color: #2a4a2a;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
 /* === VLAGGEN === */
 .flag-icon { width: 28px; height: 21px; vertical-align: middle; }
 .flag-icon-lg { width: 42px; height: 32px; }
