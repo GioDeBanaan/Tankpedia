@@ -596,7 +596,7 @@ async function openTankDetails(title, country) {
       ? `<div class="stats-image"><img src="${data.image}" alt="${data.title}" /></div>`
       : "";
 
-    const bibiHtml = country === "Israeli"
+    const bibiHtml = (country && country.toLowerCase().trim() === "israeli")
       ? `<div class="bibi-section">
           <img src="https://upload.wikimedia.org/wikipedia/commons/9/9d/Benjamin_Netanyahu_2018.jpg"
                alt="Benjamin Netanyahu" class="bibi-photo" />

@@ -1,5 +1,5 @@
 // Tankpedia Service Worker – cacht bestanden voor offline gebruik
-const CACHE = "tankpedia-v6";
+const CACHE = "tankpedia-v7";
 
 // Lijst van bestanden die bij installatie worden gecacht
 const FILES = [
