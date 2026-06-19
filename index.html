@@ -8,7 +8,7 @@
     if (location.protocol !== "file:") {
       const link = document.createElement("link");
       link.rel = "manifest";
-      link.href = "manifest.json";
+      link.href = "SCRIPTS/manifest.json";
       document.head.appendChild(link);
     }
   </script>
@@ -298,7 +298,7 @@
     </div>
   </section>
 
-  <script src="app.js" defer></script>
+  <script src="SCRIPTS/app.js" defer></script>
   <script>
     const splashScreen = document.getElementById("splash-screen");
     const appShell = document.getElementById("app-shell");

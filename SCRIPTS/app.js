@@ -576,7 +576,7 @@ async function getTanksDb() {
   if (location.protocol === "file:") {
     throw new Error("Tank data needs a web server");
   }
-  const res = await fetch("tank-database.json");
+  const res = await fetch("SCRIPTS/tank-database.json");
   tanksDb = (await res.json()).pages || [];
   return tanksDb;
 }
@@ -707,5 +707,5 @@ const startView = new URLSearchParams(location.search).get("view");
 switchTab(startView === "fav" ? "fav" : "search");
 
 if (location.protocol !== "file:" && "serviceWorker" in navigator) {
-  navigator.serviceWorker.register("service-worker.js");
+  navigator.serviceWorker.register("SCRIPTS/service-worker.js");
 }
