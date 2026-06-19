@@ -598,9 +598,17 @@ async function openTankDetails(title, country) {
 
     const bibiHtml = (country && country.toLowerCase().trim() === "israeli")
       ? `<div class="bibi-section">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/9/9d/Benjamin_Netanyahu_2018.jpg"
-               alt="Benjamin Netanyahu" class="bibi-photo" />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Benjamin_Netanyahu_2018.jpg/240px-Benjamin_Netanyahu_2018.jpg"
+               alt="Benjamin Netanyahu" class="bibi-photo" loading="lazy" />
           <p class="bibi-caption">🇮🇱 Prime Minister Benjamin Netanyahu approves this tank</p>
+        </div>`
+      : "";
+
+    const stalinHtml = (country && country.toLowerCase().trim() === "soviet")
+      ? `<div class="bibi-section">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Joseph_Stalin_official_portrait.jpg/240px-Joseph_Stalin_official_portrait.jpg"
+               alt="Joseph Stalin" class="bibi-photo" loading="lazy" />
+          <p class="bibi-caption">🇷🇺 Joseph Stalin approves this tank</p>
         </div>`
       : "";
 
@@ -608,7 +616,7 @@ async function openTankDetails(title, country) {
       <h2>${flagH} ${data.title}</h2>
       ${imageHtml}
       <div class="stat-grid">${statsHtml}</div>
-      ${bibiHtml}
+      ${bibiHtml}${stalinHtml}
       <div class="stats-footer">
         <a href="https://en.wikipedia.org/wiki/${encodeURIComponent(title)}" target="_blank" rel="noopener">${_t("openWiki")}</a>
       </div>
