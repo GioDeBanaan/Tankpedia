@@ -2,20 +2,20 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 [hidden] { display: none !important; }
 
-/* === BODY – Duitse tank camouflage (WWII Dunkelgelb + Olivgrün + Rotbraun) === */
+/* === BODY – NATO camouflage (zwart / groen / bruin patroon) === */
 body {
   font-family: "Segoe UI", Arial, sans-serif;
-  background-color: #b8943a;
-  /* Organische vlekken in Duitse tank-camouflage kleuren */
+  background-color: #4a6b3a;
+  /* Organische vlekken in NATO Woodland-kleuren */
   background-image:
-    radial-gradient(ellipse 35% 25% at 12% 20%, #6b8a3a 0%, transparent 100%),
-    radial-gradient(ellipse 25% 35% at 78% 18%, #5a6b2a 0%, transparent 100%),
-    radial-gradient(ellipse 30% 30% at 55% 65%, #7a3a2a 0%, transparent 100%),
-    radial-gradient(ellipse 20% 40% at 88% 70%, #6b3a2a 0%, transparent 100%),
-    radial-gradient(ellipse 40% 20% at 30% 80%, #5a7a3a 0%, transparent 100%),
-    radial-gradient(ellipse 25% 25% at 45% 35%, #8a5a2a 0%, transparent 100%),
-    radial-gradient(ellipse 30% 20% at 70% 40%, #4a6b2a 0%, transparent 100%),
-    radial-gradient(ellipse 20% 30% at 20% 55%, #8a4a2a 0%, transparent 100%);
+    radial-gradient(ellipse 30% 25% at 10% 15%, #1a1a1a 0%, transparent 100%),
+    radial-gradient(ellipse 25% 35% at 80% 20%, #2a3a1a 0%, transparent 100%),
+    radial-gradient(ellipse 35% 20% at 60% 75%, #4a2a1a 0%, transparent 100%),
+    radial-gradient(ellipse 20% 40% at 90% 65%, #1a2a1a 0%, transparent 100%),
+    radial-gradient(ellipse 40% 25% at 25% 70%, #3a1a0a 0%, transparent 100%),
+    radial-gradient(ellipse 25% 30% at 40% 35%, #1a1a1a 0%, transparent 100%),
+    radial-gradient(ellipse 35% 20% at 70% 45%, #5a3a1a 0%, transparent 100%),
+    radial-gradient(ellipse 20% 35% at 50% 10%, #2a4a1a 0%, transparent 100%);
   color: #e8dcc8;
   min-height: 100vh;
 }
