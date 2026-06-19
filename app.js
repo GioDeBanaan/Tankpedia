@@ -103,7 +103,8 @@ function tFormat(key, values) {
 function toggleLang() {
   lang = lang === "nl" ? "en" : "nl";
   document.getElementById("lang-btn").textContent = _t("langSwitch");
-  document.querySelector("h1").textContent = _t("title");
+  const appTitle = document.getElementById("app-title");
+  if (appTitle) appTitle.textContent = _t("title");
   document.getElementById("search").placeholder = _t("searchPlaceholder");
   document.getElementById("search-button").textContent = _t("searchBtn");
   document.getElementById("nav-search").textContent = _t("navSearch");
@@ -596,10 +597,13 @@ function switchTab(tab) {
 document.getElementById("nav-search").addEventListener("click", () => switchTab("search"));
 document.getElementById("nav-fav").addEventListener("click", () => switchTab("fav"));
 document.getElementById("nav-home").addEventListener("click", () => {
-  location.href = new URL("home.html?view=home", location.href).href;
+  location.href = new URL("index.html#app", location.href).href;
 });
 
 document.getElementById("lang-btn").addEventListener("click", toggleLang);
+
+const startView = new URLSearchParams(location.search).get("view");
+switchTab(startView === "fav" ? "fav" : "search");
 
 if (location.protocol !== "file:" && "serviceWorker" in navigator) {
   navigator.serviceWorker.register("service-worker.js");

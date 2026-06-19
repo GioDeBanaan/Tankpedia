@@ -14,10 +14,18 @@
   </script>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
+    [hidden] { display: none !important; }
     body {
       font-family: Arial, sans-serif;
       background: #f4f5f8;
       color: #1f2937;
+      min-height: 100vh;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+    }
+    .splash {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -25,10 +33,6 @@
       min-height: 100vh;
       padding: 2rem;
       text-align: center;
-    }
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-12px); }
     }
     .logo {
       width: 10rem;
@@ -49,16 +53,271 @@
       font-weight: 700;
     }
     .btn:hover { background: #1d4ed8; }
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1rem;
+      background: #fff;
+      border-bottom: 1px solid #e5e7eb;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      min-width: 0;
+    }
+    .brand img { width: 44px; height: 44px; object-fit: contain; }
+    .brand h1 { margin: 0; font-size: 1.4rem; }
+    .brand p { margin: 0.15rem 0 0; color: #64748b; font-size: 0.92rem; }
+    .toolbar {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+    .toolbar button,
+    .nav-link,
+    #search-button,
+    #modal-close,
+    .details-button,
+    #compare-btn {
+      border: 0;
+      border-radius: 999px;
+      padding: 0.7rem 1rem;
+      background: #e2e8f0;
+      color: #0f172a;
+      font: inherit;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .nav-link.active,
+    #search-button,
+    .details-button,
+    #compare-btn {
+      background: #2563eb;
+      color: #fff;
+    }
+    main { max-width: 1100px; margin: 0 auto; padding: 1rem; }
+    .page { display: none; }
+    .page.active { display: grid; gap: 1rem; }
+    .search-panel, #fav-list, #output {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 1rem;
+      padding: 1rem;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+    }
+    .search-panel {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+    #search {
+      width: 100%;
+      border: 1px solid #cbd5e1;
+      border-radius: 0.85rem;
+      padding: 0.95rem 1rem;
+      font: inherit;
+    }
+    .search-card,
+    .fav-card {
+      border: 1px solid #e5e7eb;
+      border-radius: 1rem;
+      padding: 1rem;
+      background: #fff;
+    }
+    .result-header,
+    .fav-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+    .result-header h3 { margin: 0; }
+    .result-header p { margin: 0.4rem 0 0; color: #64748b; }
+    .result-thumb { max-width: 180px; width: 100%; border-radius: 0.8rem; margin-top: 0.75rem; }
+    .fav-star { font-size: 1.4rem; cursor: pointer; user-select: none; }
+    .fav-star.active { color: #f59e0b; }
+    #modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.6);
+      padding: 1rem;
+      z-index: 20;
+      align-items: center;
+      justify-content: center;
+    }
+    #modal-overlay.open { display: flex; }
+    .modal-content {
+      width: min(900px, 100%);
+      max-height: 85vh;
+      overflow: auto;
+      background: #fff;
+      border-radius: 1rem;
+      padding: 1rem;
+    }
+    .stat-grid { display: grid; gap: 0.6rem; margin-top: 1rem; }
+    .stat-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      border: 1px solid #e5e7eb;
+      border-radius: 0.85rem;
+      padding: 0.75rem 0.9rem;
+    }
+    .stat-label { font-weight: 700; }
+    .stats-footer { margin-top: 1rem; text-align: right; }
+    .stats-footer a { color: #2563eb; text-decoration: none; font-weight: 700; }
+    .flag-icon { vertical-align: middle; }
+    .country-badge {
+      display: inline-block;
+      padding: 0.15rem 0.5rem;
+      border-radius: 999px;
+      background: #e2e8f0;
+      color: #475569;
+      font-size: 0.78rem;
+      margin-left: 0.35rem;
+      vertical-align: middle;
+    }
+    .compare-list {
+      display: grid;
+      gap: 0.9rem;
+      margin-top: 1rem;
+    }
+    .compare-item {
+      border: 1px solid #e5e7eb;
+      border-radius: 1rem;
+      padding: 1rem;
+      background: #fff;
+    }
+    .compare-item.top-one {
+      border-color: #2563eb;
+      box-shadow: 0 10px 30px rgba(37, 99, 235, 0.12);
+    }
+    .compare-item-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      align-items: flex-start;
+      margin-bottom: 0.75rem;
+    }
+    .compare-rank {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 2.2rem;
+      height: 2.2rem;
+      border-radius: 999px;
+      background: #2563eb;
+      color: #fff;
+      font-weight: 700;
+      flex: 0 0 auto;
+    }
+    .compare-score {
+      font-weight: 700;
+      color: #2563eb;
+      white-space: nowrap;
+    }
+    .compare-note {
+      margin-top: 0.35rem;
+      color: #64748b;
+      line-height: 1.5;
+    }
+    .compare-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.75rem;
+    }
+    .compare-pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.35rem 0.65rem;
+      border-radius: 999px;
+      background: #e2e8f0;
+      color: #0f172a;
+      font-size: 0.85rem;
+    }
+    @media (max-width: 720px) {
+      .topbar { flex-direction: column; align-items: flex-start; }
+      .search-panel { grid-template-columns: 1fr; }
+      .result-header, .fav-header { flex-direction: column; }
+    }
   </style>
 </head>
 <body>
-  <img src="IMG/Tank%20Logo.png" class="logo" alt="Tankpedia" />
-  <h1>Tankpedia</h1>
-  <p>Een encyclopedie van militaire tanks. Zoek door 259 tanks uit 21 landen, bekijk stats van Wikipedia, sla favorieten op en vergelijk tanks met elkaar.</p>
-  <a id="open-app" href="#" class="btn">Naar de app</a>
+  <section id="splash-screen" class="splash">
+    <img src="IMG/Tank%20Logo.png" class="logo" alt="Tankpedia" />
+    <h1>Tankpedia</h1>
+    <p>Een encyclopedie van militaire tanks. Zoek door 259 tanks uit 21 landen, bekijk stats van Wikipedia, sla favorieten op en vergelijk tanks met elkaar.</p>
+    <a id="open-app" href="#app" class="btn">Naar de app</a>
+  </section>
+
+  <section id="app-shell" hidden>
+    <header class="topbar">
+      <div class="brand">
+        <img src="IMG/Tank%20Logo.png" alt="Tankpedia">
+        <div>
+          <h1 id="app-title">Tankpedia</h1>
+          <p>Militaire tankencyclopedie</p>
+        </div>
+      </div>
+      <div class="toolbar">
+        <button id="lang-btn" type="button">EN</button>
+        <button id="nav-search" type="button" class="nav-link active">Zoeken</button>
+        <button id="nav-fav" type="button" class="nav-link">Favorieten</button>
+        <button id="nav-home" type="button" class="nav-link">Home</button>
+      </div>
+    </header>
+
+    <main>
+      <section id="page-search" class="page active">
+        <div class="search-panel">
+          <input id="search" type="search" placeholder="Zoek tanks..." autocomplete="off">
+          <button id="search-button" type="button">Zoeken</button>
+        </div>
+        <div id="output"></div>
+      </section>
+
+      <section id="page-fav" class="page">
+        <div id="fav-list"></div>
+      </section>
+    </main>
+
+    <div id="modal-overlay">
+      <div class="modal-content">
+        <button id="modal-close" type="button">Sluiten</button>
+        <div id="modal-body"></div>
+      </div>
+    </div>
+  </section>
+
+  <script src="app.js" defer></script>
   <script>
+    const splashScreen = document.getElementById("splash-screen");
+    const appShell = document.getElementById("app-shell");
     const openApp = document.getElementById("open-app");
-    openApp.href = new URL("app.html?view=app", location.href).href;
+
+    function syncView() {
+      const showApp = location.hash === "#app";
+      splashScreen.hidden = showApp;
+      appShell.hidden = !showApp;
+    }
+
+    openApp.addEventListener("click", e => {
+      e.preventDefault();
+      location.hash = "app";
+      syncView();
+    });
+
+    window.addEventListener("hashchange", syncView);
+    syncView();
   </script>
 </body>
 </html>
