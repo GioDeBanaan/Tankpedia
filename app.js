@@ -50,6 +50,8 @@ const LANG = {
     tankMass: "Gewicht",
     tankSize: "Hoogte / Breedte",
     tankManufacturer: "Manufacturer",
+    tankCannon: "Kanon",
+    tankMachineguns: "Machinegeweren",
   },
   en: {
     title: "Tankpedia",
@@ -101,6 +103,8 @@ const LANG = {
     tankMass: "Weight",
     tankSize: "Height / Width",
     tankManufacturer: "Manufacturer",
+    tankCannon: "Cannon",
+    tankMachineguns: "Machine guns",
   }
 };
 
@@ -207,6 +211,14 @@ function getSizeText(fields) {
   return parts.join(" / ");
 }
 
+function getCannonText(fields) {
+  return getInfoboxField(fields, ["Main armament", "Primary armament", "Armament"]);
+}
+
+function getMachinegunsText(fields) {
+  return getInfoboxField(fields, ["Machine guns", "Secondary armament"]);
+}
+
 function buildTankDisplayData(fields) {
   const type = getInfoboxField(fields, ["Type"]);
   const crew = getInfoboxField(fields, ["Crew"]);
@@ -215,6 +227,8 @@ function buildTankDisplayData(fields) {
   const mass = getInfoboxField(fields, ["Mass"]);
   const size = getSizeText(fields);
   const manufacturer = getInfoboxField(fields, ["Manufacturer"]);
+  const cannon = getCannonText(fields);
+  const machineguns = getMachinegunsText(fields);
 
   return {
     type,
@@ -224,6 +238,8 @@ function buildTankDisplayData(fields) {
     mass,
     size,
     manufacturer,
+    cannon,
+    machineguns,
     scoreFields: {
       crew: extractTankNumber(crew),
       speed: extractTankNumber(getInfoboxField(fields, ["Maximum speed", "Speed"])),
@@ -521,6 +537,8 @@ async function openTankDetails(title, country) {
       ["tankMass", display.mass],
       ["tankSize", display.size],
       ["tankManufacturer", display.manufacturer],
+      ["tankCannon", display.cannon],
+      ["tankMachineguns", display.machineguns],
     ].filter(([, value]) => value);
 
     let statsHtml = stats.map(([labelKey, value]) => `
