@@ -103,9 +103,14 @@
       syncView();
     });
 
-    // Bij hash wijziging (bijv. Home knop) view bijwerken
+    // Bij hash wijziging (bv. terug-navigatie) view aanpassen
     window.addEventListener("hashchange", syncView);
-    syncView();
+
+    // Initialiseer: laat altijd de splash zien, negeer #app op start
+    // (voorkomt dat PWA op Android meteen de search toont)
+    splashScreen.hidden = false;
+    appShell.hidden = true;
+    if (location.hash === "#app") history.replaceState(null, "", location.pathname + location.search);
   </script>
 </body>
 </html>
