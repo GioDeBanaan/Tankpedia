@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tankpedia</title>
   <script>
+    // PWA manifest laden indien niet lokaal (file://)
     if (location.protocol !== "file:") {
       const link = document.createElement("link");
       link.rel = "manifest";
@@ -13,6 +14,7 @@
     }
   </script>
   <style>
+    /* Basisstijlen voor de home-pagina (splash buiten de SPA om) */
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: Arial, sans-serif;
@@ -57,6 +59,7 @@
   <p>Een encyclopedie van militaire tanks. Zoek door 259 tanks uit 21 landen, bekijk stats van Wikipedia, sla favorieten op en vergelijk tanks met elkaar.</p>
   <a id="open-app" href="#" class="btn">Naar de app</a>
   <script>
+    // Stel link dynamisch in zodat deze werkt ongeacht het pad (GitHub Pages / subdirectory)
     const openApp = document.getElementById("open-app");
     openApp.href = new URL("app.html?view=app", location.href).href;
   </script>

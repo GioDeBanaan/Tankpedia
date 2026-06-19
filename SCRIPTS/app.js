@@ -1,4 +1,8 @@
-// Translations
+// =============================================================================
+// TANKPEDIA – JavaScript
+// =============================================================================
+
+// ======================== VERTALINGEN (NL / EN) ==============================
 const LANG = {
   nl: {
     title: "Tankpedia",
@@ -108,16 +112,20 @@ const LANG = {
   }
 };
 
+// Huidige taal (start met Nederlands)
 let lang = "nl";
 
+// Haalt vertaalde tekst op voor huidige taal
 function _t(key) {
   return LANG[lang][key] || key;
 }
 
+// Vervangt placeholders {key} in vertaalde tekst met waarden
 function tFormat(key, values) {
   return Object.entries(values).reduce((text, [name, value]) => text.replaceAll(`{${name}}`, value), _t(key));
 }
 
+// ========================= TAAL WISSELEN =====================================
 function toggleLang() {
   lang = lang === "nl" ? "en" : "nl";
   document.getElementById("lang-btn").textContent = _t("langSwitch");
@@ -128,12 +136,14 @@ function toggleLang() {
   document.getElementById("nav-search").textContent = _t("navSearch");
   document.getElementById("nav-fav").textContent = _t("navFav");
   document.getElementById("nav-home").textContent = _t("navHome");
+  // Als er een actieve zoekopdracht is, herlaad met nieuwe taal
   const q = document.getElementById("search").value.trim();
   if (q) loadTanks(q);
   renderFavorites();
 }
 
-// Flags
+// ======================== VLAGGEN ============================================
+// Land → ISO-code mapping voor vlaggen via flagcdn.com
 function getFlagUrl(country) {
   const map = {
     American: "us", Soviet: "su", German: "de", British: "gb",
@@ -146,27 +156,30 @@ function getFlagUrl(country) {
   };
   const code = map[country];
   if (!code) return null;
-  if (code === "su") return "https://upload.wikimedia.org/wikipedia/commons/a/a9/Flag_of_the_Soviet_Union.svg";
-  if (code === "yu") return "https://upload.wikimedia.org/wikipedia/commons/6/61/Flag_of_Yugoslavia_%281946-1992%29.svg";
   return `https://flagcdn.com/28x21/${code}.png`;
 }
 
+// Kleine vlag voor zoekkaarten
 function flagHtml(country) {
   const url = getFlagUrl(country);
   return url ? `<img class="flag-icon" src="${url}" alt="${country}" title="${country}" />` : "";
 }
 
+// Grote vlag voor modals (tankdetails)
 function flagHtmlLg(country) {
   const url = getFlagUrl(country);
   return url ? `<img class="flag-icon flag-icon-lg" src="${url}" alt="${country}" title="${country}" />` : "";
 }
 
+// ======================== DATA UIT WIKIPEDIA INFOBOX =========================
+// Haalt een numerieke waarde uit tekst (bijv. "50 km/h" → 50)
 function extractTankNumber(value) {
   if (!value) return null;
   const match = String(value).match(/[\d,.]+/);
   return match ? parseFloat(match[0].replace(",", ".")) : null;
 }
 
+// Maakt infobox-tekst schoon: verwijdert referenties, kort in indien nodig
 function cleanInfoboxText(value) {
   if (!value) return "";
   let text = String(value).replace(/\[\d+\]/g, "").replace(/\s+/g, " ").trim();
@@ -180,6 +193,7 @@ function cleanInfoboxText(value) {
   return text;
 }
 
+// Zoekt eerste veld uit een lijst van mogelijke veldnamen
 function getInfoboxField(fields, names) {
   for (const name of names) {
     if (fields[name]) return cleanInfoboxText(fields[name]);
@@ -187,6 +201,7 @@ function getInfoboxField(fields, names) {
   return "";
 }
 
+// Stelt pantsertekst samen (voor/zij/achter apart of samengevat)
 function getArmorText(fields) {
   const parts = [];
   const front = getInfoboxField(fields, ["Front armor"]);
@@ -202,6 +217,7 @@ function getArmorText(fields) {
   return armor;
 }
 
+// Stelt afmetingtekst samen (hoogte / breedte)
 function getSizeText(fields) {
   const height = getInfoboxField(fields, ["Height"]);
   const width = getInfoboxField(fields, ["Width"]);
@@ -219,6 +235,7 @@ function getMachinegunsText(fields) {
   return getInfoboxField(fields, ["Machine guns", "Secondary armament"]);
 }
 
+// Bouwt volledig display-object van ruwe infobox-velden
 function buildTankDisplayData(fields) {
   const type = getInfoboxField(fields, ["Type"]);
   const crew = getInfoboxField(fields, ["Crew"]);
@@ -231,15 +248,8 @@ function buildTankDisplayData(fields) {
   const machineguns = getMachinegunsText(fields);
 
   return {
-    type,
-    crew,
-    engine,
-    armor,
-    mass,
-    size,
-    manufacturer,
-    cannon,
-    machineguns,
+    type, crew, engine, armor, mass, size, manufacturer, cannon, machineguns,
+    // Score-velden (alleen getallen) voor gevechtswaarde-berekening
     scoreFields: {
       crew: extractTankNumber(crew),
       speed: extractTankNumber(getInfoboxField(fields, ["Maximum speed", "Speed"])),
@@ -250,6 +260,8 @@ function buildTankDisplayData(fields) {
   };
 }
 
+// ======================== GEVECHTSWAARDE SCORE ===============================
+// Berekent een gevechtsscore op basis van beschikbare stats
 function scoreBattleTank(tank) {
   const metrics = tank.scoreFields || {};
   const crew = metrics.crew;
@@ -261,23 +273,28 @@ function scoreBattleTank(tank) {
   let score = 0;
   const notes = [];
 
+  // Pantser: hoger is beter, max 300
   if (armor !== null) {
     score += Math.min(armor, 300) * 2.8;
     notes.push(`${_t("armor")}: ${armor}`);
   }
+  // Snelheid: hoger is beter, max 100
   if (speed !== null) {
     score += Math.min(speed, 100) * 2.1;
     notes.push(`${_t("speed")}: ${speed}`);
   }
+  // Bemanning: minder bemanning = meer geautomatiseerd = bonus
   if (crew !== null) {
     const crewBonus = crew <= 3 ? 28 : crew <= 4 ? 20 : crew <= 5 ? 12 : 6;
     score += crewBonus;
     notes.push(`${_t("crew")}: ${crew}`);
   }
+  // Gewicht: lichter is beter (mobiliteit), max aftrek bij 80 ton
   if (mass !== null) {
     score += Math.max(0, 80 - Math.min(mass, 80)) * 0.4;
     notes.push(`${_t("mass")}: ${mass}`);
   }
+  // Lengte: korter is beter (kleiner doelwit), max bonus bij 12m
   if (length !== null) {
     score += Math.max(0, 12 - Math.min(length, 12)) * 2;
     notes.push(`${_t("length")}: ${length}`);
@@ -286,6 +303,8 @@ function scoreBattleTank(tank) {
   return { score: Math.round(score), notes, crew, speed, armor, mass };
 }
 
+// ======================== RANGLIJST HTML =====================================
+// Bouwt HTML voor de gerangschikte lijst (vergelijking / favorietenranking)
 function buildRankingHtml(ranked) {
   const winner = ranked[0];
   const runnerUp = ranked[1];
@@ -327,6 +346,8 @@ function buildRankingHtml(ranked) {
   `;
 }
 
+// ======================== FAVORIETEN RANGLIJST ===============================
+// Laadt Wikipedia-data voor alle favorieten en toont gerangschikte lijst
 async function renderFavoriteRanking(favs) {
   const rankingContainer = document.getElementById("fav-ranking");
   if (!rankingContainer) return;
@@ -356,7 +377,7 @@ async function renderFavoriteRanking(favs) {
   rankingContainer.innerHTML = buildRankingHtml(ranked);
 }
 
-// Favorites
+// ======================== FAVORIETEN (localStorage) ==========================
 function getFavorites() {
   return JSON.parse(localStorage.getItem("tankpedia_favs") || "[]");
 }
@@ -369,6 +390,7 @@ function isFavorite(key) {
   return getFavorites().some(f => f.key === key);
 }
 
+// Voegt toe of verwijdert een favoriet, werkt de weergave bij
 function toggleFavorite(title, key, country, description) {
   let favs = getFavorites();
   const idx = favs.findIndex(f => f.key === key);
@@ -382,6 +404,7 @@ function toggleFavorite(title, key, country, description) {
   return idx > -1 ? "removed" : "added";
 }
 
+// Toont alle favorieten + ranking in de favorieten-pagina
 function renderFavorites() {
   const container = document.getElementById("fav-list");
   if (!container) return;
@@ -402,6 +425,7 @@ function renderFavorites() {
   }).join("");
   container.innerHTML = `<div id="fav-toolbar"><button id="compare-btn">${_t("compare")}</button></div>${cardsHtml}<div id="fav-ranking"></div>`;
 
+  // Klik op favoriet → toon tankdetails
   container.querySelectorAll(".fav-card").forEach(card => {
     card.addEventListener("click", function(e) {
       if (e.target.closest(".fav-del-btn") || e.target.closest(".fav-cb")) return;
@@ -410,6 +434,7 @@ function renderFavorites() {
       openTankDetails(key, f ? f.country : "");
     });
   });
+  // Verwijderknop
   container.querySelectorAll(".fav-del-btn").forEach(btn => {
     btn.addEventListener("click", function(e) {
       e.stopPropagation();
@@ -418,10 +443,13 @@ function renderFavorites() {
       renderFavorites();
     });
   });
+  // Vergelijkknop
   document.getElementById("compare-btn").addEventListener("click", compareSelectedFavorites);
   renderFavoriteRanking(favs);
 }
 
+// ======================== VERGELIJKING =======================================
+// Vergelijk geselecteerde favorieten (aangevinkt of alle)
 async function compareSelectedFavorites() {
   const cbs = document.querySelectorAll(".fav-cb:checked");
   const selected = Array.from(cbs).map(cb => cb.dataset.key);
@@ -461,15 +489,17 @@ async function compareSelectedFavorites() {
   `;
 }
 
-// Modal
+// ======================== MODAL (overlay) ====================================
 const modalOverlay = document.getElementById("modal-overlay");
 const modalBody = document.getElementById("modal-body");
 const modalClose = document.getElementById("modal-close");
 
 modalClose.addEventListener("click", closeModal);
+// Klik buiten modal inhoud → sluiten
 modalOverlay.addEventListener("click", e => {
   if (e.target === modalOverlay) closeModal();
 });
+// Escape toets → sluiten
 document.addEventListener("keydown", e => {
   if (e.key === "Escape") closeModal();
 });
@@ -479,6 +509,8 @@ function closeModal() {
   modalBody.innerHTML = "";
 }
 
+// ======================== WIKIPEDIA DATA OPHALEN =============================
+// Haalt tankdetails op via Wikipedia REST API (page/html)
 async function fetchTankDetails(title) {
   const pageTitle = title.replace(/ /g, "_");
   const htmlUrl = `https://en.wikipedia.org/api/rest_v1/page/html/${encodeURIComponent(pageTitle)}`;
@@ -488,12 +520,16 @@ async function fetchTankDetails(title) {
   const doc = new DOMParser().parseFromString(html, "text/html");
   const infobox = doc.querySelector("table.infobox");
   if (!infobox) throw new Error("No infobox");
+
+  // Eerste afbeelding uit infobox
   const img = infobox.querySelector("img");
   let image = null;
   if (img) {
     image = img.getAttribute("src");
     if (image && image.startsWith("//")) image = "https:" + image;
   }
+
+  // Alle infobox-velden uitlezen (label → waarde)
   const fields = {};
   infobox.querySelectorAll("tr").forEach(tr => {
     const th = tr.querySelector("th");
@@ -509,6 +545,7 @@ async function fetchTankDetails(title) {
       if (label && value) fields[label] = value;
     }
   });
+
   const display = buildTankDisplayData(fields);
   return {
     title: title.replace(/_/g, " "),
@@ -519,6 +556,7 @@ async function fetchTankDetails(title) {
   };
 }
 
+// Toont tankdetails in de modal
 async function openTankDetails(title, country) {
   const flagH = flagHtmlLg(country) || "";
   const key = title;
@@ -569,8 +607,10 @@ async function openTankDetails(title, country) {
   }
 }
 
-// Local tank database
+// ======================== LOKALE TANK DATABASE ===============================
 let tanksDb = null;
+
+// Laadt tank-database.json één keer en cacht deze in geheugen
 async function getTanksDb() {
   if (tanksDb) return tanksDb;
   if (location.protocol === "file:") {
@@ -581,11 +621,12 @@ async function getTanksDb() {
   return tanksDb;
 }
 
-// Search
+// ======================== ZOEKFUNCTIE ========================================
 async function loadTanks(q = "") {
   const box = document.getElementById("output");
   const trimmedQuery = q.trim();
 
+  // Zet status- en resultaatcontainers klaar
   box.innerHTML = `
     <div id="search-status"></div>
     <div id="search-results"></div>
@@ -604,10 +645,14 @@ async function loadTanks(q = "") {
   try {
     const allTanks = await getTanksDb();
     const qLower = trimmedQuery.toLowerCase();
+
+    // Filter op titel of beschrijving (hoofdletterongevoelig)
     let pages = allTanks.filter(t =>
       t.title.toLowerCase().includes(qLower) ||
       (t.description && t.description.toLowerCase().includes(qLower))
     );
+
+    // Sorteer: exacte match → begint met → alfabetisch
     pages.sort((a, b) => {
       const at = a.title.toLowerCase(), bt = b.title.toLowerCase();
       if (at === qLower) return -1;
@@ -616,6 +661,8 @@ async function loadTanks(q = "") {
       if (!at.startsWith(qLower) && bt.startsWith(qLower)) return 1;
       return at.localeCompare(bt);
     });
+
+    // Max 30 resultaten tonen
     pages = pages.slice(0, 30);
 
     if (pages.length === 0) {
@@ -626,6 +673,7 @@ async function loadTanks(q = "") {
     const label = pages.length === 1 ? _t("result") : _t("results");
     statusDiv.innerHTML = `<p>${pages.length} ${label}${_t("found")}</p>`;
 
+    // Genereer zoekkaarten
     pages.forEach(page => {
       const card = document.createElement("div");
       card.className = "search-card";
@@ -652,10 +700,12 @@ async function loadTanks(q = "") {
         ${thumbnail ? `<img class="result-thumb" src="${thumbnail}" alt="${title}" />` : ""}
       `;
 
+      // Bekijk stats knop
       card.querySelector(".details-button").addEventListener("click", e => {
         e.stopPropagation();
         openTankDetails(pageKey, cName);
       });
+      // Fav ster klik
       card.querySelector(".fav-star").addEventListener("click", function(e) {
         e.stopPropagation();
         const key = this.dataset.title;
@@ -664,6 +714,7 @@ async function loadTanks(q = "") {
         this.classList.toggle("active", result === "added");
         this.textContent = result === "added" ? "\u2605" : "\u2606";
       });
+      // Klik op hele kaart → details
       card.addEventListener("click", () => openTankDetails(pageKey, cName));
       resultsDiv.appendChild(card);
     });
@@ -675,7 +726,8 @@ async function loadTanks(q = "") {
   }
 }
 
-// Init
+// ======================== INITIALISATIE ======================================
+// Zoekbalk event listeners
 const searchInput = document.getElementById("search");
 const searchButton = document.getElementById("search-button");
 
@@ -687,6 +739,7 @@ if (searchInput && searchButton) {
   });
 }
 
+// ======================== TAB-NAVIGATIE ======================================
 function switchTab(tab) {
   document.getElementById("nav-search").classList.toggle("active", tab === "search");
   document.getElementById("nav-fav").classList.toggle("active", tab === "fav");
@@ -698,14 +751,16 @@ function switchTab(tab) {
 document.getElementById("nav-search").addEventListener("click", () => switchTab("search"));
 document.getElementById("nav-fav").addEventListener("click", () => switchTab("fav"));
 document.getElementById("nav-home").addEventListener("click", () => {
-  location.href = new URL("index.html#app", location.href).href;
+  location.hash = "app";
 });
 
 document.getElementById("lang-btn").addEventListener("click", toggleLang);
 
+// Start op zoek-tab, tenzij ?view=fav in URL staat
 const startView = new URLSearchParams(location.search).get("view");
 switchTab(startView === "fav" ? "fav" : "search");
 
+// Service worker registreren (alleen via HTTP, niet file://)
 if (location.protocol !== "file:" && "serviceWorker" in navigator) {
   navigator.serviceWorker.register("SCRIPTS/service-worker.js");
 }

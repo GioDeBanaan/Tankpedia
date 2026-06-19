@@ -1,0 +1,262 @@
+/* === TOPBAR / HEADER === */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.8rem 1rem;
+  background: linear-gradient(135deg, #1a3a1a, #2a4a2a);
+  border-bottom: 2px solid #4a6b3a;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* === MERK / LOGO + TITEL === */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-width: 0;
+}
+.brand img { width: 44px; height: 44px; object-fit: contain; }
+.brand h1 { margin: 0; font-size: 1.4rem; color: #e8dcc8; }
+.brand p { margin: 0.15rem 0 0; color: #a8b89a; font-size: 0.92rem; }
+
+/* === WERKBALK (navigatieknoppen) === */
+.toolbar {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+/* Algemene knopstijl voor alle actieknoppen */
+.toolbar button,
+.nav-link,
+#search-button,
+#modal-close,
+.details-button,
+#compare-btn {
+  border: 1px solid #5a7a4a;
+  border-radius: 999px;
+  padding: 0.7rem 1rem;
+  background: #4a6b3a;
+  color: #e8dcc8;
+  font: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.15s;
+}
+.toolbar button:hover,
+.nav-link:hover {
+  background: #5a7b4a;
+}
+
+/* Accentkleur voor actieve / primaire knoppen (olijfgroen) */
+.nav-link.active,
+#search-button,
+.details-button,
+#compare-btn {
+  background: #6b8e23;
+  color: #fff;
+  border-color: #8aad3a;
+}
+.nav-link.active:hover,
+#search-button:hover,
+.details-button:hover,
+#compare-btn:hover {
+  background: #7a9e2a;
+}
+
+/* === ZOEKPANEEL, FAVORIETENLIJST, OUTPUT = kaartenbak === */
+.search-panel, #fav-list, #output {
+  background: rgba(235, 225, 195, 0.95);
+  border: 1px solid #8a7a5a;
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+/* Zoekpaneel: input + knop naast elkaar */
+.search-panel {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+/* Zoekveld */
+#search {
+  width: 100%;
+  border: 1px solid #8a7a5a;
+  border-radius: 0.85rem;
+  padding: 0.95rem 1rem;
+  font: inherit;
+  background: #f5f0e0;
+  color: #2a3a2a;
+}
+#search:focus { outline: 2px solid #6b8e23; outline-offset: -1px; }
+
+/* === ZOEK- EN FAVORIETENKAARTEN === */
+.search-card,
+.fav-card {
+  border: 1px solid #8a7a5a;
+  border-radius: 1rem;
+  padding: 1rem;
+  background: #f5f0e0;
+}
+
+/* Koptekst van een kaart (titel + actieknoppen) */
+.result-header,
+.fav-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: flex-start;
+}
+.result-header h3 { margin: 0; color: #1a3a1a; }
+.result-header p { margin: 0.4rem 0 0; color: #6a5a3a; }
+.result-thumb { max-width: 180px; width: 100%; border-radius: 0.8rem; margin-top: 0.75rem; border: 1px solid #8a7a5a; }
+
+/* Favorieten ster */
+.fav-star { font-size: 1.4rem; cursor: pointer; user-select: none; color: #8a7a5a; }
+.fav-star.active { color: #d4a017; }
+#fav-toolbar { margin-bottom: 0.75rem; }
+.fav-empty { color: #6a5a3a; }
+.fav-card strong { color: #1a3a1a; }
+
+/* Verwijderknop in favorietenkaart */
+.fav-del-btn {
+  background: none; border: 1px solid #8a6a4a; border-radius: 999px;
+  padding: 0.2rem 0.6rem; cursor: pointer; color: #8a4a3a; font-size: 1rem;
+}
+
+/* === MODAL (overlay voor tankdetails) === */
+#modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 35, 20, 0.85);
+  padding: 1rem;
+  z-index: 20;
+  align-items: center;
+  justify-content: center;
+}
+#modal-overlay.open { display: flex; }
+
+.modal-content {
+  width: min(900px, 100%);
+  max-height: 85vh;
+  overflow: auto;
+  background: #f0e8d0;
+  border: 2px solid #6b8e23;
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+.modal-content h2 { color: #1a3a1a; }
+
+/* === STATISTIEKEN (tankdetails) === */
+.stat-grid { display: grid; gap: 0.6rem; margin-top: 1rem; }
+.stat-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  border: 1px solid #8a7a5a;
+  border-radius: 0.85rem;
+  padding: 0.75rem 0.9rem;
+  background: #f5f0e0;
+}
+.stat-label { font-weight: 700; color: #2a4a2a; }
+.stat-value { color: #1a3a1a; }
+.stats-footer { margin-top: 1rem; text-align: right; }
+.stats-footer a { color: #6b8e23; text-decoration: none; font-weight: 700; }
+.stats-footer a:hover { text-decoration: underline; }
+.stats-image img {
+  max-width: 100%; border-radius: 0.8rem; border: 1px solid #8a7a5a;
+}
+
+/* === VLAGGEN === */
+.flag-icon { width: 28px; height: 21px; vertical-align: middle; }
+.flag-icon-lg { width: 42px; height: 32px; }
+
+/* Land-badge voor niet-herkende landen */
+.country-badge {
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  background: #4a6b3a;
+  color: #e8dcc8;
+  font-size: 0.78rem;
+  margin-left: 0.35rem;
+  vertical-align: middle;
+}
+
+/* === VERGELIJKING / RANGLIJST === */
+.compare-list {
+  display: grid;
+  gap: 0.9rem;
+  margin-top: 1rem;
+}
+
+.compare-item {
+  border: 1px solid #8a7a5a;
+  border-radius: 1rem;
+  padding: 1rem;
+  background: #f5f0e0;
+}
+.compare-item.top-one {
+  border-color: #6b8e23;
+  box-shadow: 0 8px 24px rgba(107, 142, 35, 0.2);
+}
+
+.compare-item-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: flex-start;
+  margin-bottom: 0.75rem;
+}
+.compare-item-header h3 { color: #1a3a1a; margin: 0; }
+
+.compare-rank {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 999px;
+  background: #6b8e23;
+  color: #fff;
+  font-weight: 700;
+  flex: 0 0 auto;
+}
+
+.compare-score {
+  font-weight: 700;
+  color: #6b8e23;
+  white-space: nowrap;
+}
+
+.compare-note {
+  margin-top: 0.35rem;
+  color: #6a5a3a;
+  line-height: 1.5;
+}
+
+.compare-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.compare-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+  background: #4a6b3a;
+  color: #e8dcc8;
+  font-size: 0.85rem;
+}

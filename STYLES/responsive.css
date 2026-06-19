@@ -1,0 +1,40 @@
+/* === RESPONSIVE – aanpassingen voor kleine schermen (mobiel) === */
+@media (max-width: 720px) {
+  html { font-size: 15px; }
+
+  /* Topbar stapelt verticaal */
+  .topbar { flex-direction: column; align-items: stretch; gap: 0.5rem; }
+  .brand p { display: none; }
+  .toolbar { justify-content: center; }
+
+  /* Alle knoppen krijgen minimale touch-hoogte van 44px */
+  .toolbar button, .nav-link, #search-button, #modal-close, .details-button, #compare-btn {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.9rem;
+    min-height: 44px;
+  }
+
+  /* Zoekpaneel: knop onder input i.p.v. ernaast */
+  .search-panel { grid-template-columns: 1fr; }
+  #search { font-size: 1rem; padding: 0.85rem 1rem; min-height: 48px; }
+  #search-button { min-height: 48px; }
+
+  /* Kaarten minder padding */
+  .search-card, .fav-card { padding: 0.85rem; }
+  .result-header, .fav-header { flex-direction: column; }
+  .result-thumb { max-width: 100%; }
+
+  /* Modal compact */
+  .modal-content { padding: 0.75rem; }
+  .stat-row { flex-direction: column; gap: 0.3rem; padding: 0.65rem 0.8rem; }
+  .stats-image img { max-width: 100%; height: auto; }
+
+  /* Splash compacter */
+  .splash { padding: 1.5rem; }
+  .splash h1 { font-size: 1.8rem; }
+  .splash p { font-size: 1rem; }
+  .logo { width: 7rem; height: 7rem; }
+
+  /* Vergelijking verticaal */
+  .compare-item-header { flex-direction: column; gap: 0.5rem; }
+}
