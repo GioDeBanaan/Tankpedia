@@ -568,7 +568,7 @@ function switchTab(tab) {
 document.getElementById("nav-search").addEventListener("click", () => switchTab("search"));
 document.getElementById("nav-fav").addEventListener("click", () => switchTab("fav"));
 document.getElementById("nav-home").addEventListener("click", () => {
-  location.href = new URL("index.html?view=home", location.href).href;
+  location.href = new URL("home.html?view=home", location.href).href;
 });
 
 document.getElementById("lang-btn").addEventListener("click", toggleLang);
