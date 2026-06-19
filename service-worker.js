@@ -1,5 +1,5 @@
 // Tankpedia Service Worker – cacht bestanden voor offline gebruik
-const CACHE = "tankpedia-v5";
+const CACHE = "tankpedia-v6";
 
 // Lijst van bestanden die bij installatie worden gecacht
 const FILES = [
@@ -27,9 +27,14 @@ self.addEventListener("activate", e => {
   self.clients.claim();
 });
 
-// Fetch-event: probeer netwerk eerst, val terug op cache bij fout
+// Fetch-event: netwerk eerst, bij navigatie-fout index.html uit cache (SPA fallback)
 self.addEventListener("fetch", e => {
   e.respondWith(
-    fetch(e.request).catch(() => caches.match(e.request))
+    fetch(e.request).catch(() => {
+      if (e.request.mode === "navigate") {
+        return caches.match("index.html");
+      }
+      return caches.match(e.request);
+    })
   );
 });

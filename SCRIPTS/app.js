@@ -760,5 +760,5 @@ switchTab(startView === "fav" ? "fav" : "search");
 
 // Service worker registreren (alleen via HTTP, niet file://)
 if (location.protocol !== "file:" && "serviceWorker" in navigator) {
-  navigator.serviceWorker.register("SCRIPTS/service-worker.js");
+  navigator.serviceWorker.register("service-worker.js");
 }
