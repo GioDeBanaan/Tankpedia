@@ -562,7 +562,7 @@ function switchTab(tab) {
 
 document.getElementById("nav-search").addEventListener("click", () => switchTab("search"));
 document.getElementById("nav-fav").addEventListener("click", () => switchTab("fav"));
-document.getElementById("nav-home").addEventListener("click", () => { location.href = "index.html"; });
+document.getElementById("nav-home").addEventListener("click", () => { location.href = "./index.html?view=home"; });
 
 document.getElementById("lang-btn").addEventListener("click", toggleLang);
 
