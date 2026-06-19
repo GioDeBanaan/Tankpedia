@@ -4,7 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tankpedia</title>
-  <link rel="manifest" href="manifest.json">
+  <script>
+    if (location.protocol !== "file:") {
+      const link = document.createElement("link");
+      link.rel = "manifest";
+      link.href = "manifest.json";
+      document.head.appendChild(link);
+    }
+  </script>
   <style>
     * { box-sizing: border-box; }
     body {

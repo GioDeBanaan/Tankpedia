@@ -443,6 +443,9 @@ async function openTankDetails(title, country) {
 let tanksDb = null;
 async function getTanksDb() {
   if (tanksDb) return tanksDb;
+  if (location.protocol === "file:") {
+    throw new Error("Tank data needs a web server");
+  }
   const res = await fetch("tank-database.json");
   tanksDb = (await res.json()).pages || [];
   return tanksDb;
@@ -535,7 +538,9 @@ async function loadTanks(q = "") {
       resultsDiv.appendChild(card);
     });
   } catch (error) {
-    statusDiv.innerHTML = `<p>${_t("searchFailed")}</p>`;
+    statusDiv.innerHTML = location.protocol === "file:"
+      ? `<p>Open de site via GitHub Pages of een lokale webserver om te zoeken.</p>`
+      : `<p>${_t("searchFailed")}</p>`;
     console.error("Search error:", error);
   }
 }
@@ -566,6 +571,6 @@ document.getElementById("nav-home").addEventListener("click", () => { location.h
 
 document.getElementById("lang-btn").addEventListener("click", toggleLang);
 
-if ("serviceWorker" in navigator) {
+if (location.protocol !== "file:" && "serviceWorker" in navigator) {
   navigator.serviceWorker.register("service-worker.js");
 }
