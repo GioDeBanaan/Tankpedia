@@ -34,6 +34,11 @@ const LANG = {
     compareSelect: "Selecteer 2 of meer tanks om te vergelijken",
     compareLoading: "Bezig met laden van tankgegevens...",
     compareFail: "Kon tankgegevens niet laden voor",
+    compareWinner: "Winnaar op basis van de beschikbare stats.",
+    compareCandidate: "Sterke kandidaat in deze selectie.",
+    compareSummaryOne: "{winner} staat bovenaan.",
+    compareSummaryTwo: "{winner} staat bovenaan. {runnerUp} volgt op plek 2.",
+    compareNoStatsRank: "Weinig stats beschikbaar om te scoren.",
   },
   en: {
     title: "Tankpedia",
@@ -69,6 +74,11 @@ const LANG = {
     compareSelect: "Select 2 or more tanks to compare",
     compareLoading: "Loading tank data...",
     compareFail: "Failed to load data for",
+    compareWinner: "Winner based on the available stats.",
+    compareCandidate: "Strong candidate in this selection.",
+    compareSummaryOne: "{winner} is on top.",
+    compareSummaryTwo: "{winner} is on top. {runnerUp} is second.",
+    compareNoStatsRank: "Not enough stats available to score.",
   }
 };
 
@@ -76,6 +86,10 @@ let lang = "nl";
 
 function _t(key) {
   return LANG[lang][key] || key;
+}
+
+function tFormat(key, values) {
+  return Object.entries(values).reduce((text, [name, value]) => text.replaceAll(`{${name}}`, value), _t(key));
 }
 
 function toggleLang() {
@@ -213,122 +227,99 @@ async function compareSelectedFavorites() {
     return;
   }
 
-  modalBody.innerHTML = `
-    <div class="modal-top-bar"></div>
-    <h2>${_t("compareTitle")}</h2>
-    <div class="chart-wrap"><canvas id="compare-chart"></canvas></div>
-  `;
-
-  const canvas = document.getElementById("compare-chart");
-  const rect = canvas.parentElement.getBoundingClientRect();
-  const cw = Math.max(300, Math.min(600, rect.width || 400));
-  canvas.width = cw;
-  canvas.height = Math.round(cw * 0.65);
-  drawComparisonChart(canvas, results);
-}
-
-function drawComparisonChart(canvas, tanks) {
-  const ctx = canvas.getContext("2d");
-  const w = canvas.width, h = canvas.height;
-  const pad = { top: 30, bottom: 50, left: 55, right: 20 };
-  const chartW = w - pad.left - pad.right;
-  const chartH = h - pad.top - pad.bottom;
-
   const extractNum = (s) => {
     if (!s) return null;
     const m = String(s).match(/[\d,.]+/);
     return m ? parseFloat(m[0].replace(",", ".")) : null;
   };
 
-  const statKeys = [
-    { key: "Speed", label: _t("speed"), max: 100 },
-    { key: "Maximum speed", label: _t("speed"), max: 100 },
-    { key: "Mass", label: _t("mass"), max: 80 },
-    { key: "Armor", label: _t("armor"), max: 300 },
-    { key: "Crew", label: _t("crew"), max: 8 },
-    { key: "Length", label: _t("length"), max: 12 },
-  ];
+  const getCrew = (tank) => extractNum((tank.infobox || {})["Crew"]);
+  const getSpeed = (tank) => {
+    const infobox = tank.infobox || {};
+    return extractNum(infobox["Maximum speed"]) || extractNum(infobox["Speed"]);
+  };
+  const getArmor = (tank) => extractNum((tank.infobox || {})["Armor"]);
+  const getMass = (tank) => extractNum((tank.infobox || {})["Mass"]);
+  const getLength = (tank) => extractNum((tank.infobox || {})["Length"]);
 
-  const categories = [];
-  const usedLabels = new Set();
-  statKeys.forEach(sk => {
-    if (usedLabels.has(sk.label)) return;
-    const vals = tanks.map(t => extractNum((t.infobox || {})[sk.key]));
-    if (vals.some(v => v !== null && v > 0)) {
-      categories.push({ label: sk.label, max: sk.max, values: vals.map((v, i) => ({ tankIdx: i, val: v || 0 })) });
-      usedLabels.add(sk.label);
+  const scoreTank = (tank) => {
+    const crew = getCrew(tank);
+    const speed = getSpeed(tank);
+    const armor = getArmor(tank);
+    const mass = getMass(tank);
+    const length = getLength(tank);
+
+    let score = 0;
+    const notes = [];
+
+    if (armor !== null) {
+      score += Math.min(armor, 300) * 2.8;
+      notes.push(`Armor ${armor}`);
     }
-  });
+    if (speed !== null) {
+      score += Math.min(speed, 100) * 2.1;
+      notes.push(`Speed ${speed}`);
+    }
+    if (crew !== null) {
+      const crewBonus = crew <= 3 ? 28 : crew <= 4 ? 20 : crew <= 5 ? 12 : 6;
+      score += crewBonus;
+      notes.push(`Crew ${crew}`);
+    }
+    if (mass !== null) {
+      score += Math.max(0, 80 - Math.min(mass, 80)) * 0.4;
+      notes.push(`Mass ${mass}`);
+    }
+    if (length !== null) {
+      score += Math.max(0, 12 - Math.min(length, 12)) * 2;
+      notes.push(`Length ${length}`);
+    }
 
-  if (categories.length === 0) {
-    ctx.fillStyle = "#94a3b8";
-    ctx.font = "13px Arial";
-    ctx.textAlign = "center";
-    ctx.fillText("—", w / 2, h / 2);
-    return;
-  }
+    return { score: Math.round(score), notes };
+  };
 
-  const colors = ["#2563eb", "#dc2626", "#16a34a", "#d97706", "#7c3aed", "#ec4899", "#0891b2", "#64748b"];
-  const catCount = categories.length;
-  const tankCount = tanks.length;
-  const groupW = chartW / catCount;
-  const barW = Math.min(30, (groupW * 0.7) / tankCount);
-  const gap = (groupW - barW * tankCount) / 2;
+  const ranked = results
+    .map(tank => ({ ...tank, ...scoreTank(tank) }))
+    .sort((a, b) => b.score - a.score);
 
-  const yMax = 100;
-  const yStep = 25;
+  const winner = ranked[0];
+  const runnerUp = ranked[1];
+  const summaryText = runnerUp
+    ? tFormat("compareSummaryTwo", { winner: winner.title, runnerUp: runnerUp.title })
+    : tFormat("compareSummaryOne", { winner: winner.title });
 
-  ctx.font = "10px Arial";
-  ctx.fillStyle = "#64748b";
-  ctx.textAlign = "right";
-  ctx.strokeStyle = "#e2e8f0";
-  ctx.lineWidth = 1;
-  for (let y = 0; y <= yMax; y += yStep) {
-    const yPos = pad.top + chartH - (y / yMax) * chartH;
-    ctx.beginPath();
-    ctx.moveTo(pad.left, yPos);
-    ctx.lineTo(w - pad.right, yPos);
-    ctx.stroke();
-    ctx.fillText(y, pad.left - 6, yPos + 3);
-  }
+  const itemsHtml = ranked.map((tank, index) => {
+    const rank = index + 1;
+    const isWinner = index === 0;
+    const stats = [];
+    if (getArmor(tank) !== null) stats.push(`<span class="compare-pill">Armor ${getArmor(tank)}</span>`);
+    if (getSpeed(tank) !== null) stats.push(`<span class="compare-pill">Speed ${getSpeed(tank)}</span>`);
+    if (getCrew(tank) !== null) stats.push(`<span class="compare-pill">Crew ${getCrew(tank)}</span>`);
+    if (getMass(tank) !== null) stats.push(`<span class="compare-pill">Mass ${getMass(tank)}</span>`);
 
-  categories.forEach((cat, ci) => {
-    const groupX = pad.left + ci * groupW;
-    cat.values.forEach((v, ti) => {
-      const x = groupX + gap + ti * barW;
-      const barH = (v.val / yMax) * chartH;
-      const y = pad.top + chartH - barH;
-      ctx.fillStyle = colors[ti % colors.length];
-      ctx.beginPath();
-      ctx.roundRect(x, y, barW, barH, [2, 2, 0, 0]);
-      ctx.fill();
-      if (v.val > 0) {
-        ctx.fillStyle = "#1f2937";
-        ctx.font = "bold 9px Arial";
-        ctx.textAlign = "center";
-        ctx.fillText(v.val, x + barW / 2, y - 3);
-      }
-    });
-    ctx.fillStyle = "#475569";
-    ctx.font = "10px Arial";
-    ctx.textAlign = "center";
-    ctx.fillText(cat.label, groupX + groupW / 2, pad.top + chartH + 14);
-  });
+    return `
+      <div class="compare-item${isWinner ? " top-one" : ""}">
+        <div class="compare-item-header">
+          <div style="display:flex;gap:0.8rem;align-items:flex-start;">
+            <span class="compare-rank">${rank}</span>
+            <div>
+              <h3 style="margin:0;">${tank.title}</h3>
+              <p class="compare-note">${isWinner ? _t("compareWinner") : _t("compareCandidate")}</p>
+            </div>
+          </div>
+          <div class="compare-score">Score ${tank.score}</div>
+        </div>
+        <div class="compare-note">${tank.notes.length ? tank.notes.join(" · ") : _t("compareNoStatsRank")}</div>
+        <div class="compare-meta">${stats.join("")}</div>
+      </div>
+    `;
+  }).join("");
 
-  const legendY = h - 14;
-  let lx = pad.left;
-  tanks.forEach((t, i) => {
-    const name = t.title || `Tank ${i + 1}`;
-    const displayName = name.length > 14 ? name.substring(0, 14) + "..." : name;
-    ctx.fillStyle = colors[i % colors.length];
-    ctx.fillRect(lx, legendY - 8, 10, 10);
-    ctx.fillStyle = "#1f2937";
-    ctx.font = "10px Arial";
-    ctx.textAlign = "left";
-    ctx.fillText(displayName, lx + 14, legendY + 2);
-    lx += ctx.measureText(displayName).width + 28;
-    if (lx > w - pad.right - 40) { lx = pad.left; }
-  });
+  modalBody.innerHTML = `
+    <div class="modal-top-bar"></div>
+    <h2>${_t("compareTitle")}</h2>
+    <p class="compare-note">${summaryText}</p>
+    <div class="compare-list">${itemsHtml}</div>
+  `;
 }
 
 // Modal
