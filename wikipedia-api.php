@@ -1,10 +1,8 @@
 <?php
-// Tankpedia Wikipedia proxy: scrapes infobox HTML for tank stats (?details=), also proxies summary and title search.
 header("Content-Type: application/json; charset=UTF-8");
 
 define('WIKI_REST_BASE', 'https://en.wikipedia.org/api/rest_v1/page/html/');
 
-// Tank details: scrape infobox from Wikipedia HTML
 if (!empty($_GET['details'])) {
   $title = trim($_GET['details']);
   if ($title === '') {
@@ -38,7 +36,6 @@ if (!empty($_GET['details'])) {
     exit;
   }
 
-  // Find the most relevant infobox (tank-specific, not generic)
   preg_match_all('/<table[^>]*class="[^"]*infobox[^"]*"[^>]*>.*?<\/table>/is', $response, $allMatches);
   $infoboxes = $allMatches[0];
   
@@ -63,7 +60,6 @@ if (!empty($_GET['details'])) {
   
   $infobox = $bestInfobox ?: ($infoboxes[0] ?? '');
 
-  // Parse infobox fields
   $fields = [];
   if ($infobox) {
     if (preg_match('/<img[^>]*src="([^"]+)"/i', $infobox, $imgMatch)) {
@@ -103,7 +99,6 @@ if (!empty($_GET['details'])) {
   exit;
 }
 
-// Summary endpoint (passthrough to Wikipedia)
 if (!empty($_GET['summary'])) {
   $title = trim($_GET['summary']);
   if ($title === '') {
@@ -140,7 +135,6 @@ if (!empty($_GET['summary'])) {
   exit;
 }
 
-// Title search (passthrough to Wikipedia)
 $search = $_GET['q'] ?? '';
 if (trim($search) === '') {
   echo json_encode(['pages' => []]);

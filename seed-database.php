@@ -1,5 +1,4 @@
 <?php
-// Tankpedia database seeder: truncates and repopulates the tanks table with 259 military tanks from 21 countries.
 $host = '127.0.0.1';
 $dbname = 'tankpedia';
 $user = 'root';
@@ -16,7 +15,6 @@ echo "Seeding comprehensive military tank database...\n\n";
 $pdo->exec("TRUNCATE TABLE tanks");
 echo "[OK] Cleared existing data\n\n";
 
-// Comprehensive list of real military tank Wikipedia articles.
 $tanksByCountry = [
   'American' => [
     'M1 Abrams', 'M4 Sherman', 'M4 Sherman variants',

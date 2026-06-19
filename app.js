@@ -1,5 +1,4 @@
-// Tankpedia: all client-side logic — language switch, flags, favorites (localStorage), search, modal, comparison chart.
-// ── Translations ──────────────────────────────────────
+// Translations
 const LANG = {
   nl: {
     title: "Tankpedia",
@@ -88,14 +87,12 @@ function toggleLang() {
   document.getElementById("nav-search").textContent = _t("navSearch");
   document.getElementById("nav-fav").textContent = _t("navFav");
   document.getElementById("nav-home").textContent = _t("navHome");
-  if (document.getElementById("search-results").children.length > 0) {
-    const q = document.getElementById("search").value;
-    if (q) loadTanks(q);
-  }
+  const q = document.getElementById("search").value.trim();
+  if (q) loadTanks(q);
   renderFavorites();
 }
 
-// ── Flags ─────────────────────────────────────────────
+// Flags
 function getFlagUrl(country) {
   const map = {
     American: "us", Soviet: "su", German: "de", British: "gb",
@@ -123,7 +120,7 @@ function flagHtmlLg(country) {
   return url ? `<img class="flag-icon flag-icon-lg" src="${url}" alt="${country}" title="${country}" />` : "";
 }
 
-// ── Favorites (CR.D) ──────────────────────────────────
+// Favorites
 function getFavorites() {
   return JSON.parse(localStorage.getItem("tankpedia_favs") || "[]");
 }
@@ -252,7 +249,6 @@ function drawComparisonChart(canvas, tanks) {
     { key: "Length", label: _t("length"), max: 12 },
   ];
 
-  // Collect unique stat categories and values per tank
   const categories = [];
   const usedLabels = new Set();
   statKeys.forEach(sk => {
@@ -296,7 +292,6 @@ function drawComparisonChart(canvas, tanks) {
     ctx.fillText(y, pad.left - 6, yPos + 3);
   }
 
-  // Bars
   categories.forEach((cat, ci) => {
     const groupX = pad.left + ci * groupW;
     cat.values.forEach((v, ti) => {
@@ -307,7 +302,6 @@ function drawComparisonChart(canvas, tanks) {
       ctx.beginPath();
       ctx.roundRect(x, y, barW, barH, [2, 2, 0, 0]);
       ctx.fill();
-      // value on top
       if (v.val > 0) {
         ctx.fillStyle = "#1f2937";
         ctx.font = "bold 9px Arial";
@@ -315,14 +309,12 @@ function drawComparisonChart(canvas, tanks) {
         ctx.fillText(v.val, x + barW / 2, y - 3);
       }
     });
-    // category label
     ctx.fillStyle = "#475569";
     ctx.font = "10px Arial";
     ctx.textAlign = "center";
     ctx.fillText(cat.label, groupX + groupW / 2, pad.top + chartH + 14);
   });
 
-  // Legend
   const legendY = h - 14;
   let lx = pad.left;
   tanks.forEach((t, i) => {
@@ -339,7 +331,7 @@ function drawComparisonChart(canvas, tanks) {
   });
 }
 
-// ── Modal ─────────────────────────────────────────────
+// Modal
 const modalOverlay = document.getElementById("modal-overlay");
 const modalBody = document.getElementById("modal-body");
 const modalClose = document.getElementById("modal-close");
@@ -447,16 +439,16 @@ async function openTankDetails(title, country) {
   }
 }
 
-// ── Local tank database ───────────────────────────────
+// Local tank database
 let tanksDb = null;
 async function getTanksDb() {
   if (tanksDb) return tanksDb;
-  const res = await fetch("tanks.json");
+  const res = await fetch("tank-database.json");
   tanksDb = (await res.json()).pages || [];
   return tanksDb;
 }
 
-// ── Search ────────────────────────────────────────────
+// Search
 async function loadTanks(q = "") {
   const box = document.getElementById("output");
   const trimmedQuery = q.trim();
@@ -548,7 +540,7 @@ async function loadTanks(q = "") {
   }
 }
 
-// ── Init ──────────────────────────────────────────────
+// Init
 const searchInput = document.getElementById("search");
 const searchButton = document.getElementById("search-button");
 
@@ -560,7 +552,6 @@ if (searchInput && searchButton) {
   });
 }
 
-// Tab switching
 function switchTab(tab) {
   document.getElementById("nav-search").classList.toggle("active", tab === "search");
   document.getElementById("nav-fav").classList.toggle("active", tab === "fav");
@@ -571,12 +562,10 @@ function switchTab(tab) {
 
 document.getElementById("nav-search").addEventListener("click", () => switchTab("search"));
 document.getElementById("nav-fav").addEventListener("click", () => switchTab("fav"));
-document.getElementById("nav-home").addEventListener("click", () => { location.href = "home.html"; });
+document.getElementById("nav-home").addEventListener("click", () => { location.href = "index.html"; });
 
-// Language
 document.getElementById("lang-btn").addEventListener("click", toggleLang);
 
-// Service worker registration
 if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("sw.js");
+  navigator.serviceWorker.register("service-worker.js");
 }

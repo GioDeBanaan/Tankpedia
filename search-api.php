@@ -1,6 +1,4 @@
 <?php
-// Tankpedia search endpoint: reads ?q= from GET, searches the tanks table via LIKE, returns JSON.
-// Database connection
 $host = '127.0.0.1';
 $dbname = 'tankpedia';
 $user = 'root';
@@ -18,7 +16,6 @@ try {
 
 header("Content-Type: application/json; charset=UTF-8");
 
-// Read search query
 $q = trim($_GET['q'] ?? '');
 
 if ($q === '') {
@@ -26,7 +23,6 @@ if ($q === '') {
   exit;
 }
 
-// LIKE search with title-first ordering
 $anywhere = '%' . $q . '%';
 $exactStart = $q . '%';
 
@@ -43,7 +39,6 @@ $stmt = $pdo->prepare("
 $stmt->execute([$anywhere, $anywhere, $exactStart, $anywhere]);
 $results = $stmt->fetchAll();
 
-// Format results
 $pages = [];
 foreach ($results as $row) {
   $page = [

@@ -1,13 +1,11 @@
-// Tankpedia service worker: caches app files for offline fallback.
-// Uses network-first: always tries the server first, falls back to cache when offline.
 const CACHE = "tankpedia-v4";
 const FILES = [
   ".",
-  "home.html",
   "index.html",
-  "script.js",
+  "app.html",
+  "app.js",
   "manifest.json",
-  "tanks.json",
+  "tank-database.json",
   "IMG/Tank%20Logo.png"
 ];
 
