@@ -353,7 +353,7 @@ function buildRankingHtml(ranked) {
   }).join("");
 
   return `
-    <h3 style="margin:1rem 0 0.35rem;">${_t("rankingTitle")}</h3>
+    <h3 class="ranking-title">${_t("rankingTitle")}</h3>
     <p class="compare-note">${summaryText}</p>
     <div class="compare-list">${itemsHtml}</div>
   `;
@@ -458,7 +458,6 @@ function renderFavorites() {
   });
   // Vergelijkknop
   document.getElementById("compare-btn").addEventListener("click", compareSelectedFavorites);
-  renderFavoriteRanking(favs);
 }
 
 // ======================== VERGELIJKING =======================================

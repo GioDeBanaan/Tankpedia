@@ -23,12 +23,15 @@
     }
   </script>
   <style>
-    /* Basisstijlen voor de home-pagina (splash buiten de SPA om) */
+    /* Blueprint thema voor home-pagina */
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: Arial, sans-serif;
-      background: #f4f5f8;
-      color: #1f2937;
+      background: #0a1628;
+      background-image: url("../IMG/Blueprint.jpg");
+      background-repeat: repeat;
+      background-size: cover;
+      color: #e0e8f0;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -47,8 +50,8 @@
       animation: bounce 2s ease-in-out infinite;
       margin-bottom: 1.5rem;
     }
-    h1 { font-size: 2.2rem; margin-bottom: 0.5rem; }
-    p { font-size: 1.1rem; color: #475569; max-width: 500px; line-height: 1.6; margin-bottom: 2rem; }
+    h1 { font-size: 2.2rem; margin-bottom: 0.5rem; color: #e0e8f0; }
+    p { font-size: 1.1rem; color: #94a3b8; max-width: 500px; line-height: 1.6; margin-bottom: 2rem; }
     .btn {
       display: inline-block;
       padding: 1rem 2.5rem;
@@ -58,6 +61,7 @@
       border-radius: 1rem;
       font-size: 1.2rem;
       font-weight: 700;
+      border: 1px solid #3b82f6;
     }
     .btn:hover { background: #1d4ed8; }
   </style>

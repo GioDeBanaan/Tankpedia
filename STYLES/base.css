@@ -2,7 +2,7 @@
   ====================================================================
   TANKPEDIA – Basis Stijlen (STYLES/base.css)
   ====================================================================
-  Bevat: CSS-reset, body-styling met NATO-camouflage achtergrond,
+  Bevat: CSS-reset, body-styling met Blueprint grid achtergrond,
   splash-scherm layout, animaties en basisknop-stijlen.
   Dit bestand wordt ALTIJD geladen (zowel splash als app-shell).
   ====================================================================
@@ -12,14 +12,14 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 [hidden] { display: none !important; }
 
-/* === BODY – NATO camouflage (herhalend camo-patroon) === */
+/* === BODY – Blueprint achtergrond === */
 body {
   font-family: "Segoe UI", Arial, sans-serif;
-  background-color: #4a6b3a;
-  background-image: url("../IMG/bunker_green-camo.jpg");
+  background-color: #0a1628;
+  background-image: url("../IMG/Blueprint.jpg");
   background-repeat: repeat;
-  background-size: 512px 512px;
-  color: #e8dcc8;
+  background-size: cover;
+  color: #e0e8f0;
   min-height: 100vh;
 }
 
@@ -47,22 +47,22 @@ body {
   margin-bottom: 1.5rem;
 }
 
-.splash h1 { font-size: 2.2rem; margin-bottom: 0.5rem; color: #e8dcc8; }
-.splash p { font-size: 1.1rem; color: #c4b89a; max-width: 500px; line-height: 1.6; margin-bottom: 2rem; }
+.splash h1 { font-size: 2.2rem; margin-bottom: 0.5rem; color: #e0e8f0; }
+.splash p { font-size: 1.1rem; color: #94a3b8; max-width: 500px; line-height: 1.6; margin-bottom: 2rem; }
 
 /* === KNOP (splash "Naar de app") === */
 .btn {
   display: inline-block;
   padding: 1rem 2.5rem;
-  background: #6b8e23;
+  background: #2563eb;
   color: #fff;
   text-decoration: none;
   border-radius: 1rem;
   font-size: 1.2rem;
   font-weight: 700;
-  border: 1px solid #8aad3a;
+  border: 1px solid #3b82f6;
 }
-.btn:hover { background: #5a7a1a; }
+.btn:hover { background: #1d4ed8; }
 
 /* === MAIN LAYOUT === */
 main { max-width: 1100px; margin: 0 auto; padding: 1rem; }
@@ -70,4 +70,4 @@ main { max-width: 1100px; margin: 0 auto; padding: 1rem; }
 .page.active { display: grid; gap: 1rem; }
 
 /* === HULP === */
-.loading-spinner { color: #6a5a3a; }
+.loading-spinner { color: #94a3b8; }

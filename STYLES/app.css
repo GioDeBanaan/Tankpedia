@@ -11,7 +11,7 @@
     - Vlaggen (flag-icon)
     - Vergelijkingslijst (compare-item)
     - Bibi/Stalin easter egg (.bibi-section)
-  Wordt alleen geladen wanneer de app-shell actief is.
+  Blueprint thema: donkerblauw met blauwe raster-accenten.
   ====================================================================
 */
 
@@ -22,8 +22,8 @@
   justify-content: space-between;
   gap: 1rem;
   padding: 0.8rem 1rem;
-  background: linear-gradient(135deg, #1a3a1a, #2a4a2a);
-  border-bottom: 2px solid #4a6b3a;
+  background: linear-gradient(135deg, #060f1e, #0a1628);
+  border-bottom: 2px solid #2563eb;
   position: sticky;
   top: 0;
   z-index: 10;
@@ -37,8 +37,8 @@
   min-width: 0;
 }
 .brand img { width: 44px; height: 44px; object-fit: contain; }
-.brand h1 { margin: 0; font-size: 1.4rem; color: #e8dcc8; }
-.brand p { margin: 0.15rem 0 0; color: #a8b89a; font-size: 0.92rem; }
+.brand h1 { margin: 0; font-size: 1.4rem; color: #e0e8f0; }
+.brand p { margin: 0.15rem 0 0; color: #60a5fa; font-size: 0.92rem; }
 
 /* === WERKBALK (navigatieknoppen) === */
 .toolbar {
@@ -54,11 +54,11 @@
 #modal-close,
 .details-button,
 #compare-btn {
-  border: 1px solid #5a7a4a;
+  border: 1px solid #1e3a5f;
   border-radius: 999px;
   padding: 0.7rem 1rem;
-  background: #4a6b3a;
-  color: #e8dcc8;
+  background: #1a3a6b;
+  color: #e0e8f0;
   font: inherit;
   cursor: pointer;
   text-decoration: none;
@@ -66,32 +66,33 @@
 }
 .toolbar button:hover,
 .nav-link:hover {
-  background: #5a7b4a;
+  background: #2563eb;
 }
 
-/* Accentkleur voor actieve / primaire knoppen (olijfgroen) */
+/* Accentkleur voor actieve / primaire knoppen (fel blauw) */
 .nav-link.active,
 #search-button,
 .details-button,
 #compare-btn {
-  background: #6b8e23;
+  background: #2563eb;
   color: #fff;
-  border-color: #8aad3a;
+  border-color: #3b82f6;
 }
 .nav-link.active:hover,
 #search-button:hover,
 .details-button:hover,
 #compare-btn:hover {
-  background: #7a9e2a;
+  background: #1d4ed8;
 }
 
 /* === ZOEKPANEEL, FAVORIETENLIJST, OUTPUT = kaartenbak === */
 .search-panel, #fav-list, #output {
-  background: rgba(235, 225, 195, 0.95);
-  border: 1px solid #8a7a5a;
+  background: rgba(10, 22, 40, 0.9);
+  border: 1px solid #1e3a5f;
   border-radius: 1rem;
   padding: 1rem;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  color: #e0e8f0;
 }
 
 /* Zoekpaneel: input + knop naast elkaar */
@@ -105,22 +106,23 @@
 /* Zoekveld */
 #search {
   width: 100%;
-  border: 1px solid #8a7a5a;
+  border: 1px solid #1e3a5f;
   border-radius: 0.85rem;
   padding: 0.95rem 1rem;
   font: inherit;
-  background: #f5f0e0;
-  color: #2a3a2a;
+  background: #0d1b2a;
+  color: #e0e8f0;
 }
-#search:focus { outline: 2px solid #6b8e23; outline-offset: -1px; }
+#search:focus { outline: 2px solid #2563eb; outline-offset: -1px; }
 
 /* === ZOEK- EN FAVORIETENKAARTEN === */
 .search-card,
 .fav-card {
-  border: 1px solid #8a7a5a;
+  border: 1px solid #1e3a5f;
   border-radius: 1rem;
   padding: 1rem;
-  background: #f5f0e0;
+  background: rgba(13, 27, 42, 0.85);
+  color: #e0e8f0;
 }
 
 /* Koptekst van een kaart (titel + actieknoppen) */
@@ -131,29 +133,32 @@
   gap: 1rem;
   align-items: flex-start;
 }
-.result-header h3 { margin: 0; color: #1a3a1a; }
-.result-header p { margin: 0.4rem 0 0; color: #6a5a3a; }
-.result-thumb { max-width: 180px; width: 100%; border-radius: 0.8rem; margin-top: 0.75rem; border: 1px solid #8a7a5a; }
+.result-header h3 { margin: 0; color: #60a5fa; }
+.result-header p { margin: 0.4rem 0 0; color: #94a3b8; }
+.result-thumb { max-width: 180px; width: 100%; border-radius: 0.8rem; margin-top: 0.75rem; border: 1px solid #1e3a5f; }
 
 /* Favorieten ster */
-.fav-star { font-size: 1.4rem; cursor: pointer; user-select: none; color: #8a7a5a; }
-.fav-star.active { color: #d4a017; }
+.fav-star { font-size: 1.4rem; cursor: pointer; user-select: none; color: #60a5fa; }
+.fav-star.active { color: #fbbf24; }
 #fav-toolbar { margin-bottom: 0.75rem; }
-.fav-empty { color: #6a5a3a; }
-.fav-card strong { color: #1a3a1a; }
+.fav-empty { color: #94a3b8; }
+.fav-card strong { color: #60a5fa; }
 
 /* Verwijderknop in favorietenkaart */
 .fav-del-btn {
-  background: none; border: 1px solid #8a6a4a; border-radius: 999px;
-  padding: 0.2rem 0.6rem; cursor: pointer; color: #8a4a3a; font-size: 1rem;
+  background: none; border: 1px solid #1e3a5f; border-radius: 999px;
+  padding: 0.2rem 0.6rem; cursor: pointer; color: #94a3b8; font-size: 1rem;
 }
+
+/* Ranglijst titel */
+.ranking-title { margin: 1rem 0 0.35rem; color: #60a5fa; }
 
 /* === MODAL (overlay voor tankdetails) === */
 #modal-overlay {
   display: none;
   position: fixed;
   inset: 0;
-  background: rgba(20, 35, 20, 0.85);
+  background: rgba(5, 10, 25, 0.9);
   padding: 1rem;
   z-index: 20;
   align-items: center;
@@ -165,13 +170,14 @@
   width: min(900px, 100%);
   max-height: 85vh;
   overflow: auto;
-  background: #f0e8d0;
-  border: 2px solid #6b8e23;
+  background: #0d1b2a;
+  border: 2px solid #2563eb;
   border-radius: 1rem;
   padding: 1rem;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+  color: #e0e8f0;
 }
-.modal-content h2 { color: #1a3a1a; }
+.modal-content h2 { color: #60a5fa; }
 
 /* === STATISTIEKEN (tankdetails) === */
 .stat-grid { display: grid; gap: 0.6rem; margin-top: 1rem; }
@@ -179,18 +185,18 @@
   display: flex;
   justify-content: space-between;
   gap: 1rem;
-  border: 1px solid #8a7a5a;
+  border: 1px solid #1e3a5f;
   border-radius: 0.85rem;
   padding: 0.75rem 0.9rem;
-  background: #f5f0e0;
+  background: rgba(10, 22, 40, 0.85);
 }
-.stat-label { font-weight: 700; color: #2a4a2a; }
-.stat-value { color: #1a3a1a; }
+.stat-label { font-weight: 700; color: #60a5fa; }
+.stat-value { color: #e0e8f0; }
 .stats-footer { margin-top: 1rem; text-align: right; }
-.stats-footer a { color: #6b8e23; text-decoration: none; font-weight: 700; }
+.stats-footer a { color: #3b82f6; text-decoration: none; font-weight: 700; }
 .stats-footer a:hover { text-decoration: underline; }
 .stats-image img {
-  max-width: 100%; border-radius: 0.8rem; border: 1px solid #8a7a5a;
+  max-width: 100%; border-radius: 0.8rem; border: 1px solid #1e3a5f;
 }
 
 /* === BIBI EASTER EGG === */
@@ -201,12 +207,12 @@
 .bibi-photo {
   max-width: 200px;
   border-radius: 1rem;
-  border: 2px solid #6b8e23;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  border: 2px solid #2563eb;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
 }
 .bibi-caption {
   margin: 0.5rem 0 0;
-  color: #2a4a2a;
+  color: #60a5fa;
   font-weight: 700;
   font-size: 0.95rem;
 }
@@ -220,8 +226,8 @@
   display: inline-block;
   padding: 0.15rem 0.5rem;
   border-radius: 999px;
-  background: #4a6b3a;
-  color: #e8dcc8;
+  background: #1a3a6b;
+  color: #e0e8f0;
   font-size: 0.78rem;
   margin-left: 0.35rem;
   vertical-align: middle;
@@ -235,14 +241,15 @@
 }
 
 .compare-item {
-  border: 1px solid #8a7a5a;
+  border: 1px solid #1e3a5f;
   border-radius: 1rem;
   padding: 1rem;
-  background: #f5f0e0;
+  background: rgba(13, 27, 42, 0.85);
+  color: #e0e8f0;
 }
 .compare-item.top-one {
-  border-color: #6b8e23;
-  box-shadow: 0 8px 24px rgba(107, 142, 35, 0.2);
+  border-color: #2563eb;
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.15);
 }
 
 .compare-item-header {
@@ -252,7 +259,7 @@
   align-items: flex-start;
   margin-bottom: 0.75rem;
 }
-.compare-item-header h3 { color: #1a3a1a; margin: 0; }
+.compare-item-header h3 { color: #60a5fa; margin: 0; }
 
 .compare-rank {
   display: inline-flex;
@@ -261,7 +268,7 @@
   min-width: 2.2rem;
   height: 2.2rem;
   border-radius: 999px;
-  background: #6b8e23;
+  background: #2563eb;
   color: #fff;
   font-weight: 700;
   flex: 0 0 auto;
@@ -269,13 +276,13 @@
 
 .compare-score {
   font-weight: 700;
-  color: #6b8e23;
+  color: #3b82f6;
   white-space: nowrap;
 }
 
 .compare-note {
   margin-top: 0.35rem;
-  color: #6a5a3a;
+  color: #94a3b8;
   line-height: 1.5;
 }
 
@@ -291,7 +298,7 @@
   align-items: center;
   padding: 0.35rem 0.65rem;
   border-radius: 999px;
-  background: #4a6b3a;
-  color: #e8dcc8;
+  background: #1a3a6b;
+  color: #e0e8f0;
   font-size: 0.85rem;
 }

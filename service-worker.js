@@ -13,7 +13,7 @@ Zorgt voor offline-functionaliteit van de PWA.
 =========================================================================
 */
 // Cache versie – wijzigen bij updates om oude cache te vervangen
-const CACHE = "tankpedia-v7";
+const CACHE = "tankpedia-v8";
 
 // Lijst van bestanden die bij installatie worden gecacht
 const FILES = [
@@ -23,7 +23,7 @@ const FILES = [
   "manifest.json",
   "SCRIPTS/tank-database.json",
   "IMG/Tank%20Logo.png",
-  "IMG/bunker_green-camo.jpg"
+  "IMG/Blueprint.jpg"
 ];
 
 // Install-event: alle bestanden in de cache plaatsen
