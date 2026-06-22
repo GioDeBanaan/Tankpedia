@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<!--
+  ==========================================================================
+  TANKPEDIA – App Redirect (PAGES/app-redirect.html)
+  ==========================================================================
+  Stuurt de gebruiker direct door naar index.html#app (de app-shell).
+  Wordt gebruikt door de PWA wanneer de start_url naar deze pagina verwijst.
+  De #app-hash zorgt dat de SPA de app-shell toont i.p.v. het splash-scherm.
+  ==========================================================================
+-->
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tankpedia</title>
+  <script>
+    location.replace("../index.html#app");
+  </script>
+</head>
+<body>
+  <p>Redirecting to <a href="../index.html#app">index.html#app</a>...</p>
+</body>
+</html>

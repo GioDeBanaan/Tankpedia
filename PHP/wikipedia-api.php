@@ -1,4 +1,17 @@
 <?php
+/*
+========================================================================
+TANKPEDIA – Wikipedia API Proxy (PHP/wikipedia-api.php)
+========================================================================
+PHP-proxy voor de Wikipedia REST API.
+Gebruikt door de PHP-backend (niet door de SPA) om:
+  * Zoeken naar tank-pagina's (GET ?q=...)
+  * Tank-details ophalen (GET ?details=...) – parseert infobox
+  * Samenvattingen ophalen (GET ?summary=...)
+Stuurt JSON terug met de opgevraagde gegevens.
+Werkt via cURL om CORS- en rate-limiting problemen te omzeilen.
+========================================================================
+*/
 header("Content-Type: application/json; charset=UTF-8");
 
 define('WIKI_REST_BASE', 'https://en.wikipedia.org/api/rest_v1/page/html/');

@@ -1,4 +1,18 @@
-// Tankpedia Service Worker – cacht bestanden voor offline gebruik
+/*
+=========================================================================
+TANKPEDIA – Service Worker (service-worker.js)
+=========================================================================
+Zorgt voor offline-functionaliteit van de PWA.
+  * Cacht bij installatie: index.html, app.js, manifest.json,
+    tank-database.json, logo, camo-achtergrond
+  * Network-first strategie: probeert netwerk, valt terug op cache
+  * Navigatie-fallback: bij offline navigatie wordt index.html geserveerd
+    (voor SPA-routing)
+  * Cross-origin verzoeken (Wikimedia-afbeeldingen) worden niet
+    onderschept om CORS-problemen te voorkomen
+=========================================================================
+*/
+// Cache versie – wijzigen bij updates om oude cache te vervangen
 const CACHE = "tankpedia-v7";
 
 // Lijst van bestanden die bij installatie worden gecacht

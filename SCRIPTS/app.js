@@ -1,5 +1,14 @@
 // =============================================================================
-// TANKPEDIA – JavaScript
+// TANKPEDIA – Hoofd JavaScript (SCRIPTS/tankpedia-core.js)
+// =============================================================================
+// Dit bestand bevat alle applicatie-logica voor de Tankpedia SPA:
+//   - Vertalingen (NL/EN) – LANG object
+//   - Favorieten (localStorage) – get/set/toggle
+//   - Wikipedia REST API calls – fetchTankDetails()
+//   - Infobox-parsing – extractTankNumber(), getArmorText()
+//   - Tank-vergelijking – scoreBattleTank(), rankTanks()
+//   - UI-sturing – openTankDetails(), loadTanks(), renderFavorites()
+//   - Service worker registratie
 // =============================================================================
 
 // ======================== VERTALINGEN (NL / EN) ==============================

@@ -1,4 +1,16 @@
 <?php
+/*
+========================================================================
+TANKPEDIA – Database Seeder (PHP/seed-database.php)
+========================================================================
+Vult de MySQL-database met tankgegevens via de Wikipedia REST API.
+Doorloopt een lijst van tanks per land, haalt voor elk een beschrijving
+en thumbnail op van Wikipedia, en slaat deze op in de `tanks`-tabel.
+Te gebruiken via CLI of browser:
+  php seed-database.php  of  open in browser (via localhost)
+Vooraf: maak een MySQL-database `tankpedia` aan met een `tanks`-tabel.
+========================================================================
+*/
 $host = '127.0.0.1';
 $dbname = 'tankpedia';
 $user = 'root';

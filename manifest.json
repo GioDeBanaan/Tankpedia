@@ -1,4 +1,5 @@
 {
+  "_comment": "PWA manifest – configureert hoe Tankpedia als geïnstalleerde app wordt weergegeven (standalone modus, icoon, start_url, thema-kleuren). Wordt dynamisch geladen door index.html (niet via file://).",
   "name": "Tankpedia",
   "short_name": "Tankpedia",
   "description": "Military tank encyclopedia",
@@ -8,7 +9,7 @@
   "theme_color": "#2563eb",
   "orientation": "portrait",
   "icons": [
-    {
+{
       "src": "IMG/Tank%20Logo.png",
       "sizes": "512x512",
       "type": "image/png",

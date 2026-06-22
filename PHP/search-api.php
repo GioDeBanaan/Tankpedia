@@ -1,4 +1,15 @@
 <?php
+/*
+========================================================================
+TANKPEDIA – Search API (PHP/search-api.php)
+========================================================================
+PHP-endpoint voor het doorzoeken van de lokale MySQL-tankdatabase.
+Gebruikt door de PHP-backend (niet door de SPA).
+Zoekt op titel en beschrijving (LIKE %query%), sorteert op relevantie
+(exacte match eerst), en retourneert de resultaten als JSON.
+Vooraf: database moet gevuld zijn via seed-database.php.
+========================================================================
+*/
 $host = '127.0.0.1';
 $dbname = 'tankpedia';
 $user = 'root';

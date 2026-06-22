@@ -1,3 +1,13 @@
+/*
+  ====================================================================
+  TANKPEDIA – Responsive Stijlen (STYLES/responsive.css)
+  ====================================================================
+  Media-queries voor mobiele weergave (< 720px).
+  Past topbar, zoekpaneel, kaarten, modal en splash aan
+  voor kleinere schermen met touch-vriendelijke minimale hoogtes.
+  ====================================================================
+*/
+
 /* === RESPONSIVE – aanpassingen voor kleine schermen (mobiel) === */
 @media (max-width: 720px) {
   html { font-size: 15px; }

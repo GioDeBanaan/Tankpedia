@@ -1,4 +1,19 @@
 <!DOCTYPE html>
+<!--
+  ==========================================================================
+  TANKPEDIA – Hoofdpagina (index.html)
+  ==========================================================================
+  Dit is de ENIGE HTML-entry van de Single Page Application (SPA).
+  Bevat:
+    - Splash-scherm (eerste indruk met logo + uitleg)
+    - App-shell (topbar, zoekpagina, favorietenpagina)
+    - Modal-overlay (tankdetails + vergelijking)
+    - Inline JavaScript voor splash-navigatie via URL hash (#app)
+  PWA-manifest en service worker worden dynamisch geladen (niet via file://).
+  Stijlen zijn opgesplitst in: base.css (reset/splash), app.css (app-styles),
+  responsive.css (mobiel).
+==========================================================================
+-->
 <html lang="nl">
 <head>
   <meta charset="UTF-8">

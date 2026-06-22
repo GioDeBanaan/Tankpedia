@@ -1,3 +1,20 @@
+/*
+  ====================================================================
+  TANKPEDIA – App Stijlen (STYLES/app.css)
+  ====================================================================
+  Bevat alle stijlen voor de app-shell interface:
+    - Topbar (logo, titel, navigatieknoppen)
+    - Toolbar (zoeken/favorieten knoppen)
+    - Zoekpaneel, kaarten (search-card / fav-card)
+    - Modal-overlay (tankdetails)
+    - Statistieken-grid (stat-row / stat-grid)
+    - Vlaggen (flag-icon)
+    - Vergelijkingslijst (compare-item)
+    - Bibi/Stalin easter egg (.bibi-section)
+  Wordt alleen geladen wanneer de app-shell actief is.
+  ====================================================================
+*/
+
 /* === TOPBAR / HEADER === */
 .topbar {
   display: flex;

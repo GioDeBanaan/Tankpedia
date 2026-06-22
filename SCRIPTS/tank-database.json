@@ -1,4 +1,5 @@
 ﻿{
+    "_comment": "Tank-database (tank-database.json) – Bevat 259+ tanks uit 21 landen. Elk object heeft: title, page_key, description, thumbnail_url, country. Wordt lokaal in de browser geladen via fetch() voor zoeken. Details worden live opgehaald van de Wikipedia REST API.",
     "pages": [
         {
             "title": "10TP",

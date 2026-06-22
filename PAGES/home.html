@@ -1,11 +1,20 @@
 <!DOCTYPE html>
+<!--
+  ==========================================================================
+  TANKPEDIA – Home Pagina (PAGES/home.html)
+  ==========================================================================
+  Standalone home/landing-pagina, los van de SPA.
+  Toont logo, beschrijving en een knop "Naar de app" die linkt naar
+  PAGES/app-redirect.html#view=app.
+  Wordt gebruikt als PWA-startpagina voor bepaalde configuraties.
+  ==========================================================================
+-->
 <html lang="nl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tankpedia</title>
   <script>
-    // PWA manifest laden indien niet lokaal (file://)
     if (location.protocol !== "file:") {
       const link = document.createElement("link");
       link.rel = "manifest";
@@ -61,7 +70,8 @@
   <script>
     // Stel link dynamisch in zodat deze werkt ongeacht het pad (GitHub Pages / subdirectory)
     const openApp = document.getElementById("open-app");
-    openApp.href = new URL("app.html?view=app", location.href).href;
+    // Verwijst naar de SPA app-shell (app-redirect.html → index.html#app)
+    openApp.href = new URL("app-redirect.html?view=app", location.href).href;
   </script>
 </body>
 </html>
